@@ -3,6 +3,8 @@
 --Basic commands (If Needed)
 drop table users;
 
+--Lat and long coordinatinates need to be added to the users and charitity tables. 
+
 CREATE TABLE users (
     user_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     firstname VARCHAR(30) NOT NULL,
@@ -16,6 +18,7 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL
 );
 
+--The charity id may not be autopopulated but instead be the tax id. 
 CREATE TABLE charities (
     charity_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL, 
