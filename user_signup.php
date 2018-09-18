@@ -39,23 +39,25 @@
     if ($count > 0){
       $message = '<label>Username Taken!</label>';
     }else {
+
       //Query to add new user to the users table
       $query = 'INSERT INTO users
-                  (firstname, lastname, street, town, state, zip, email, username, password)
+                  (firstname, lastname, email, street, town, state, zip, username, password)
                 VALUES
-                  (:firstname, :lastname, :street, :town, :state, :zip, :email, :username, :password)'; 
-      $statement = $db->prepare($query); 
+                  (:firstname, :lastname, :email, :street, :town, :state, :zip, :username, :password)'; 
+      $statement = $db->prepare($query);
       $statement->bindValue(':firstname', $firstname);
-      $statement->bindValue(':lastname', $lastname);
+      $statement->bindValue(':lastname', $lastName);
+      $statement->bindValue(':email', $email);
       $statement->bindValue(':street', $street);
       $statement->bindValue(':town', $town);
       $statement->bindValue(':state', $state);
       $statement->bindValue(':zip', $zip);
-      $statement->bindValue(':email', $email);
       $statement->bindValue(':username', $username);
       $statement->bindValue(':password', $password_hashed);
       $statement->execute();
       $statement->closeCursor();
+
       //Message to alert user that they signed up
       $message = '<label>User Signed Up!</label>';
     }
@@ -64,6 +66,7 @@
 
 ?>
 <?php include 'view/header.php'; ?>
+
 <h1>User Sign up</h1>
 
 <div class='container'>
@@ -77,13 +80,14 @@
 
   <!-- Start of bootstrap form -->
   <form method="post">
+
     <div class="form-group">
       <label for="firstname">First Name</label>
-      <input type="text" name='firstname' class="form-control" id="firstname" placeholder="Enter First Name" required>
+      <input type="text" name='firstname' class="form-control" id="firstname" placeholder="Enter First Name">
     </div>
     <div class="form-group">
       <label for="lastName">Last Name</label>
-      <input type="text" name='lastName' class="form-control" id="lastName" placeholder="Enter Last Name" required>
+      <input type="text" name='lastName' class="form-control" id="lastName" placeholder="Enter Last Name">
     </div>
     <div class="form-group">
       <label for="email">Email</label>
@@ -114,10 +118,17 @@
       <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword2">Password</label>
-      <input type="password" name='password2' class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name='password2' class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
     </div>
+
     <button type="submit" name="login" class="btn btn-primary">Submit</button>
+
   </form>
   <!-- End of Bootstrap form -->
+
+  <div class='login_anchor center'>
+    <a href="index.php">Login Page</a>
+  </div>
+
 </div>
