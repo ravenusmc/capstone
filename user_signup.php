@@ -39,24 +39,31 @@
     if ($count > 0){
       $message = '<label>Username Taken!</label>';
     }else {
+      //These lines will get the latitude and longitude from google maps.
+      $address = $street . ' ' . $town . ' ' . $state . ' ' . $zip;
+      $prepAddr = str_replace(' ','+', $address);
+      $geocode = file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+      $output = json_decode($geocode);
+      $latitude = $output->results[0]->geometry->location->lat;
+      $longitude = $output->results[0]->geometry->location->lng;
 
       //Query to add new user to the users table
-      $query = 'INSERT INTO users
-                  (firstname, lastname, email, street, town, state, zip, username, password)
-                VALUES
-                  (:firstname, :lastname, :email, :street, :town, :state, :zip, :username, :password)'; 
-      $statement = $db->prepare($query);
-      $statement->bindValue(':firstname', $firstname);
-      $statement->bindValue(':lastname', $lastName);
-      $statement->bindValue(':email', $email);
-      $statement->bindValue(':street', $street);
-      $statement->bindValue(':town', $town);
-      $statement->bindValue(':state', $state);
-      $statement->bindValue(':zip', $zip);
-      $statement->bindValue(':username', $username);
-      $statement->bindValue(':password', $password_hashed);
-      $statement->execute();
-      $statement->closeCursor();
+      // $query = 'INSERT INTO users
+      //             (firstname, lastname, email, street, town, state, zip, username, password)
+      //           VALUES
+      //             (:firstname, :lastname, :email, :street, :town, :state, :zip, :username, :password)'; 
+      // $statement = $db->prepare($query);
+      // $statement->bindValue(':firstname', $firstname);
+      // $statement->bindValue(':lastname', $lastName);
+      // $statement->bindValue(':email', $email);
+      // $statement->bindValue(':street', $street);
+      // $statement->bindValue(':town', $town);
+      // $statement->bindValue(':state', $state);
+      // $statement->bindValue(':zip', $zip);
+      // $statement->bindValue(':username', $username);
+      // $statement->bindValue(':password', $password_hashed);
+      // $statement->execute();
+      // $statement->closeCursor();
 
       //Message to alert user that they signed up
       $message = '<label>User Signed Up!</label>';
