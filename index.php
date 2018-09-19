@@ -53,6 +53,7 @@
 ?>
 
 <div class='container'>
+
   <form method="post">
     <div class="form-group">
       <label for="exampleInputEmail1">Username</label>
@@ -64,6 +65,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  
 </div>
 
 

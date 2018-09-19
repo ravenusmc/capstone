@@ -82,6 +82,7 @@
 <h1>User Sign up</h1>
 
 <div class='container'>
+  
   <!-- Start of error handling -->
   <?php 
     if (isset($message)){

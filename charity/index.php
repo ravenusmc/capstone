@@ -19,6 +19,14 @@
     case 'home':
       include('home.php');
       break;
+    //This case will bring the user to the search charity page 
+    case 'search_charities':
+      include('search_charities.php');
+      break;
+    //This action will bring the user to the add item page 
+    case 'add_item':
+      include('add_item.php');
+      break;
   }
 
 ?>
