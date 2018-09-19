@@ -6,6 +6,7 @@
 
   //Pulling in the databases
   require('./model/database.php');
+  require('key.php');
   global $db;
 
   $message = "";
@@ -42,16 +43,18 @@
       //These lines will get the latitude and longitude from google maps.
       $address = $street . ' ' . $town . ' ' . $state . ' ' . $zip;
       $prepAddr = str_replace(' ','+', $address);
-      $geocode = file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+      $geocode = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$prepAddr.'&key='.$api_key);
       $output = json_decode($geocode);
       $latitude = $output->results[0]->geometry->location->lat;
       $longitude = $output->results[0]->geometry->location->lng;
 
+      echo $latitude;
+      
       //Query to add new user to the users table
       // $query = 'INSERT INTO users
-      //             (firstname, lastname, email, street, town, state, zip, username, password)
+      //             (firstname, lastname, email, street, town, state, zip, latitude, longitude, username, password)
       //           VALUES
-      //             (:firstname, :lastname, :email, :street, :town, :state, :zip, :username, :password)'; 
+      //             (:firstname, :lastname, :email, :street, :town, :state, :zip, :latitude, :longitude, :username, :password)'; 
       // $statement = $db->prepare($query);
       // $statement->bindValue(':firstname', $firstname);
       // $statement->bindValue(':lastname', $lastName);
@@ -59,6 +62,8 @@
       // $statement->bindValue(':street', $street);
       // $statement->bindValue(':town', $town);
       // $statement->bindValue(':state', $state);
+      // $statement->bindValue(':latitude', $latitude);
+      // $statement->bindValue(':longitude', $longitude);
       // $statement->bindValue(':zip', $zip);
       // $statement->bindValue(':username', $username);
       // $statement->bindValue(':password', $password_hashed);
@@ -125,8 +130,8 @@
       <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" name='password2' class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+      <label for="exampleInputPassword2">Password</label>
+      <input type="password" name='password2' class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
     </div>
 
     <button type="submit" name="login" class="btn btn-primary">Submit</button>

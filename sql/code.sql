@@ -14,6 +14,8 @@ CREATE TABLE users (
     town VARCHAR(30) NOT NULL,
     state char(2) NOT NULL,
     zip INT NOT NULL,
+    latitude DECIMAL(7, 5) NOT NULL,
+    longitude DECIMAL(7, 5) NOT NULL, 
     username VARCHAR(30) NOT NULL,
     password VARCHAR(255) NOT NULL
 );
