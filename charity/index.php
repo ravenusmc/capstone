@@ -2,6 +2,7 @@
   
   //Pulling in the databases
   require('../model/database.php');
+  require('../model/charities.php');
 
   //Setting a default action 
   $action = filter_input(INPUT_POST, 'action');
@@ -21,6 +22,7 @@
       break;
     //This case will bring the user to the search charity page 
     case 'search_charities':
+      $charity_types = get_charity_type();
       include('search_charities.php');
       break;
     //This action will bring the user to the add item page 
