@@ -3,6 +3,7 @@
   //Pulling in the databases
   require('../model/database.php');
   require('../model/charities.php');
+  require('../model/items.php');
 
   //Setting a default action 
   $action = filter_input(INPUT_POST, 'action');
@@ -26,8 +27,22 @@
       include('search_charities.php');
       break;
     //This action will bring the user to the add item page 
-    case 'add_item':
+    case 'add_item_form':
+      $item_categories = get_all_item_categories();
       include('add_item.php');
+      break;
+    //This action will add an item to the items table 
+    case 'add_item':
+
+      //Getting the user input 
+      $user_id  = filter_input(INPUT_POST, 'user_id');
+      $item_name  = filter_input(INPUT_POST, 'item_name');
+      $category_type = filter_input(INPUT_POST, 'category_type');
+
+      //Adding a new item to the items table 
+      add_new_item($item_name, $category_type, $user_id);
+      
+      include('home.php');
       break;
   }
 

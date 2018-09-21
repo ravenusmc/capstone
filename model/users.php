@@ -1,6 +1,8 @@
 <?php 
 
   //This file deals with all of the database calls dealing with only the users table 
+
+  //This function will get one user by username and password from the database 
   function get_one_user($username, $password){
     global $db;
     $query = "SELECT * FROM users 
