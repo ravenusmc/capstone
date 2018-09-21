@@ -9,3 +9,21 @@ INSERT INTO CharityType
   (type_name)
 VALUES 
   ('Education');
+
+INSERT INTO itemCategories
+  (category_name)
+VALUES 
+  ('Yard/Garden Item');
+
+--Item Categories that were inserted into the itemcategories table 
+Household 
+Kids Toys
+kids clothes
+books
+small appliance
+women's clothing 
+men's clothing
+women shoes
+men's shoes 
+Pet item 
+yard/garden item

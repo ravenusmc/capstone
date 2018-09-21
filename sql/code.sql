@@ -3,8 +3,7 @@
 --Basic commands (If Needed)
 drop table users;
 
---Lat and long coordinatinates need to be added to the users and charitity tables. 
-
+--ADDED 
 CREATE TABLE users (
     user_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     firstname VARCHAR(30) NOT NULL,
@@ -20,6 +19,7 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL
 );
 
+--ADDED
 --The charity id may not be autopopulated but instead be the tax id. 
 CREATE TABLE charities (
     charity_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -36,6 +36,7 @@ CREATE TABLE charities (
         FOREIGN KEY (charityType_ID) REFERENCES charityType(charityType_ID)
 );
 
+--ADDED
 CREATE TABLE CharityType (
     charityType_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     type_name VARCHAR(45) NOT NULL 
@@ -43,16 +44,21 @@ CREATE TABLE CharityType (
 
 
 
-CREATE TABLE Donations (
-    donation_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    items VARCHAR(255) NOT NULL,
+CREATE TABLE items (
+    item_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    item_name VARCHAR(255) NOT NULL,
     itemCategory_ID INT NOT NULL,
-    CONSTRAINT donationsFKitemcategories
-        FOREIGN KEY (itemCategory_ID) REFERENCES itemCategories(itemCategory_ID)
+    user_id INT NOT NULL,
+    CONSTRAINT itemsFKitemcategories
+        FOREIGN KEY (itemCategory_ID) REFERENCES itemCategories(itemCategory_ID),
+    CONSTRAINT itemsFKuser_ID
+        FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
+--ADDED 
 CREATE TABLE itemCategories (
-    itemCategory_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT
+    itemCategory_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    category_name VARCHAR(45) NOT NULL
 );
 
 
