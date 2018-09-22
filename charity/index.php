@@ -21,6 +21,10 @@
     case 'home':
       include('home.php');
       break;
+    //This case will bring the ADMIN user ONLY to the charity sign up page 
+    case 'charity_sign_up':
+      include('charity_sign_up.php');
+      break;
     //This case will bring the user to the search charity page 
     case 'search_charities':
       $charity_types = get_charity_type();

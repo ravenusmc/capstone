@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  
+  //This variable will be a flag to verify if the user is currently in a session
+  //or just browsing. 
+  $name = $_SESSION["username"];
+  $id = $_SESSION["user_id"];
+  
+?>
 <!DOCTYPE html>
 <html>
 <!-- the head section -->
@@ -26,6 +35,12 @@
       <li class="nav-item">
         <a class="nav-link nav_bar_link" href="../charity/logout.php">Logout</a>
       </li>
+      <?php if ($name == 'admin'): ?>
+        <li class="nav-item">
+          <a class="nav-link nav_bar_link" href="?action=charity_sign_up">Sign Up Charity</a>
+        </li>
+      <?php endif; ?>
+
     </ul>
   </div>
 </nav>
