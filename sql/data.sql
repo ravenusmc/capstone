@@ -26,4 +26,22 @@ men's clothing
 women shoes
 men's shoes 
 Pet item 
-yard/garden item
+yard/garden item'
+
+
+INSERT INTO CharityType
+  (type_name)
+VALUES 
+  ('Research / Public Policy');
+
+Animals 
+arts/culture
+community development 
+Education
+Environment 
+Health
+Human and Civil Rights
+Human Services
+International
+Religion
+Research / Public Policy

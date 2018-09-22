@@ -36,6 +36,22 @@ CREATE TABLE charities (
         FOREIGN KEY (charityType_ID) REFERENCES charityType(charityType_ID)
 );
 
+
+CREATE TABLE charities (
+    charity_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL, 
+    street VARCHAR(30) NOT NULL,
+    town VARCHAR(30) NOT NULL,
+    state char(2) NOT NULL,
+    zip INT NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    charityType_ID INT NOT NULL,
+    latitude DECIMAL(7, 5) NOT NULL,
+    longitude DECIMAL(7,5) NOT NULL,
+    CONSTRAINT charitiesFKcharitytype
+        FOREIGN KEY (charityType_ID) REFERENCES charityType(charityType_ID)
+);
+
 --ADDED
 CREATE TABLE CharityType (
     charityType_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

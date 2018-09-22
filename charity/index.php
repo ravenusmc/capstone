@@ -23,6 +23,7 @@
       break;
     //This case will bring the ADMIN user ONLY to the charity sign up page 
     case 'charity_sign_up':
+      $charity_types = get_charity_type();
       include('charity_sign_up.php');
       break;
     //This case will bring the user to the search charity page 
