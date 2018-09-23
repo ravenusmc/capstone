@@ -34,14 +34,18 @@ INSERT INTO CharityType
 VALUES 
   ('Research / Public Policy');
 
-Animals 
-arts/culture
-community development 
-Education
+Animals      
+arts/culture   --kids toys
+community development  --kids toys id=4
+Education --kids toys id = 1
 Environment 
 Health
 Human and Civil Rights
-Human Services
-International
-Religion
+Human Services 
+International --kids toys
+Religion --kids toys
 Research / Public Policy
+
+INSERT INTO charityAndItemsTable
+  (charityType_ID, itemCategory_ID)
+VALUES (3, 2)

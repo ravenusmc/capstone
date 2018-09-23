@@ -8,6 +8,7 @@
   
 ?>
 <?php include '../view/header.php'; ?>
+<link rel="stylesheet" type="text/css" href="../assets/css/add_item.css">
 
   <h1>Add Item</h1>
 
@@ -19,12 +20,30 @@
     <input type='hidden' name='user_id' value='<?php echo $id ?>' />
 
     <input placeholder='Item Name' type='text' name='item_name' required>&nbsp;
-    <select name='category_type'>
+    <label>Item Type:</label>
+    <select name='category_type' id='item_category'>
       <?php foreach ($item_categories as $item_category): ?>
         <option value='<?php echo $item_category['itemCategory_ID']; ?>'><?php echo $item_category['category_name']; ?></option>
       <?php endforeach; ?> 
     </select>
 
+    <input onclick='showCharities(); return false;' type="submit" value="See Charity Types" />
+
+    <!-- Start of AJAX charity type test -->
+    <div id='charity_type_selection'>
+      <div id="txtHint">
+        <label>Charity Type</label>
+      </div>
+    </div>
+
+    <!-- End of AJAX charity type test -->
+
+
+
     <input type="submit" value="Add Item" />
   </form>
   <!-- End of form to add item -->
+
+  <a href="?action=see_charities">See Charities</a>
+
+  <script type="text/javascript" src='../assets/js/ajax.js'></script>

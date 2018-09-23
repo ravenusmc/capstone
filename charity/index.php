@@ -49,6 +49,10 @@
       
       include('home.php');
       break;
-  }
+    //This action will allow the user to see charities based on the items they've donated 
+    case 'see_charities':
+      include('see_charities.php');
+      break;
+  } 
 
 ?>
