@@ -33,6 +33,9 @@
         <a class="nav-link nav_bar_link" href="?action=home">Home</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link nav_bar_link" href="../admin/about.php">About</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link nav_bar_link" href="../charity/logout.php">Logout</a>
       </li>
       <?php if ($name == 'admin'): ?>
