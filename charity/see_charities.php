@@ -14,6 +14,7 @@
 <?php foreach ($items as $item): ?>
 
   <h3><?php echo $item['item_name']; ?></h3>
+  <p><?php echo $item['name']; ?></p>
 
 <?php endforeach; ?>
 <!-- End of displaying items -->

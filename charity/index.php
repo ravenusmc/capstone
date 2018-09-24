@@ -56,7 +56,7 @@
       $user_id  = filter_input(INPUT_POST, 'user_id');
 
       //Getting all the items based on the user 
-      $items = get_items_based_on_user($user_id);
+      $items = get_items_charities_each_user($user_id);
 
       include('see_charities.php');
       break;

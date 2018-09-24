@@ -34,18 +34,20 @@ INSERT INTO CharityType
 VALUES 
   ('Research / Public Policy');
 
-Animals      
-arts/culture   --kids toys
-community development  --kids toys id=4
-Education --kids toys id = 1
-Environment 
-Health
-Human and Civil Rights
-Human Services 
-International --kids toys
-Religion --kids toys
-Research / Public Policy
+1. Education --Household
+2. Animals      
+3. arts/culture  
+4. community development --Household
+5. Environment 
+6. Health
+7. Human and Civil Rights
+8. Human Services 
+9.  International --Household
+10. Religion  --Household
+11. Research / Public Policy
 
+
+--Silverware 
 INSERT INTO charityAndItemsTable
   (charityType_ID, itemCategory_ID)
-VALUES (3, 2)
+VALUES (10, 1)
