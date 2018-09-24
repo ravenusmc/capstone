@@ -27,4 +27,17 @@
     $statement->closeCursor();
   }
 
+  //This function will get items based on the user 
+  function get_items_based_on_user($user_id) {
+    global $db;
+    $query = "SELECT * FROM items 
+              WHERE user_id = :user_id";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':user_id', $user_id);
+    $statement->execute();
+    $items = $statement->fetchAll();
+    $statement->closeCursor();
+    return $items;
+  }
+
 ?>

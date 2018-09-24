@@ -51,6 +51,13 @@
       break;
     //This action will allow the user to see charities based on the items they've donated 
     case 'see_charities':
+
+      //Getting the user id 
+      $user_id  = filter_input(INPUT_POST, 'user_id');
+
+      //Getting all the items based on the user 
+      $items = get_items_based_on_user($user_id);
+
       include('see_charities.php');
       break;
   } 

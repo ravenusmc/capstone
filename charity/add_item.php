@@ -38,12 +38,17 @@
 
     <!-- End of AJAX charity type test -->
 
-
-
     <input type="submit" value="Add Item" />
+
   </form>
   <!-- End of form to add item -->
 
-  <a href="?action=see_charities">See Charities</a>
+  <form action='index.php' method='post'>
+
+    <input type="hidden" name="action" value="see_charities" />
+    <input type='' name='user_id' value='<?php echo $id ?>' />
+    <input type="submit" value="See Charities" />
+
+  </form>
 
   <script type="text/javascript" src='../assets/js/ajax.js'></script>
