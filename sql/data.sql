@@ -51,3 +51,52 @@ VALUES
 INSERT INTO charityAndItemsTable
   (charityType_ID, itemCategory_ID)
 VALUES (10, 1)
+
+UPDATE charities 
+SET name = 'Community Center', street = '3333 Buford Dr', town = 'Buford'
+WHERE  charity_id = 5;
+
+UPDATE charities 
+SET latitude = 34.0646432, longitude = -83.9839893
+WHERE  charity_id = 5;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
