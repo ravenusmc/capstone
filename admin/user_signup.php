@@ -1,12 +1,13 @@
-<?php
+<?php 
+  
   //All the code in this file will deal with the signup page 
 
   // Start a session
   session_start();
 
   //Pulling in the databases
-  require('./model/database.php');
-  require('key.php');
+  require('../model/database.php');
+  require('../key.php');
   global $db;
 
   $message = "";
@@ -77,7 +78,7 @@
   }//End of if main conditional 
 
 ?>
-<?php include 'view/header.php'; ?>
+<?php include '../view/header.php'; ?>
 
 <h1>User Sign up</h1>
 

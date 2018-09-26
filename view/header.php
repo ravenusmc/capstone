@@ -20,28 +20,30 @@
 </head>
 <body>
 
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Charity Connection</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link nav_bar_link" href="../charity">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav_bar_link" href="../admin/about.php">About</a>
-      </li>
-      <?php if ($name == 'admin'): ?>
+    <?php if (isset($name)): ?>
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link nav_bar_link" href="?action=charity_sign_up">Sign Up Charity</a>
+          <a class="nav-link nav_bar_link" href="../charity">Home</a>
         </li>
-      <?php endif; ?>
-      <li class="nav-item">
-        <a class="nav-link nav_bar_link" href="../charity/logout.php">Logout</a>
-      </li>
-    </ul>
+        <li class="nav-item">
+          <a class="nav-link nav_bar_link" href="../admin/about.php">About</a>
+        </li>
+        <?php if ($name == 'admin'): ?>
+          <li class="nav-item">
+            <a class="nav-link nav_bar_link" href="?action=charity_sign_up">Sign Up Charity</a>
+          </li>
+        <?php endif; ?>
+        <li class="nav-item">
+          <a class="nav-link nav_bar_link" href="../charity/logout.php">Logout</a>
+        </li>
+      </ul>
+    <?php endif; ?>
   </div>
 </nav>
