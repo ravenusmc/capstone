@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include('view/header.php'); ?>
 <a href='admin/login.php'>User Login</a>
 <a href='admin/user_signup.php'>User Sign Up</a>
 
