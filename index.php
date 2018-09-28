@@ -1,6 +1,38 @@
 <?php include 'view/header.php'; ?>
-<h1>Landing Page</h1>
-
-
 <a href='admin/login.php'>User Login</a>
 <a href='admin/user_signup.php'>User Sign Up</a>
+
+
+
+<header>
+<img src="#" alt="" class="">
+<h1 class="">Landing Page</h1>
+</header>
+<main>
+<section class="" id="problem">
+     <h2 class="homePageHeading">Problem</h2>
+     <p>This is where we'll list out the problem.</p>
+</section>
+
+<section class="" id="solution">
+     <h2 class="homePageHeading">How we solve it</h2>
+     <p>This is where we'll list out how we solve the problem.</p>
+</section>
+
+<h3 class="ctaHeading">Interested in donating?</h3>
+<a href="admin/user_signup.php" class="ctaBtn">Sign up!</a>
+
+<section class="" id="searchCharities"> 
+     <h2 class="homePageHeading">See charities in my area</h2>
+     <form action="" method="post" class="">
+          <input type="text" placeholder="Enter your address" class="" id="enterAddress">
+          <input type="submit" value="Go!">
+     </form>
+     <p><a href="">Advanced Search</a></p>
+</section>
+</main>
+
+<?php include('view/footer.php');
+
+
+
