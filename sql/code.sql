@@ -72,15 +72,24 @@ CREATE TABLE charityAndItemsTable (
         FOREIGN KEY (itemCategory_ID) REFERENCES itemCategories(itemCategory_ID)
 );
 
+--Added 
+CREATE TABLE charity_favorites (
+    favorite_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    charity_id INT NOT NULL,
+    favorite CHAR(1) NOT NULL,
+    CONSTRAINT charity_favoritiesFKcharities
+        FOREIGN KEY (charity_id) REFERENCES charities(charity_id)
+);
+
 --Works
-SELECT u.latitude as "user_lat", u.longitude as "user_long", c.charity_id, i.item_name, ct.type_name, c.name, c.street, c.town, c.state, c.zip, c.latitude, c.longitude FROM items i
-JOIN users u on u.user_id = i.user_id
-JOIN itemCategories ic on ic.itemCategory_ID = i.itemCategory_ID
-JOIN charityAndItemsTable cit on ic.itemCategory_ID = cit.itemCategory_ID
-JOIN charities c on c.charityType_ID = cit.charityType_ID
-JOIN CharityType ct on ct.charityType_ID = c.charityType_ID
-WHERE i.user_id = 3
-ORDER BY item_name;
+-- SELECT u.latitude as "user_lat", u.longitude as "user_long", c.charity_id, i.item_name, ct.type_name, c.name, c.street, c.town, c.state, c.zip, c.latitude, c.longitude FROM items i
+-- JOIN users u on u.user_id = i.user_id
+-- JOIN itemCategories ic on ic.itemCategory_ID = i.itemCategory_ID
+-- JOIN charityAndItemsTable cit on ic.itemCategory_ID = cit.itemCategory_ID
+-- JOIN charities c on c.charityType_ID = cit.charityType_ID
+-- JOIN CharityType ct on ct.charityType_ID = c.charityType_ID
+-- WHERE i.user_id = 3
+-- ORDER BY item_name;
 
 INSERT INTO `itemCategories` (`itemCategory_ID`, `category_name`) VALUES
 (1, 'Household'),

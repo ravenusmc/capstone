@@ -24,6 +24,12 @@
   <p>Charity Type: <?php echo $item['type_name']; ?></p>
   <p><?php echo $item['street'] . ' ' . $item['town'] . ' ' . $item['state'] . ' ' . $item['street']; ?></p>
 
+  <form action="index.php" method="post">
+    <input type="hidden" name="action" value="see_single_charity">
+    <input type="hidden" name="charity_id" value="<?php echo $item['charity_id']; ?>">
+    <input class='input_style' type="submit" value="More Info">
+  </form>
+
   <div id="map_<?php echo $item['charity_id'] . $item['item_name']; ?>" class='map'>
   </div>
 
@@ -71,56 +77,6 @@
 
   });
   
-
-  ////////////////////////// OLD CODE WILL EVENTUALLY DELETE ///////////////////////////////
-    // function initMap() {
-
-    //   var map_id = 'map_' + '<?php echo $item['charity_id']; ?>';
-
-    //   //This is the lat and long of the charity
-    //   var charity_latitude = Number('<?php echo $item['latitude']; ?>')
-    //   var charity_longitude = Number('<?php echo $item['longitude']; ?>')
-
-    //   //This is the lat and long of the user. 
-    //   var user_latitude = Number('<?php echo $item['user_lat']; ?>')
-    //   var user_longitude = Number('<?php echo $item['user_long']; ?>')
-
-    //   var markers = [
-    //     ['User', user_latitude, user_longitude, ('http://maps.google.com/mapfiles/ms/icons/green-dot.png')],
-    //     ['<?php echo $item['name']; ?>', charity_latitude, charity_longitude, ('http://maps.google.com/mapfiles/ms/icons/red-dot.png') ]
-    //   ]
-
-
-    //   var chairtyLatLng = {lat: Number('<?php echo $item['latitude']; ?>'), lng: Number('<?php echo $item['longitude']; ?>') };
-
-    //   //This sets up the google map object and centers the map based on the user. 
-    //   var map = new google.maps.Map(document.getElementById(map_id), {
-    //       center: chairtyLatLng,
-    //       zoom: 12
-    //     });
-
-    //   // Create a marker and set its position.
-    //   // var marker = new google.maps.Marker({
-    //   //   map: map,
-    //   //   position: myLatLng
-    //   // });
-
-    //   //To post multiple markers I use this code 
-    //   for (var i = 0; i < markers.length; i++){
-    //     var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-    //     var marker = new google.maps.Marker({
-    //       position: position,
-    //       icon: markers[i][3],
-    //       map: map
-    //     })
-
-    //   }
-
-    //   //google.maps.event.addDomListener(window, 'load', initialize);
-
-    // } 
-
-  // });
 
   </script>
   <!-- End of Google maps Code -->
