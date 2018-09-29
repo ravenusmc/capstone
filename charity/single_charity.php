@@ -21,6 +21,7 @@
   <p>Make Favorite Charity?</p>
   <form action="index.php" method="post">
     <input type="hidden" name="action" value="add_favorite_charity">
+    <input type="hidden" name="user_id" value="<?php echo $id; ?>">
     <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
     <input type='radio' name='favorite' value='y' checked>Yes<br>
     <input type='radio' name='favorite' value='n'>no<br>

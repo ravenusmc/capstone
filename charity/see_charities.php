@@ -8,8 +8,6 @@
   $name = $_SESSION["username"];
   $id = $_SESSION["user_id"];
 
-
-
 ?>
 <?php include '../view/header.php'; ?>
 <link rel="stylesheet" type="text/css" href="../assets/css/see_charities.css">
