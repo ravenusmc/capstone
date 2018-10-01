@@ -15,6 +15,8 @@
 <br>
 <a href="?action=add_item_form">Add Item to Donate</a>
 
+<hr>
+
 <h2>Your Favorite Charities:</h2>
 
 <?php foreach ($charities as $charity): ?>
