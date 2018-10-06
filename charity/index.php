@@ -1,5 +1,10 @@
 <?php
   
+  session_start();
+
+  $name = $_SESSION["username"];
+  $id = $_SESSION["user_id"];
+  
   //Pulling in the databases
   require('../model/database.php');
   require('../model/charities.php');
@@ -19,6 +24,11 @@
 
     //This case brings the user to the home page 
     case 'home':
+
+      //Getting all the favorite charities for the user 
+      $charities = get_favorite_charities($id);
+      
+      //This line will get all of the favorite charities from the user 
       include('home.php');
       break;
     //This case will bring the ADMIN user ONLY to the charity sign up page 
@@ -57,6 +67,25 @@
 
       //Getting all the items based on the user 
       $items = get_items_charities_each_user($user_id);
+
+      include('see_charities.php');
+      break;
+    //This action will allow the user to see information on an individual charity 
+    case 'see_single_charity':
+      $charity_id = filter_input(INPUT_POST, 'charity_id');
+
+      $charity = get_single_charity($charity_id);
+
+      include('single_charity.php');
+      break; 
+    //This action will make a charity a favorite 
+    case 'add_favorite_charity':
+      $favorite = filter_input(INPUT_POST, 'favorite');
+      $charity_id = filter_input(INPUT_POST, 'charity_id');
+      $user_id = filter_input(INPUT_POST, 'user_id');
+
+      //Inserting data in user_tables
+      insert_into_favorites($favorite, $charity_id, $user_id);
 
       include('see_charities.php');
       break;

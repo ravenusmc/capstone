@@ -19,10 +19,18 @@
   //Getting the charities based on the id
   $all_charities = get_all_charities_based_on_type($charity_id);
 
+  // $count = 1;
+
   //Displaying the results
   foreach ($all_charities as $charity) {
     echo "<p>" . $charity['name'] . "</p>";
     echo "<p>" . $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state'] . "</p>";
+    echo "<a href=" . $charity['name'] . ">" . $charity['name'] . "</a>";
+    // if ($count == 0){
+    //   echo '<p>' . 'Zer' . '</p>';
+    // }else if ($count == 1){
+    //   echo '<p>' . 'One' . '</p>';
+    // }
   }
 
 ?>

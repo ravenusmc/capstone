@@ -61,6 +61,21 @@ SET latitude = 34.0646432, longitude = -83.9839893
 WHERE  charity_id = 5;
 
 
+--Works
+SELECT u.latitude as "user_lat", u.longitude as "user_long", c.charity_id, i.item_name, ct.type_name, c.name, c.street, c.town, c.state, c.zip, c.latitude, c.longitude FROM items i
+JOIN users u on u.user_id = i.user_id
+JOIN itemCategories ic on ic.itemCategory_ID = i.itemCategory_ID
+JOIN charityAndItemsTable cit on ic.itemCategory_ID = cit.itemCategory_ID
+JOIN charities c on c.charityType_ID = cit.charityType_ID
+JOIN CharityType ct on ct.charityType_ID = c.charityType_ID
+WHERE i.user_id = 3
+ORDER BY item_name;
+
+SELECT c.name, c.street, c.town, c.state, c.zip FROM charity_favorites cf
+JOIN charities c ON c.charity_id = cf.charity_id
+WHERE cf.user_id = 3;
+
+
 
 
 
