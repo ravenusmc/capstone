@@ -94,7 +94,11 @@
       $user_id = filter_input(INPUT_POST, 'user_id');
       $charity_id = filter_input(INPUT_POST, 'charity_id');
 
-      echo $charity_id;
+      //Calling the function to change status of favorites 
+      change_favorite_table($user_id, $charity_id);
+      
+      include('home.php');
+      break;
   } 
 
 ?>

@@ -80,8 +80,15 @@
   }
 
   //This function will update the charity_favorites table to make it go from a favorite to not a favorite
-  function change_favorite_table(){
-
-  }
+  function change_favorite_table($user_id, $charity_id){
+    global $db;
+    $query = "UPDATE charity_favorites SET favorite = 'n' 
+    WHERE user_id = :user_id AND charity_id = :charity_id";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':user_id', $user_id);
+    $statement->bindValue(':charity_id', $charity_id);
+    $statement->execute();
+    $statement->closeCursor();
+  } 
 
 ?>    
