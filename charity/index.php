@@ -89,6 +89,12 @@
 
       include('see_charities.php');
       break;
+    //This action will update a favorite charite 
+    case 'update_favorite_charity':
+      $user_id = filter_input(INPUT_POST, 'user_id');
+      $charity_id = filter_input(INPUT_POST, 'charity_id');
+
+      echo $charity_id;
   } 
 
 ?>

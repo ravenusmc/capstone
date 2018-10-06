@@ -68,15 +68,20 @@
   //This function gets all of the favorite charities for each user
   function get_favorite_charities($user_id){
     global $db;
-    $query = "SELECT c.name, c.street, c.town, c.state, c.zip FROM charity_favorites cf
+    $query = "SELECT c.charity_id, c.name, c.street, c.town, c.state, c.zip FROM charity_favorites cf
               JOIN charities c ON c.charity_id = cf.charity_id
-              WHERE cf.user_id = :user_id";
+              WHERE cf.user_id = :user_id AND cf.favorite = 'y'";
     $statement = $db->prepare($query);
     $statement->bindValue(':user_id', $user_id);
     $statement->execute();
     $charities = $statement->fetchAll();
     $statement->closeCursor();
     return $charities;
+  }
+
+  //This function will update the charity_favorites table to make it go from a favorite to not a favorite
+  function change_favorite_table(){
+
   }
 
 ?>    
