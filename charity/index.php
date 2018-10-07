@@ -99,6 +99,15 @@
       
       include('home.php');
       break;
+    //This action will take the user to the page to see the charities by zip
+    case 'see_charity_by_zip':
+      $zip = filter_input(INPUT_POST, 'zip');
+
+      //Getting all charities by zip 
+      $charities = get_charity_by_zip($zip);
+
+      include('charity_by_zip.php');
+      break; 
   } 
 
 ?>

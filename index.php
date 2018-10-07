@@ -24,8 +24,9 @@
 
 <section class="" id="searchCharities"> 
      <h2 class="homePageHeading">See charities in my area</h2>
-     <form action="" method="post" class="">
-          <input type="text" placeholder="Enter your address" class="" id="enterAddress">
+     <form action="charity/index.php" method="post" class="">
+          <input type="hidden" name="action" value="see_charity_by_zip">
+          <input type="text" name='zip' placeholder="Enter your zip code" class="" id="enterAddress">
           <input type="submit" value="Go!">
      </form>
      <p><a href="">Advanced Search</a></p>
