@@ -23,6 +23,12 @@
   <p>Charity Name: <?php echo $charity['name']; ?></p>
   <p>Address: <?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
   <br>
+  <form method="post">
+    <input type="hidden" name="action" value="update_favorite_charity">
+    <input type="hidden" name="user_id" value="<?php echo $id; ?>">
+    <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+    <button type="submit" class="btn btn-danger">unfavorite</button>
+  </form>
 <?php endforeach; ?> 
 
 

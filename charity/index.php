@@ -89,6 +89,25 @@
 
       include('see_charities.php');
       break;
+    //This action will update a favorite charite 
+    case 'update_favorite_charity':
+      $user_id = filter_input(INPUT_POST, 'user_id');
+      $charity_id = filter_input(INPUT_POST, 'charity_id');
+
+      //Calling the function to change status of favorites 
+      change_favorite_table($user_id, $charity_id);
+      
+      include('home.php');
+      break;
+    //This action will take the user to the page to see the charities by zip
+    case 'see_charity_by_zip':
+      $zip = filter_input(INPUT_POST, 'zip');
+
+      //Getting all charities by zip 
+      $charities = get_charity_by_zip($zip);
+
+      include('charity_by_zip.php');
+      break; 
   } 
 
 ?>

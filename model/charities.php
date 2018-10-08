@@ -66,17 +66,43 @@
   }
 
   //This function gets all of the favorite charities for each user
-  function get_favorite_charities($user_id){
+  function get_favorite_charities($user_id) {
     global $db;
-    $query = "SELECT c.name, c.street, c.town, c.state, c.zip FROM charity_favorites cf
+    $query = "SELECT c.charity_id, c.name, c.street, c.town, c.state, c.zip FROM charity_favorites cf
               JOIN charities c ON c.charity_id = cf.charity_id
-              WHERE cf.user_id = :user_id";
+              WHERE cf.user_id = :user_id AND cf.favorite = 'y'";
     $statement = $db->prepare($query);
     $statement->bindValue(':user_id', $user_id);
     $statement->execute();
     $charities = $statement->fetchAll();
     $statement->closeCursor();
     return $charities;
+  }
+
+  //This function will update the charity_favorites table to make it go from a favorite to not a favorite
+  function change_favorite_table($user_id, $charity_id) {
+    global $db;
+    $query = "UPDATE charity_favorites SET favorite = 'n' 
+    WHERE user_id = :user_id AND charity_id = :charity_id";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':user_id', $user_id);
+    $statement->bindValue(':charity_id', $charity_id);
+    $statement->execute();
+    $statement->closeCursor();
+  } 
+
+  //This function will get a charity based on zip code 
+  function get_charity_by_zip($zip) {
+    global $db; 
+    $query = "SELECT * FROM charities 
+              WHERE zip = :zip";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':zip', $zip);
+    $statement->execute();
+    $charities = $statement->fetchAll();
+    $statement->closeCursor();
+    return $charities;
+
   }
 
 ?>    
