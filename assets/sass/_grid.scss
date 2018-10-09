@@ -2,13 +2,67 @@
 
 // add the breakpoint and then add the grid.
 
-/*  
-.homePageSection {}
 
-.homePageHeading {}
+@media screen and (min-width: 768px) {
+  
+     .pageMain {
+          display: grid;
+          width: 100%;
+          margin: 0 auto;
+          grid-template-areas: 
+               "section1 section2"
+               "section1 section2"
+               "cta1 cta1"
+               "cta2 cta2";
+     }  
 
-.ctaSection {}
+     #problem {
+          display: grid;
+          grid-area: section1;
+          grid-template-areas: 
+               "heading"
+               "paragraph";
+          padding: 1em;
+          
+     }
 
-.ctaHeading {}
+     #solution {
+          display: grid;
+          grid-area: section2;
+          grid-template-areas: 
+               "heading"
+               "paragraph";
+          padding: 1em;
+          
+     }
 
-*/
+     .homePageHeading {
+          display: grid;
+          grid-area: heading;
+          text-align: center;
+          padding: .5em;
+     }
+
+     .homePageSection p {
+          display: grid;
+          grid-area: paragraph;
+          padding: .5em;
+     }
+
+     #ctaSignUp {
+          display: grid;
+          grid-area: cta1;
+     
+     }
+
+     .ctaHeading {
+          text-align: left;
+     }
+
+     #ctaSearch {
+          display: grid;
+          grid-area: cta2;
+     }
+
+
+}

@@ -3,30 +3,135 @@
 // Variables
 @import '_variables.scss';
 @import '_mixins.scss';
+@import '_grid.scss';
 
 
+// ----------------------------------------//
+/* General typography and color styles */
+// ----------------------------------------//
 
-// Customizations
+body {
+     color: $darkBlue;
+}
+
+p {
+     font-family: $serif, serif;
+     font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+     font-family: $sans, sans-serif;
+}
+
+// ----------------------------------------//
+/* Customizations */
+// ----------------------------------------//
+
+// ----------------------------------------//
+//navbar
+// ----------------------------------------//
+
 .logoNav {
      max-height: 75px;
      width: 50%;
 }
 
+.navbar-brand {
+     margin: .5em;
+}
+
+.navbar-toggler {
+     color: $logoBlue;
+     opacity: 1;
+     border: 1px solid $logoBlue;
+
+     &:hover {
+          background-color: $logoBlue;
+          color: $logoYellow;
+     }
+}
+
+.bg-yellow {
+     background-color: $paleYellow;
+}
+
+.loginLinks {
+     float: right;
+     padding: .5em 0;
+}
+
+.loginBtn {
+     background-color: $logoBlue;
+     color: $logoYellow;
+
+     &:hover {
+          background-color: $darkBlue;
+          color: $logoYellow;
+     }
+} 
+
+// ----------------------------------------//
+//header 
+// ----------------------------------------//
+
 .headerImg {
      background-size: cover;
      width: 100%;
+     position: relative;
 }
 
+.headerText {
+     text-align: center;
+     position: absolute;
+     bottom: 1em;
+     color: white;
+     z-index: 5;
+}
+
+// ----------------------------------------//
+//main sections
+// ----------------------------------------//
 
 .pageMain {
      width: 90%;
      margin: 0 auto;
 }
 
-.homePageSection {}
+.homePageTitle {
+     text-align: center;
+}
 
-.homePageHeading {}
 
-.ctaSection {}
+.homePageHeading {
+     text-align: center;
+}
 
-.ctaHeading {}
+
+
+// ----------------------------------------//
+//About page
+// ----------------------------------------//
+
+
+// ----------------------------------------//
+//Log in page
+// ----------------------------------------//
+
+
+// ----------------------------------------//
+//Sign up page
+// ----------------------------------------//
+
+
+// ----------------------------------------//
+// Add Items page
+// ----------------------------------------//
+
+// ----------------------------------------//
+// Map results page
+// ----------------------------------------//
+
+// ----------------------------------------//
+// thank you page
+// ----------------------------------------//
+
