@@ -1,35 +1,50 @@
-<?php include('view/header.php'); ?>
+<?php 
+include('view/header.php'); ?>
+
 <a href='admin/login.php'>User Login</a>
 <a href='admin/user_signup.php'>User Sign Up</a>
 
 
 
 <header>
-<img src="#" alt="" class="">
-<h1 class="">Landing Page</h1>
+<img src="assets/images/heartsWeb.jpg" alt="string of paper hearts" class="headerImg">
+<h1 class="">Welcome to Charity Connection</h1>
 </header>
-<main>
-<section class="" id="problem">
-     <h2 class="homePageHeading">Problem</h2>
+
+<main class="pageMain">
+
+<section class="homePageSection" id="problem">
+     <h2 class="homePageHeading">What's the problem?</h2>
      <p>This is where we'll list out the problem.</p>
 </section>
 
-<section class="" id="solution">
+<section class="homePageSection" id="solution">
      <h2 class="homePageHeading">How we solve it</h2>
      <p>This is where we'll list out how we solve the problem.</p>
 </section>
 
-<h3 class="ctaHeading">Interested in donating?</h3>
-<a href="admin/user_signup.php" class="ctaBtn">Sign up!</a>
+<section class="ctaSection">
+     <h3 class="ctaHeading">Interested in donating?</h3>
+     <a href="admin/user_signup.php" class="ctaBtn">Sign up!</a>
+</section>
 
-<section class="" id="searchCharities"> 
-     <h2 class="homePageHeading">See charities in my area</h2>
+<section class="ctaSection" id="searchCharities"> 
+     <h3 class="ctaHeading">See charities in my area</h3>
      <form action="charity/index.php" method="post" class="">
           <input type="hidden" name="action" value="see_charity_by_zip">
           <input type="text" name='zip' placeholder="Enter your zip code" class="" id="enterAddress">
           <input type="submit" value="Go!">
      </form>
-     <p><a href="">Advanced Search</a></p>
+     <p class="advSearch"><a href="">Advanced Search</a></p>
+     <section class="advSearchHidden">
+          <form action="" method="" class="advSearchByType">
+               <select name="byType">
+                     
+               </select>
+          </form>
+
+     </section>
+
 </section>
 </main>
 

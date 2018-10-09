@@ -84,7 +84,7 @@ CREATE TABLE charity_favorites (
         FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
-INSERT INTO `itemCategories` (`itemCategory_ID`, `category_name`) VALUES
+INSERT INTO itemCategories (itemCategory_ID, category_name) VALUES
 (1, 'Household'),
 (2, 'Kids Toys'),
 (3, 'Kids Clothes'),
@@ -97,12 +97,12 @@ INSERT INTO `itemCategories` (`itemCategory_ID`, `category_name`) VALUES
 (10, 'Pet Item'),
 (11, 'Yard/Garden Item');
 
-INSERT INTO `charities` (`charity_id`, `name`, `street`, `town`, `state`, `zip`, `password`, `charityType_ID`, `latitude`, `longitude`) VALUES
+INSERT INTO charities (charity_id, name, street, town, state, zip, password, charityType_ID, latitude, longitude) VALUES
 (1, 'Game Stop', '3385 Woodward Crossing Blvd', 'Buford', 'GA', 30519, '12', 2, '34.06940', '-83.98427'),
 (4, 'The Church', '2228 Kilgore Road', 'Buford', 'GA', 30519, '12', 10, '34.08097', '-83.97317'),
 (5, 'My House', '2460 Chandler Grove Drive', 'Buford', 'GA', 30519, '12', 4, '34.08977', '-83.96808');
 
-INSERT INTO `charityAndItemsTable` (`charityType_ID`, `itemCategory_ID`) VALUES
+INSERT INTO charityAndItemsTable (charityType_ID, itemCategory_ID) VALUES
 (1, 2),
 (4, 2),
 (3, 2),
@@ -111,7 +111,7 @@ INSERT INTO `charityAndItemsTable` (`charityType_ID`, `itemCategory_ID`) VALUES
 (9, 1),
 (10, 1);
 
-INSERT INTO `CharityType` (`charityType_ID`, `type_name`) VALUES
+INSERT INTO CharityType (charityType_ID, type_name) VALUES
 (1, 'Education'),
 (2, 'Animals'),
 (3, 'Arts/Culture'),
@@ -124,13 +124,13 @@ INSERT INTO `CharityType` (`charityType_ID`, `type_name`) VALUES
 (10, 'Religion'),
 (11, 'Research / Public Policy');
 
-INSERT INTO `items` (`item_ID`, `item_name`, `itemCategory_ID`, `user_id`) VALUES
+INSERT INTO items (item_ID, item_name, itemCategory_ID, user_id) VALUES
 (1, 'Toy Truck', 2, 2),
 (2, 'It', 4, 2),
 (3, 'Toy Truck', 2, 3),
-(5, 'kitchenware ', 1, 3);
+(5, 'kitchenware', 1, 3);
 
-INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `email`, `street`, `town`, `state`, `zip`, `latitude`, `longitude`, `username`, `password`) VALUES
+INSERT INTO users (user_id, firstname, lastname, email, street, town, state, zip, latitude, longitude, username, password) VALUES
 (2, 'Gus', 'Cain', 'a1@yahoo.com', '2460 Chandler Grove Drive', 'Buford', 'GA', 30519, '34.08977', '-83.96808', 'Gus', '$2y$10$OmqRvT.zYoJykdDyih6Xs.D4YHGw8xRixcjorstjDr9qgVYkiW/O6'),
 (3, 'Admin', 'Admin', 'a2@yahoo.com', '2460 Chandler Grove Drive', 'Buford', 'GA', 30519, '34.08977', '-83.96808', 'Admin', '$2y$10$5yKVeCrNBGlTQpOJijsHlu1jhKHapca3PAeDA6UpUJGkhueYOrQgW');
 

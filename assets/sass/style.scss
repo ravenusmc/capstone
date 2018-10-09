@@ -4,11 +4,29 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 
-// Bootstrap SASS
 
 
 // Customizations
-body {
-     background-color: red;
+.logoNav {
+     max-height: 75px;
+     width: 50%;
 }
 
+.headerImg {
+     background-size: cover;
+     width: 100%;
+}
+
+
+.pageMain {
+     width: 90%;
+     margin: 0 auto;
+}
+
+.homePageSection {}
+
+.homePageHeading {}
+
+.ctaSection {}
+
+.ctaHeading {}
