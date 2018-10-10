@@ -1,12 +1,12 @@
 <?php
-  session_start();
+  //session_start();
   
   //This variable will be a flag to verify if the user is currently in a session
   //or just browsing. 
   //$name = $_SESSION["username"];
-  $name = 'Hello World!';
+  // $name = 'Hello World!';
   //$id = $_SESSION["user_id"];
-  $id = 'MyMyselfandI';
+  // $id = 'MyMyselfandI';
 
  
   

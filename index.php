@@ -64,6 +64,7 @@ include('view/header.php'); ?>
 </section>
 </main>
 
+<script type="text/javascript" src='assets/js/landing.js'></script>
 <?php include('view/footer.php');
 
 
