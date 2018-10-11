@@ -1,0 +1,9 @@
+@mixin customBtn {
+     background-color: $logoBlue;
+     color: $logoYellow;
+     text-align: center;
+}
+
+@mixin customBtnHover {
+     background-color: $darkBlue;
+}

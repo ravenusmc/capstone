@@ -21,6 +21,10 @@
     padding: 1em;
   }
 
+  .homePageSection {
+    align-self: start;
+  }
+
   .homePageHeading {
     display: grid;
     grid-area: heading;
@@ -62,6 +66,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Ministry", sans-serif;
 }
 
+/* Accessibility-related */
+#skip a {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+#skip a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
 /* Customizations */
 .logoNav {
   max-height: 75px;
@@ -94,10 +113,10 @@ h1, h2, h3, h4, h5, h6 {
 .loginBtn {
   background-color: #2E3192;
   color: #F9ED32;
+  text-align: center;
 }
 .loginBtn:hover {
   background-color: #0B0C25;
-  color: #F9ED32;
 }
 
 .headerImg {
@@ -111,7 +130,13 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: 1em;
   color: white;
+  text-shadow: 3px 1px 3px black;
   z-index: 5;
+  text-transform: uppercase;
+  font-family: "Ministry";
+  font-size: 4em;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .pageMain {
@@ -121,10 +146,45 @@ h1, h2, h3, h4, h5, h6 {
 
 .homePageTitle {
   text-align: center;
+  margin-top: 1em;
 }
 
 .homePageHeading {
   text-align: center;
+}
+
+.ctaSection {
+  width: 50%;
+  margin: 2em auto;
+  text-align: center;
+}
+.ctaSection h3 {
+  text-align: center;
+}
+
+.ctaBtn {
+  background-color: #2E3192;
+  color: #F9ED32;
+  text-align: center;
+}
+.ctaBtn:hover {
+  background-color: #0B0C25;
+}
+
+#advSearchBtn {
+  margin-top: 1em;
+  background-color: #2E3192;
+  color: #F9ED32;
+  text-align: center;
+  font-family: "Ministry";
+}
+#advSearchBtn:hover {
+  background-color: #0B0C25;
+}
+
+.advSearchHidden {
+  display: block;
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

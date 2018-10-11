@@ -23,6 +23,30 @@ h1, h2, h3, h4, h5, h6 {
      font-family: $sans, sans-serif;
 }
 
+
+// ----------------------------------------//
+/* Accessibility-related */
+// ----------------------------------------//
+
+#skip a { 
+     position:absolute; 
+     left:-10000px; 
+     top:auto; 
+     width:1px; 
+     height:1px; 
+     overflow:hidden;
+
+     &:focus {
+          position:static; 
+          width:auto; 
+          height:auto;
+     }
+} 
+
+
+
+
+
 // ----------------------------------------//
 /* Customizations */
 // ----------------------------------------//
@@ -61,12 +85,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loginBtn {
-     background-color: $logoBlue;
-     color: $logoYellow;
+     @include customBtn;
 
      &:hover {
-          background-color: $darkBlue;
-          color: $logoYellow;
+          @include customBtnHover;
      }
 } 
 
@@ -85,7 +107,13 @@ h1, h2, h3, h4, h5, h6 {
      position: absolute;
      bottom: 1em;
      color: white;
+     text-shadow: 3px 1px 3px black;
      z-index: 5;
+     text-transform: uppercase;
+     font-family: $sans;
+     font-size: 4em;
+     width: 100%;
+     margin: 0 auto;
 }
 
 // ----------------------------------------//
@@ -99,6 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .homePageTitle {
      text-align: center;
+     margin-top: 1em;
 }
 
 
@@ -106,6 +135,42 @@ h1, h2, h3, h4, h5, h6 {
      text-align: center;
 }
 
+.ctaSection {
+     width: 50%;
+     margin: 2em auto;
+     text-align: center;
+
+     h3 {
+          text-align: center;
+     }
+}
+
+.ctaBtn {
+     @include customBtn;
+     //max-width: 15%;
+
+     &:hover {
+          @include customBtnHover;
+     }
+}
+
+#advSearchBtn {
+     //max-width: 15%;
+     margin-top: 1em;
+     @include customBtn;
+     font-family: $sans;
+     //font-weight: 200;
+     //font-size: .75em;
+
+     &:hover {
+          @include customBtnHover;
+     }
+}
+
+.advSearchHidden {
+     display: block;
+     visibility: hidden;
+}
 
 
 // ----------------------------------------//
