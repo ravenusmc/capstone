@@ -26,6 +26,7 @@
 </head>
 
 <body>
+<div id="skip"><a href="#pageMain">Skip to Main Content</a></div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-yellow">
   <a class="navbar-brand" href="index.php"><img src="assets/images/logo-blue-text.svg" class="logoNav" alt="Charity Connection Logo"></a>
