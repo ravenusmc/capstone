@@ -84,6 +84,18 @@ CREATE TABLE charity_favorites (
         FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
+CREATE TABLE donations (
+    donation_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    items_list VARCHAR(255) NOT NULL,
+    charity_id INT NOT NULL,
+    date DATETIME NOT NULL,
+    CONSTRAINT donationsFKuser_ID
+        FOREIGN KEY (user_id) REFERENCES users(user_id),
+    CONSTRAINT donationsFKcharities
+        FOREIGN KEY (charity_id) REFERENCES charities(charity_id)
+);
+
 INSERT INTO itemCategories (itemCategory_ID, category_name) VALUES
 (1, 'Household'),
 (2, 'Kids Toys'),
