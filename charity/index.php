@@ -7,6 +7,7 @@
   
   //Pulling in the databases
   require('../model/database.php');
+    require('../model/users.php');
   require('../model/charities.php');
   require('../model/items.php');
 
@@ -24,6 +25,15 @@
 
     //This case brings the user to the home page 
     case 'home':
+
+      //Getting the users zip code 
+      $zip = get_user_zip($name);
+
+      //Getting the actual zip from the above query
+      $zip = $zip['zip'];
+
+      //Getting all charities based on user zip
+      $all_charities = get_charity_by_zip($zip);
 
       //Getting all the favorite charities for the user 
       $charities = get_favorite_charities($id);

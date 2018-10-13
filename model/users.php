@@ -17,6 +17,18 @@
     return $user; 
   }
 
+  function get_user_zip($name) {
+    global $db;
+    $query = "SELECT zip FROM users 
+            WHERE username = :username";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':username', $name);
+    $statement->execute();
+    $zip = $statement->fetch();
+    $statement->closeCursor();
+    return $zip;
+  }
+
 
 
 

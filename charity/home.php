@@ -15,6 +15,15 @@
 <br>
 <a href="?action=add_item_form">Add Item to Donate</a>
 
+<h2>Charities Near You:</h2>
+
+
+<?php foreach ($all_charities as $charity): ?>
+  <p>Charity Name: <?php echo $charity['name']; ?></p>
+  <p>Address: <?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
+<?php endforeach; ?> 
+
+
 <hr>
 
 <h2>Your Favorite Charities:</h2>

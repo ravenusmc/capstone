@@ -102,7 +102,7 @@
     $charities = $statement->fetchAll();
     $statement->closeCursor();
     return $charities;
-
   }
+
 
 ?>    
