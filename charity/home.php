@@ -13,16 +13,25 @@
 
 <a href="?action=search_charities">Search Charities</a>
 <br>
+<br>
+<a href="?action=select_charity_form">Donations List</a>
+<br>
+
 <a href="?action=add_item_form">Add Item to Donate</a>
+<p>The above two links will probably change/go away</p>
 
 <h2>Charities Near You:</h2>
-
 
 <?php foreach ($all_charities as $charity): ?>
   <p>Charity Name: <?php echo $charity['name']; ?></p>
   <p>Address: <?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
+  <form method="post">
+    <input type="hidden" name="action" value="donate_page_form">
+    <input type="hidden" name="user_id" value="<?php echo $id; ?>">
+    <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+    <button type="submit" class="btn btn-primary">Donate</button>
+  </form>
 <?php endforeach; ?> 
-
 
 <hr>
 
@@ -31,6 +40,13 @@
 <?php foreach ($charities as $charity): ?>
   <p>Charity Name: <?php echo $charity['name']; ?></p>
   <p>Address: <?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
+  <br>  
+  <form method="post">
+    <input type="hidden" name="action" value="donate_page_form">
+    <input type="hidden" name="user_id" value="<?php echo $id; ?>">
+    <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+    <button type="submit" class="btn btn-primary">Donate</button>
+  </form>
   <br>
   <form method="post">
     <input type="hidden" name="action" value="update_favorite_charity">

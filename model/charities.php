@@ -104,5 +104,21 @@
     return $charities;
   }
 
+  //This function will add a donation to the donations table 
+  function add_donation($user_id, $items_list, $charity_id, $today){
+    global $db;
+    $query = "INSERT INTO donations 
+              (user_id, items_list, charity_id, created)
+              VALUES 
+              (:user_id, :items_list, :charity_id, :created)";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':user_id', $user_id);
+    $statement->bindValue(':items_list', $items_list);
+    $statement->bindValue(':charity_id', $charity_id);
+    $statement->bindValue(':created', $today);
+    $statement->execute();
+    $statement->closeCursor();
+  }
+
 
 ?>    

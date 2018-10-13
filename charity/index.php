@@ -118,6 +118,29 @@
 
       include('charity_by_zip.php');
       break; 
+    //This action will take the user to the donation page 
+    case 'donate_page_form':
+      $charity_id = filter_input(INPUT_POST, 'charity_id');
+      $user_id = filter_input(INPUT_POST, 'user_id');
+
+      include('donate_page_form.php');
+      break;
+    //This action will add donations to a charity once the user submits the form 
+    case 'donations_form_submitted': 
+      $items_list = filter_input(INPUT_POST, 'items_list');
+      $user_id = filter_input(INPUT_POST, 'user_id');
+      $charity_id = filter_input(INPUT_POST, 'charity_id');
+
+      //Getting the current time to insert into the database.
+      date_default_timezone_set('US/Eastern');
+      $today = date("Y-m-d G:i:s");
+
+      //Adding the data to the donations table.
+      add_donation($user_id, $items_list, $charity_id, $today);
+
+      header('Location: .?action=home');
+      //include('home.php');
+      break;
   } 
 
 ?>
