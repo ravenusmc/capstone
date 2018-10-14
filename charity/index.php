@@ -127,16 +127,44 @@
       break;
     //This action will add donations to a charity once the user submits the form 
     case 'donations_form_submitted': 
+      //Creating an array to hold all of the user inputed items 
+      $items = array();
+
       $items_list = filter_input(INPUT_POST, 'items_list');
       $user_id = filter_input(INPUT_POST, 'user_id');
       $charity_id = filter_input(INPUT_POST, 'charity_id');
+
+      $item1 = filter_input(INPUT_POST, 'mytext');
+      if (isset($item1)) {
+        $items[] = $item1;
+      }
+      $item2 = filter_input(INPUT_POST, 'mytext2');
+      if (isset($item2)) {
+        $items[] = $item2;
+      }
+      $item3 = filter_input(INPUT_POST, 'mytext3');
+      if (isset($item3)) {
+        $items[] = $item3;
+      }
+      $item4 = filter_input(INPUT_POST, 'mytext4');
+      if (isset($item4)) {
+        $items[] = $item4;
+      }
+      $item5 = filter_input(INPUT_POST, 'mytext5');
+      if (isset($item5)) {
+        $items[] = $item5;
+      }
+      $item6 = filter_input(INPUT_POST, 'mytext6');
+      if (isset($item6)) {
+        $items[] = $item6;
+      }
 
       //Getting the current time to insert into the database.
       date_default_timezone_set('US/Eastern');
       $today = date("Y-m-d G:i:s");
 
       //Adding the data to the donations table.
-      add_donation($user_id, $items_list, $charity_id, $today);
+      add_donation($user_id, $items, $charity_id, $today);
 
       header('Location: .?action=home');
       //include('home.php');
