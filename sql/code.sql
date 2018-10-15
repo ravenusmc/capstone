@@ -1,11 +1,13 @@
---This file will hold all of the MySQL commands for the capstone project. 
+-- This file will hold all of the MySQL commands for the capstone project. 
 
---Basic commands (If Needed)
---drop table users;
+-- Basic commands (If Needed)
+-- drop table users;
 
-CREATE DATABASE Capstone;
+DROP DATABASE IF EXISTS capstone;
+CREATE DATABASE capstone;
+USE capstone;
 
---ADDED 
+-- ADDED 
 CREATE TABLE users (
     user_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     firstname VARCHAR(30) NOT NULL,
@@ -21,7 +23,7 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL
 );
 
---ADDED
+-- ADDED
 CREATE TABLE charities (
     charity_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL, 
@@ -37,14 +39,14 @@ CREATE TABLE charities (
         FOREIGN KEY (charityType_ID) REFERENCES charityType(charityType_ID)
 );
 
---ADDED
+-- ADDED
 CREATE TABLE CharityType (
     charityType_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     type_name VARCHAR(45) NOT NULL 
 );
 
 
---added
+-- added
 CREATE TABLE items (
     item_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     item_name VARCHAR(255) NOT NULL,
@@ -56,13 +58,13 @@ CREATE TABLE items (
         FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
---ADDED 
+-- ADDED 
 CREATE TABLE itemCategories (
     itemCategory_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     category_name VARCHAR(45) NOT NULL
 );
 
---Added
+-- Added
 CREATE TABLE charityAndItemsTable (
     charityType_ID INT NOT NULL,
     itemCategory_ID INT NOT NULL,
@@ -72,7 +74,7 @@ CREATE TABLE charityAndItemsTable (
         FOREIGN KEY (itemCategory_ID) REFERENCES itemCategories(itemCategory_ID)
 );
 
---Added 
+-- Added 
 CREATE TABLE charity_favorites (
     favorite_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     charity_id INT NOT NULL,
