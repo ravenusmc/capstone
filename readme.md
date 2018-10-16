@@ -1,7 +1,7 @@
 # Charity Connection
 ## Intro
   
-  This project is a capstone project that a group of students and I worked on and completed at Gwinnett Technical College. 
+  This project is a capstone project that a group of students and I worked on and completed at Gwinnett Technical College. The purpose of the project will be to allow a user to connect with charities in their area. 
 
 
 
