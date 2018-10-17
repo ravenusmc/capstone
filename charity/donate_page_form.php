@@ -77,10 +77,6 @@
 
 
 
-
-
-
-
 <!-- Start of donations form -->
 <!-- <form action="index.php" method="post">
   <input type="hidden" name="action" value="donations_form_submitted" />
