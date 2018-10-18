@@ -7,7 +7,7 @@
   
   //Pulling in the databases
   require('../model/database.php');
-    require('../model/users.php');
+  require('../model/users.php');
   require('../model/charities.php');
   require('../model/items.php');
 

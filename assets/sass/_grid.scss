@@ -3,9 +3,9 @@
 // add the breakpoint and then add the grid.
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 49em) {
   
-     .pageMain {
+     .homepageMain {
           display: grid;
           width: 100%;
           margin: 0 auto;
@@ -67,6 +67,29 @@
      #ctaSearch {
           display: grid;
           grid-area: cta2;
+     }
+
+     #signUpForm {
+          max-width: 75%;
+          
+     }
+
+     .loginPageContainer {
+          display: grid;
+          grid-auto-columns: 1fr 1fr;
+     }
+
+     #loginForm {
+          display: grid;
+          grid-column: 2 / 3;
+          width: 100%;
+     }
+
+     .sideImg {
+          display: grid;
+          grid-column: 1 / 2;
+          width: 100%;
+          
      }
 
 

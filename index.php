@@ -2,20 +2,20 @@
 include('view/header.php'); ?>
 
 <aside class="loginLinks">
-<a href='admin/login.php' class="loginBtn btn ">User Login</a>
-<a href='admin/user_signup.php' class="loginBtn btn">User Sign Up</a>
+<a href='http://localhost/capstone/admin/login.php' class="loginBtn btn ">Login</a>
+<a href='http://localhost/capstone/admin/user_signup.php' class="loginBtn btn">Sign Up</a>
 </aside>
 
 
 <header>
      <div class="heroImg">
-          <img src="assets/images/heartsWeb.jpg" alt="string of paper hearts" class="headerImg">
+          <img src="http://localhost/capstone/assets/images/heartsWeb.jpg" alt="string of paper hearts" class="headerImg">
           <p class="headerText">We are here to help</p>
      </div>
      <h1 class="homePageTitle">Welcome to Charity Connection</h1>
 </header>
 
-<main class="pageMain">
+<main class="homepageMain">
 
 <section class="homePageSection" id="problem">
      <h2 class="homePageHeading">What's the problem?</h2>
@@ -29,7 +29,7 @@ include('view/header.php'); ?>
 
 <section class="ctaSection" id="ctaSignUp">
      <h3 class="ctaHeading">Interested in donating?</h3>
-     <a href="admin/user_signup.php" class="ctaBtn btn">Sign up!</a>
+     <a href="http://localhost/capstone/admin/user_signup.php" class="ctaBtn btn">Sign up!</a>
 </section>
 
 <section class="ctaSection" id="ctaSearch"> 
@@ -80,7 +80,7 @@ include('view/header.php'); ?>
 </section>
 </main>
 
-<script type="text/javascript" src='assets/js/landing.js'></script>
+<script type="text/javascript" src='http://localhost/capstone/assets/js/landing.js'></script>
 <?php include('view/footer.php');
 
 

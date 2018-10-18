@@ -49,10 +49,12 @@
     echo $message;
   }
 ?>
+<main class="page">
 
-<div class='container'>
+<div class='container loginPageContainer'>
+  <img src="http://localhost/capstone/assets/images/charityStones.jpg" alt="charity spelled out in stones on a Zen sand garden" class="sideImg">
 
-  <form method="post">
+  <form method="post" id="loginForm">
     <div class="form-group">
       <label for="exampleInputEmail1">Username</label>
       <input type="text" name='username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
@@ -61,7 +63,11 @@
       <label for="exampleInputPassword1">Password</label>
       <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
   </form>
   
 </div>
+
+</main>
+
+<?php include '../view/footer.php'; ?>

@@ -1,0 +1,316 @@
+/* Mobile-first styles */
+
+
+// ----------------------------------------//
+/* General typography and color styles */
+// ----------------------------------------//
+
+body {
+     color: $darkBlue;
+}
+
+p {
+     font-family: $serif, serif;
+     font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+     font-family: $sans, sans-serif;
+}
+
+
+// ----------------------------------------//
+/* Accessibility-related */
+// ----------------------------------------//
+
+#skip { 
+     position:absolute; 
+     left:-1000px; 
+     top:auto; 
+     width:1px; 
+     height:1px; 
+     overflow:hidden;
+
+     &:focus {
+          position:static; 
+          width:auto; 
+          height:auto;
+     }
+} 
+
+
+
+
+
+// ----------------------------------------//
+/* Customizations */
+// ----------------------------------------//
+
+// ----------------------------------------//
+//navbar
+// ----------------------------------------//
+
+.logoNav {
+     max-height: 75px;
+     width: 50%;
+}
+
+.navbar-brand {
+     margin: .5em;
+}
+
+.navbar-toggler {
+     color: $logoBlue;
+     opacity: 1;
+     border: 1px solid $logoBlue;
+
+     &:hover {
+          background-color: $logoBlue;
+          color: $logoYellow;
+     }
+}
+
+.nav-link {
+     color: $darkBlue;
+}
+
+.bg-yellow {
+     background-color: $paleYellow;
+}
+
+.loginLinks {
+     float: right;
+     padding: .5em 0;
+}
+
+.loginBtn {
+     @include customBtn;
+
+     &:hover {
+          @include customBtnHover;
+     }
+} 
+
+// ----------------------------------------//
+//header 
+// ----------------------------------------//
+
+.heroImg {
+     position: relative;
+     width: 100%;
+}
+
+.headerImg {
+     background-size: cover;
+     width: 100%;
+}
+
+.headerText {
+     text-align: center;
+     position: absolute;
+     bottom: 1em;
+     color: white;
+     text-shadow: 3px 1px 3px black;
+     z-index: 5;
+     text-transform: uppercase;
+     font-family: $sans;
+     font-size: 4em;
+     width: 100%;
+     margin: 0 auto;
+}
+
+// ----------------------------------------//
+// forms
+// ----------------------------------------//
+
+label {
+     color: $logoBlue;
+}
+
+.form-submit-btn {
+     @include customBtn;
+
+     &:hover {
+          @include customBtnHover;
+     }
+}
+
+#signUpForm .form-submit-btn {
+     position: absolute;
+     //bottom: 1em;
+     right: 1em;
+}
+
+// ----------------------------------------//
+//main sections
+// ----------------------------------------//
+
+.homepageMain {
+     width: 90%;
+     margin: 0 auto;
+     display: block;
+}
+
+.page {
+     width: 90%;
+     margin: 0 auto;
+     display: block;
+}
+
+.pageHeading {
+     text-align: center;
+     margin: .5em;
+     color: $logoBlue;
+}
+
+
+// ----------------------------------------//
+// Home/Landing Page
+// ----------------------------------------//
+
+.homePageTitle {
+     text-align: center;
+     margin-top: 1em;
+}
+
+
+.homePageHeading {
+     text-align: center;
+}
+
+.ctaSection {
+     width: 50%;
+     margin: 2em auto;
+     text-align: center;
+
+     h3 {
+          text-align: center;
+     }
+}
+
+.ctaBtn {
+     @include customBtn;
+     //max-width: 15%;
+
+     &:hover {
+          @include customBtnHover;
+     }
+}
+
+#advSearchBtn {
+     //max-width: 15%;
+     margin-top: 1em;
+     @include customBtn;
+     font-family: $sans;
+     //font-weight: 200;
+     //font-size: .75em;
+
+     &:hover {
+          @include customBtnHover;
+     }
+}
+
+.advSearchHidden {
+     display: block;
+     visibility: hidden;
+}
+
+
+// ----------------------------------------//
+//About page
+// ----------------------------------------//
+
+.aboutHeader {
+     color: $darkBlue;
+     text-align: center;
+     padding: 1em;
+}
+
+.aboutContent {
+     float: left;
+     line-height: 1.6;
+
+     p {
+          margin-bottom: 1em;
+     }
+}
+
+.aboutImg {
+     max-width: 30%;
+     float: right;
+}
+
+// ----------------------------------------//
+//Log in page
+// ----------------------------------------//
+
+#loginForm {
+     max-width: 80%;
+     margin: 1em auto;
+     padding: .5em;
+}
+
+.sideImg {
+     width: 45%;
+     margin: 1em;
+}
+
+
+// ----------------------------------------//
+//Sign up page
+// ----------------------------------------//
+
+#signUpForm {
+     max-width: 75%;
+     margin: 1em auto;
+     padding: .5em;
+}
+
+#loginAnchor {
+     position: relative;
+     right: 1em;
+}
+
+// ----------------------------------------//
+// Add Items page
+// ----------------------------------------//
+
+#charity_type_selection {
+     display: none;
+   }
+
+
+// ----------------------------------------//
+// Map results page
+// ----------------------------------------//
+
+.map {
+     border: 2px solid blue;
+     height: 500px;
+     width: 500px;
+   }
+
+
+
+// ----------------------------------------//
+// thank you page
+// ----------------------------------------//
+
+
+// ----------------------------------------//
+// footer
+// ----------------------------------------//
+footer {
+     text-align: center;
+     border-top: 2px solid $logoBlue;
+     padding: 1em;
+     margin: 2em auto;
+}
+
+footer h6 {
+     text-transform: uppercase;
+     font-size: .5em;
+
+}
+
+

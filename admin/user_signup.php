@@ -7,7 +7,7 @@
 
   //Pulling in the databases
   require('../model/database.php');
-  require('../key.php');
+  //require('../key.php');
   global $db;
 
   $message = "";
@@ -80,7 +80,8 @@
 ?>
 <?php include '../view/header.php'; ?>
 
-<h1>User Sign up</h1>
+<main class="page">
+<h2 class="pageHeading">User Sign up</h2>
 
 <div class='container'>
   
@@ -93,7 +94,7 @@
   <!-- End of error handling -->
 
   <!-- Start of bootstrap form -->
-  <form method="post">
+  <form method="post" id="signUpForm">
 
     <div class="form-group">
       <label for="firstname">First Name</label>
@@ -136,13 +137,17 @@
       <input type="password" name='password2' class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
     </div>
 
-    <button type="submit" name="login" class="btn btn-primary">Submit</button>
+    <button type="submit" name="login" class="btn btn-primary form-submit-btn">Submit</button>
 
   </form>
   <!-- End of Bootstrap form -->
 
-  <div class='login_anchor center'>
-    <a href="index.php">Login Page</a>
+  <div class='login_anchor center' id='loginAnchor'>
+    <a href="login.php">Already a registered user? Login</a>
   </div>
 
 </div>
+
+</main>
+
+<?php include '../view/footer.php';?>
