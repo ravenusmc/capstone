@@ -7,10 +7,12 @@ body {
 p {
   font-family: "Matrix II", serif;
   font-size: 20px;
+  color: #0B0C25;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Ministry", sans-serif;
+  color: #2E3192;
 }
 
 /* Accessibility-related */
@@ -36,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-brand {
   margin: 0.5em;
+  width: 30%;
 }
 
 .navbar-toggler {
@@ -48,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #F9ED32;
 }
 
-.nav-link {
+#mainMenu .nav-link {
   color: #0B0C25;
 }
 
@@ -57,30 +60,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loginLinks {
+  display: inline;
+  max-width: 50%;
   float: right;
   padding: 0.5em 0;
 }
 
 .loginBtn {
-  background-color: #2E3192;
+  background: linear-gradient(#1D1F5B, #2E3192);
   color: #F9ED32;
+  font-family: "Ministry";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-align: center;
+  margin: 1em;
+  border: 0;
+  margin: 0.5em;
 }
 .loginBtn:hover {
-  background-color: #0B0C25;
+  background: linear-gradient(#0B0C25, #1D1F5B);
 }
 
-.heroImg {
+.headerImg {
   position: relative;
   width: 100%;
 }
 
-.headerImg {
+.heroImg {
   background-size: cover;
   width: 100%;
 }
 
-.headerText {
+.heroText {
   text-align: center;
   position: absolute;
   bottom: 1em;
@@ -89,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 5;
   text-transform: uppercase;
   font-family: "Ministry";
-  font-size: 4em;
+  font-size: 1.5em;
   width: 100%;
   margin: 0 auto;
 }
@@ -99,25 +110,20 @@ label {
 }
 
 .form-submit-btn {
-  background-color: #2E3192;
+  background: linear-gradient(#1D1F5B, #2E3192);
   color: #F9ED32;
+  font-family: "Ministry";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-align: center;
+  margin: 1em;
+  border: 0;
 }
 .form-submit-btn:hover {
-  background-color: #0B0C25;
+  background: linear-gradient(#0B0C25, #1D1F5B);
 }
 
-#signUpForm .form-submit-btn {
-  position: absolute;
-  right: 1em;
-}
-
-.homepageMain {
-  width: 90%;
-  margin: 0 auto;
-  display: block;
-}
-
+.homepageMain,
 .page {
   width: 90%;
   margin: 0 auto;
@@ -140,7 +146,7 @@ label {
 }
 
 .ctaSection {
-  width: 50%;
+  width: 80%;
   margin: 2em auto;
   text-align: center;
 }
@@ -149,23 +155,52 @@ label {
 }
 
 .ctaBtn {
-  background-color: #2E3192;
+  background: linear-gradient(#1D1F5B, #2E3192);
   color: #F9ED32;
+  font-family: "Ministry";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-align: center;
+  margin: 1em;
+  border: 0;
 }
 .ctaBtn:hover {
-  background-color: #0B0C25;
+  background: linear-gradient(#0B0C25, #1D1F5B);
+}
+
+#ctaSignUp {
+  background: linear-gradient(#0B0C25, #2E3192);
+  padding: 1em;
+}
+#ctaSignUp h3 {
+  color: #F9ED32;
+}
+#ctaSignUp #signUpBtn {
+  width: 50%;
+  margin: 0 auto;
+}
+#ctaSignUp .ctaBtn {
+  background: linear-gradient(#FFB34E, #F9ED32);
+  color: #2E3192;
+}
+#ctaSignUp .ctaBtn:hover {
+  background: linear-gradient(#D67A00, #FFB34E);
+  color: #2E3192;
 }
 
 #advSearchBtn {
   margin-top: 1em;
-  background-color: #2E3192;
+  background: linear-gradient(#1D1F5B, #2E3192);
   color: #F9ED32;
-  text-align: center;
   font-family: "Ministry";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1em;
+  border: 0;
 }
 #advSearchBtn:hover {
-  background-color: #0B0C25;
+  background: linear-gradient(#0B0C25, #1D1F5B);
 }
 
 .advSearchHidden {
@@ -173,14 +208,16 @@ label {
   visibility: hidden;
 }
 
+.advSearch {
+  width: 100%;
+}
+
 .aboutHeader {
-  color: #0B0C25;
   text-align: center;
   padding: 1em;
 }
 
 .aboutContent {
-  float: left;
   line-height: 1.6;
 }
 .aboutContent p {
@@ -197,6 +234,10 @@ label {
   margin: 1em auto;
   padding: 0.5em;
 }
+#loginForm .form-submit-btn {
+  width: 75%;
+  margin: 0 auto;
+}
 
 .sideImg {
   width: 45%;
@@ -209,9 +250,14 @@ label {
   padding: 0.5em;
 }
 
-#loginAnchor {
-  position: relative;
-  right: 1em;
+#donationHeading {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.donationForm td > button {
+  width: 75%;
+  margin: 0 auto;
 }
 
 #charity_type_selection {
@@ -225,24 +271,47 @@ label {
 }
 
 footer {
+  clear: both;
+  display: block;
   text-align: center;
   border-top: 2px solid #2E3192;
   padding: 1em;
   margin: 2em auto;
 }
+footer p {
+  font-size: 0.75em;
+}
 
 footer h6 {
   text-transform: uppercase;
   font-size: 0.5em;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
 }
 
 /* CSS Grid styles */
 @media screen and (min-width: 49em) {
+  #mainNavbar {
+    position: relative;
+    width: 100;
+  }
+
+  #mainMenu {
+    position: absolute;
+    right: 1em;
+    text-align: right;
+  }
+
   .homepageMain {
     display: grid;
     width: 100%;
     margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "section1 section2" "section1 section2" "cta1 cta1" "cta2 cta2";
+  }
+
+  .heroText {
+    font-size: 3em;
   }
 
   #problem {
@@ -279,6 +348,14 @@ footer h6 {
   #ctaSignUp {
     display: grid;
     grid-area: cta1;
+    width: 100%;
+    padding: 2em;
+    height: 300px;
+  }
+  #ctaSignUp #signUpBtn {
+    height: 2em;
+    width: 20%;
+    font-size: 2em;
   }
 
   .ctaHeading {
@@ -290,25 +367,44 @@ footer h6 {
     grid-area: cta2;
   }
 
-  #signUpForm {
-    max-width: 75%;
+  #advSearchBtn {
+    width: 50%;
+    margin: 0 auto;
   }
 
-  .loginPageContainer {
+  #loginPageContainer,
+#signUpPageContainer {
     display: grid;
-    grid-auto-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  #loginPageContainer h2,
+#signUpPageContainer h2 {
+    grid-column: 1/3;
+  }
+  #loginPageContainer .heroImg,
+#signUpPageContainer .heroImg {
+    display: grid;
+    grid-column: 1/2;
+    width: 100%;
+    padding: 1em 0;
   }
 
-  #loginForm {
+  #loginForm,
+.userForm {
     display: grid;
     grid-column: 2/3;
     width: 100%;
   }
 
-  .sideImg {
-    display: grid;
-    grid-column: 1/2;
+  #signUpForm {
     width: 100%;
+  }
+  #signUpForm .form-submit-btn {
+    margin: 0 auto;
+  }
+
+  #loginAnchor {
+    margin: 0 auto;
   }
 }
 

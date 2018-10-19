@@ -57,8 +57,8 @@
 <body>
 <div id="skip"><a href="#pageMain">Skip to Main Content</a></div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-yellow">
-  <a class="navbar-brand" href="index.php"><img src="http://localhost/capstone/assets/images/logo-blue-text.svg" class="logoNav" alt="Charity Connection Logo"></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-yellow" id="mainNavbar">
+  <a class="navbar-brand" href="http://localhost/capstone/index.php"><img src="http://localhost/capstone/assets/images/logo-blue-text.svg" class="logoNav" alt="Charity Connection Logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"><br></span>
   </button>

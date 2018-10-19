@@ -80,10 +80,13 @@
 ?>
 <?php include '../view/header.php'; ?>
 
-<main class="page">
-<h2 class="pageHeading">User Sign up</h2>
 
-<div class='container'>
+<main class="page" id="signUpPageContainer">
+<h2 class="pageHeading">User Sign up</h2>
+  <img src="../assets/images/charityWordBox.jpg" alt="Word jumble with charity as the central word" class="heroImg">
+  
+
+<section class='container userForm'>
   
   <!-- Start of error handling -->
   <?php 
@@ -117,7 +120,7 @@
       <input type="text" name='street' class="form-control" id="street" placeholder="Enter Street">
     </div>
     <div class="form-group">
-      <label for="town">Town</label>
+      <label for="town">City</label>
       <input type="text" name='town' class="form-control" id="town" placeholder="Enter Town">
     </div>
     <div class="form-group">
@@ -125,7 +128,7 @@
       <input type="text" name='state' class="form-control" id="state" placeholder="Enter State">
     </div>
     <div class="form-group">
-      <label for="zip">Zip</label>
+      <label for="zip">Zip Code</label>
       <input type="text" name='zip' class="form-control" id="zip" placeholder="Enter Zip">
     </div>
     <div class="form-group">
@@ -133,7 +136,7 @@
       <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword2">Password</label>
+      <label for="exampleInputPassword2">Confirm Password</label>
       <input type="password" name='password2' class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
     </div>
 
@@ -146,7 +149,7 @@
     <a href="login.php">Already a registered user? Login</a>
   </div>
 
-</div>
+</section>
 
 </main>
 

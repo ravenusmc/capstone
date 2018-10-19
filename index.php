@@ -2,15 +2,15 @@
 include('view/header.php'); ?>
 
 <aside class="loginLinks">
-<a href='http://localhost/capstone/admin/login.php' class="loginBtn btn ">Login</a>
-<a href='http://localhost/capstone/admin/user_signup.php' class="loginBtn btn">Sign Up</a>
+<a href="http://localhost/capstone/admin/login.php" class="loginBtn btn ">Login</a>
+<a href="http://localhost/capstone/admin/user_signup.php" class="loginBtn btn">Sign Up</a>
 </aside>
 
 
 <header>
-     <div class="heroImg">
-          <img src="http://localhost/capstone/assets/images/heartsWeb.jpg" alt="string of paper hearts" class="headerImg">
-          <p class="headerText">We are here to help</p>
+     <div class="headerImg">
+          <img src="http://localhost/capstone/assets/images/heartsWeb.jpg" alt="string of paper hearts" class="heroImg">
+          <p class="heroText">We are here to help</p>
      </div>
      <h1 class="homePageTitle">Welcome to Charity Connection</h1>
 </header>
@@ -29,7 +29,7 @@ include('view/header.php'); ?>
 
 <section class="ctaSection" id="ctaSignUp">
      <h3 class="ctaHeading">Interested in donating?</h3>
-     <a href="http://localhost/capstone/admin/user_signup.php" class="ctaBtn btn">Sign up!</a>
+     <a href="http://localhost/capstone/admin/user_signup.php" class="ctaBtn btn" id="signUpBtn">Sign up!</a>
 </section>
 
 <section class="ctaSection" id="ctaSearch"> 
@@ -39,40 +39,46 @@ include('view/header.php'); ?>
           <input type="text" name='zip' placeholder="Enter your zip code" class="" id="enterAddress">
           <input type="submit" class="ctaBtn btn" value="Go!">
      </form>
-     <p class="advSearch btn" id="advSearchBtn">Advanced Search</p>
-     <section class="advSearchHidden">
-          <form action="" method="post" class="advSearchByType">
+
+     <p class="btn" id="advSearchBtn" >Advanced Search</p>
+     
+     <section class="advSearchHidden" id="advSearchHidden">
+          <form action="" method="post" id="advSearchByType" class="advSearch">
           <label for="byType">Search by Charity Type</label>
                <select name="byType">
-                     <option value="education">Education</option>
-                     <option value="animals">Animals</option>
-                     <option value="artsculture">Arts/Culture</option>
-                     <option value="communitydev">Community Development</option>
-                     <option value="environment">Environment</option>
-                     <option value="health">Health</option>
-                     <option value="civilrights">Human and Civil Rights</option>
-                     <option value="humanservices">Human Services</option><option value="international">International</option>
-                     <option value="religion">Religious</option>
-                     <option value="research">Research/Public Policy</option>
-                     
-               </select>
+                  <option> Choose ... </option>
+                  <option value="education">Education</option>
+                  <option value="animals">Animals</option>
+                  <option value="artsculture">Arts/Culture</option>
+                  <option value="communitydev">Community Development</option>
+                  <option value="environment">Environment</option>
+                  <option value="health">Health</option>
+                  <option value="civilrights">Human and Civil Rights</option>
+                  <option value="humanservices">Human Services</option>
+                  <option value="international">International</option>
+                  <option value="religion">Religious</option>
+                  <option value="research">Research/Public Policy</option>
+              </select>
+              <input type="submit" value="Search" class="ctaBtn btn">
           </form>
 
-          <form action="" method="post" class="advSearchByItems">
+          <form action="" method="post" id="advSearchByItems" class="advSearch">
             <label for="byItems">Search by Items Accepted by Charity</label>
                <select name="byItems">
-                    <option value="household">Household Items</option>
-                    <option value="toys">Kids' Toys</option>
-                    <option value="kidclothes">Kids' Clothing</option>
-                    <option value="books">Books</option>
-                    <option value="appliances">Small Appliances</option>
-                    <option value="womenclothing">Women's Clothing</option>
-                    <option value="menclothing">Men's Clothing</option>
-                    <option value="womenshoes">Women's Shoes</option>
-                    <option value="menshoes">Men's Shoes</option>
-                    <option value="pets">Pet-related Items</option>
-                    <option value="garden">Yard or Garden Items</option>
+                  <option> Choose ... </option>
+                  <option value="household">Household Items</option>
+                  <option value="toys">Kids' Toys</option>
+                  <option value="kidclothes">Kids' Clothing</option>
+                  <option value="books">Books</option>
+                  <option value="appliances">Small Appliances</option>
+                  <option value="womenclothing">Women's Clothing</option>
+                  <option value="menclothing">Men's Clothing</option>
+                  <option value="womenshoes">Women's Shoes</option>
+                  <option value="menshoes">Men's Shoes</option>
+                  <option value="pets">Pet-related Items</option>
+                  <option value="garden">Yard or Garden Items</option>
                </select>
+               <input type="submit" value="Search" class="ctaBtn btn">
           </form>
 
      </section>

@@ -9,30 +9,27 @@
 ?>
 <?php include '../view/header.php'; ?>
 
-
-<h1>Make a Donation!</h1>
-
-<h2>Please enter up to 6 items you want to donate below:</h2>
+<main class="page">
+<h2 id="donationHeading">Make a Donation!</h2>
 
 <div class="container">  
-    <br />  
-    <br />  
-    <h2 align="center">Dynamically Add or Remove input fields in PHP with JQuery</h2>  
+     
     <div class="form-group">  
-      <form name="add_name" id="add_name">  
+      <form name="add_name" id="add_name" class="donationForm">  
         <div class="table-responsive">  
-          <table class="table table-bordered" id="dynamic_field">  
+          <table class="table" id="dynamic_field">  
             <tr>  
                 <input  type='hidden' name="charity_id" value="<?php echo $charity_id ?>">
-                <td><input type="text" name="name[]" placeholder="Enter Item Name" class="form-control name_list" /></td>  
+                <td><input type="text" name="name[]" placeholder="Enter Item" class="form-control name_list" /></td>  
                 <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>  
             </tr>  
           </table>  
-          <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />  
+          <input type="button" name="submit" id="submit" class="btn form-submit-btn" value="Submit" />  
         </div>  
       </form>  
     </div>  
 </div>  
+</main>
 
 <script>  
   
@@ -42,7 +39,7 @@
 
         $('#add').click(function(){  
              i++;  
-             $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+             $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">Remove</button></td></tr>');  
         });  
 
         $(document).on('click', '.btn_remove', function(){  
@@ -70,3 +67,5 @@
 
 
 <script type="text/javascript" src='../assets/js/input.js'></script>
+
+<?php include '../view/footer.php'; ?>

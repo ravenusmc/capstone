@@ -1,7 +1,7 @@
 
 
 function showAdvSearch() {
-     var advSearchSection = document.getElementsByClassName('advSearchHidden');
+     var advSearchSection = document.getElementById('advSearchHidden');
      
      advSearchSection.style.visibility = "visible";
 }

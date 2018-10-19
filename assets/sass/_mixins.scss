@@ -1,9 +1,14 @@
 @mixin customBtn {
-     background-color: $logoBlue;
+     background: linear-gradient($medBlue, $logoBlue);
      color: $logoYellow;
+     font-family: $sans;
+     letter-spacing: .1em;
+     text-transform: uppercase;
      text-align: center;
+     margin: 1em;
+     border: 0;
 }
 
 @mixin customBtnHover {
-     background-color: $darkBlue;
+     background: linear-gradient($darkBlue, $medBlue);
 }

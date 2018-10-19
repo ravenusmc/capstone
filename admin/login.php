@@ -49,11 +49,13 @@
     echo $message;
   }
 ?>
-<main class="page">
 
-<div class='container loginPageContainer'>
-  <img src="http://localhost/capstone/assets/images/charityStones.jpg" alt="charity spelled out in stones on a Zen sand garden" class="sideImg">
+<main class="page" id="loginPageContainer">
+  <img src="http://localhost/capstone/assets/images/charityStones.jpg" alt="charity spelled out in stones on a Zen sand garden" class="heroImg">
 
+
+<section class='container '>
+  
   <form method="post" id="loginForm">
     <div class="form-group">
       <label for="exampleInputEmail1">Username</label>
@@ -66,7 +68,7 @@
     <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
   </form>
   
-</div>
+</section>
 
 </main>
 
