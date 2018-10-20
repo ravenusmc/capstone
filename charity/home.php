@@ -64,5 +64,38 @@
 <?php endforeach; ?> 
 
 <script type="text/javascript" src='../assets/js/key.js'></script>
-<script type="text/javascript" src='../assets/js/map.js'></script>
+<!-- Start of code to add map to page -->
+<script type="text/javascript">
+  
+  var user_longitude = Number('<?php echo $user['longitude']; ?>')
+  var user_latitude = Number('<?php echo $user['latitude']; ?>')
+  var mymap = L.map('mapid').setView([user_latitude, user_longitude], 15);
 
+  var myIcon = L.icon({
+    iconUrl: '../assets/images/test.png',
+    iconSize: [38, 95],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+    shadowSize: [68, 95],
+    shadowAnchor: [22, 94]
+  });
+  
+  var marker = L.marker([user_latitude, user_longitude], {icon: myIcon}).addTo(mymap);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + key, {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 11,
+      id: 'mapbox.streets',
+      accessToken: 'your.mapbox.access.token'
+  }).addTo(mymap);
+
+  count = 0
+  <?php foreach ($all_charities as $charity): ?>
+    var charity_latitude = Number('<?php echo $charity['latitude']; ?>');
+    var charity_longitude = Number('<?php echo $charity['longitude']; ?>');
+    var marker = L.marker([charity_latitude, charity_longitude]).addTo(mymap);
+    count ++;
+  <?php endforeach; ?>
+
+</script>
+<!-- End of code to add map to page -->

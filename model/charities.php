@@ -68,7 +68,7 @@
   //This function gets all of the favorite charities for each user
   function get_favorite_charities($user_id) {
     global $db;
-    $query = "SELECT c.charity_id, c.name, c.street, c.town, c.state, c.zip FROM charity_favorites cf
+    $query = "SELECT * FROM charity_favorites cf
               JOIN charities c ON c.charity_id = cf.charity_id
               WHERE cf.user_id = :user_id AND cf.favorite = 'y'";
     $statement = $db->prepare($query);

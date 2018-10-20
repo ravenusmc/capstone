@@ -29,6 +29,9 @@
     //This case brings the user to the home page 
     case 'home':
 
+      //Getting all information on the user
+      $user = get_user_info($id);
+
       //Getting the users zip code 
       $zip = get_user_zip($name);
 

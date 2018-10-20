@@ -9,7 +9,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 
 var marker = L.marker([34.080, -83.96808]).addTo(mymap);
 
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+//marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 
 
 // var myIcon = L.icon({
