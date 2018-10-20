@@ -1,10 +1,10 @@
 <?php 
 include('view/header.php'); ?>
 
-<aside class="loginLinks">
-<a href="http://localhost/capstone/admin/login.php" class="loginBtn btn ">Login</a>
-<a href="http://localhost/capstone/admin/user_signup.php" class="loginBtn btn">Sign Up</a>
-</aside>
+<nav class="loginLinks">
+<a href="admin/login.php" class="loginBtn btn ">Login</a>
+<a href="admin/user_signup.php" class="loginBtn btn">Sign Up</a>
+</nav>
 
 
 <header>
