@@ -8,6 +8,8 @@
  
 ?>
 <?php include '../view/header.php'; ?>
+<link rel="stylesheet" type="text/css" href="../assets/css/home.css">
+
 
 <h1>HOME</h1>
 
@@ -19,6 +21,11 @@
 
 <a href="?action=add_item_form">Add Item to Donate</a>
 <p>The above two links will probably change/go away</p>
+
+<!-- Map Code -->
+<div id="mapid"></div>
+<!-- End of Map Code -->
+
 
 <h2>Charities Near You:</h2>
 
@@ -56,5 +63,6 @@
   </form>
 <?php endforeach; ?> 
 
-
+<script type="text/javascript" src='../assets/js/key.js'></script>
+<script type="text/javascript" src='../assets/js/map.js'></script>
 

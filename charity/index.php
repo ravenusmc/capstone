@@ -7,9 +7,12 @@
   
   //Pulling in the databases
   require('../model/database.php');
-    require('../model/users.php');
+  require('../model/users.php');
   require('../model/charities.php');
   require('../model/items.php');
+  require('../key.php');
+
+  
 
   //Setting a default action 
   $action = filter_input(INPUT_POST, 'action');
