@@ -10,6 +10,9 @@
   require('../model/users.php');
   require('../model/charities.php');
   require('../model/items.php');
+  require('../key.php');
+
+  
 
   //Setting a default action 
   $action = filter_input(INPUT_POST, 'action');
@@ -25,6 +28,9 @@
 
     //This case brings the user to the home page 
     case 'home':
+
+      //Getting all information on the user
+      $user = get_user_info($id);
 
       //Getting the users zip code 
       $zip = get_user_zip($name);

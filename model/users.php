@@ -29,6 +29,18 @@
     return $zip;
   }
 
+  function get_user_info($id) {
+    global $db;
+    $query = "SELECT * FROM users 
+            WHERE user_id = :user_id";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':user_id', $id);
+    $statement->execute();
+    $user = $statement->fetch();
+    $statement->closeCursor();
+    return $user;
+  }
+
 
 
 
