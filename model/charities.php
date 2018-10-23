@@ -1,9 +1,9 @@
 <?php
   //This file will handle the functions that specifically deal with tables with charity info in them 
 
-  function get_charity_type(){
+  function get_charity_type(){ //using this in landing page
     global $db;
-    $query = "SELECT * FROM CharityType
+    $query = "SELECT * FROM charitytype
     ORDER BY charityType_ID";
     $statement = $db->prepare($query);
     $statement->execute();

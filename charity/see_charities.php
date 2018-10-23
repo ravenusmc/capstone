@@ -3,7 +3,7 @@
   session_start();
 
   //Bringing in the api key for google maps
-  require('../key.php');
+  //require('../key.php');
 
   $name = $_SESSION["username"];
   $id = $_SESSION["user_id"];

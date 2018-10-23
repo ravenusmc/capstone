@@ -1,21 +1,31 @@
 <?php 
-include('view/header.php'); ?>
+require('model/database.php');
+require('model/charities.php');
+require('model/items.php');
+require_once('assets/utility/util.php');
+include('view/header.php'); 
 
-<aside class="loginLinks">
-<a href='admin/login.php' class="loginBtn btn ">User Login</a>
-<a href='admin/user_signup.php' class="loginBtn btn">User Sign Up</a>
-</aside>
+$charityTypes = get_charity_type();
+$itemCategories = get_all_item_categories();
+
+ 
+?>
+
+<!-- <nav class="loginLinks"> -->
+<a href="admin/login.php" class="loginBtn btn" id="loginHeaderBtn">Login</a>
+<a href="admin/user_signup.php" class="loginBtn btn" id="signUpHeaderBtn">Sign Up</a>
+<!-- </nav> -->
 
 
 <header>
-     <div class="heroImg">
-          <img src="assets/images/heartsWeb.jpg" alt="string of paper hearts" class="headerImg">
-          <p class="headerText">We are here to help</p>
+     <div class="headerImg">
+          <img src="http://localhost/capstone/assets/images/heartsWeb.jpg" alt="string of paper hearts" class="heroImg">
+          <p class="heroText">We are here to help</p>
      </div>
      <h1 class="homePageTitle">Welcome to Charity Connection</h1>
 </header>
 
-<main class="pageMain">
+<main class="homepageMain">
 
 <section class="homePageSection" id="problem">
      <h2 class="homePageHeading">What's the problem?</h2>
@@ -29,7 +39,7 @@ include('view/header.php'); ?>
 
 <section class="ctaSection" id="ctaSignUp">
      <h3 class="ctaHeading">Interested in donating?</h3>
-     <a href="admin/user_signup.php" class="ctaBtn btn">Sign up!</a>
+     <a href="http://localhost/capstone/admin/user_signup.php" class="ctaBtn btn" id="signUpBtn">Sign up!</a>
 </section>
 
 <section class="ctaSection" id="ctaSearch"> 
@@ -39,40 +49,32 @@ include('view/header.php'); ?>
           <input type="text" name='zip' placeholder="Enter your zip code" class="" id="enterAddress">
           <input type="submit" class="ctaBtn btn" value="Go!">
      </form>
-     <p class="advSearch btn" id="advSearchBtn">Advanced Search</p>
-     <section class="advSearchHidden">
-          <form action="" method="post" class="advSearchByType">
-          <label for="byType">Search by Charity Type</label>
-               <select name="byType">
-                     <option value="education">Education</option>
-                     <option value="animals">Animals</option>
-                     <option value="artsculture">Arts/Culture</option>
-                     <option value="communitydev">Community Development</option>
-                     <option value="environment">Environment</option>
-                     <option value="health">Health</option>
-                     <option value="civilrights">Human and Civil Rights</option>
-                     <option value="humanservices">Human Services</option><option value="international">International</option>
-                     <option value="religion">Religious</option>
-                     <option value="research">Research/Public Policy</option>
-                     
-               </select>
+
+     <p class="btn" id="advSearchBtn" >Advanced Search</p>
+     
+     <section class="advSearchHidden" id="advSearchHidden">
+          <form action="advsearch/index.php" method="post" id="advSearchByType" class="advSearch">
+            <input type="hidden" name="action" value="byType">
+            <label for="byType">Search by Charity Type</label>
+                <select name="byType">
+                    <option> Choose ... </option>
+                    <?php foreach ($charityTypes as $type) : ?>
+                      <option value="<?php echo $type['charityType_ID'];?>"><?php echo $type['type_name']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            <input type="submit" value="Search" class="ctaBtn btn">
           </form>
 
-          <form action="" method="post" class="advSearchByItems">
-            <label for="byItems">Search by Items Accepted by Charity</label>
+          <form action="advsearch/index.php" method="post" id="advSearchByItems" class="advSearch">
+            <input type="hidden" name="action" value="byItems">
+            <label for="items">Search by Items Accepted by Charity</label>
                <select name="byItems">
-                    <option value="household">Household Items</option>
-                    <option value="toys">Kids' Toys</option>
-                    <option value="kidclothes">Kids' Clothing</option>
-                    <option value="books">Books</option>
-                    <option value="appliances">Small Appliances</option>
-                    <option value="womenclothing">Women's Clothing</option>
-                    <option value="menclothing">Men's Clothing</option>
-                    <option value="womenshoes">Women's Shoes</option>
-                    <option value="menshoes">Men's Shoes</option>
-                    <option value="pets">Pet-related Items</option>
-                    <option value="garden">Yard or Garden Items</option>
+                  <option> Choose ... </option>
+                  <?php foreach ($itemCategories as $cat) : ?>
+                      <option value="<?php echo $cat['itemCategory_ID'];?>"><?php echo $cat['category_name']; ?></option>
+                    <?php endforeach; ?>
                </select>
+            <input type="submit" value="Search" class="ctaBtn btn">
           </form>
 
      </section>
@@ -80,7 +82,7 @@ include('view/header.php'); ?>
 </section>
 </main>
 
-<script type="text/javascript" src='assets/js/landing.js'></script>
+<script type="text/javascript" src='http://localhost/capstone/assets/js/landing.js'></script>
 <?php include('view/footer.php');
 
 

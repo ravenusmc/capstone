@@ -36,13 +36,14 @@
       header("location: ../charity/index.php");
       exit();
     }else {
-      $message = '<label>Password is Wrong!</label>';
+      $message = '<label class="errorMsg">Password is Wrong!</label>';
     }
 
   }//Closing main conditional statement
 
-?>
-<?php include '../view/header.php'; ?>
+ //starting the viewable page
+ require_once('../assets/utility/util.php');
+ include '../view/header.php'; ?>
 
 <?php 
   if (isset($message)){
@@ -50,9 +51,13 @@
   }
 ?>
 
-<div class='container'>
+<main class="page" id="loginPageContainer">
+  <img src="<?php echo $fullPath; ?>assets/images/charityStones.jpg" alt="charity spelled out in stones on a Zen sand garden" class="heroImg">
 
-  <form method="post">
+
+<section class='container '>
+  
+  <form method="post" id="loginForm">
     <div class="form-group">
       <label for="exampleInputEmail1">Username</label>
       <input type="text" name='username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
@@ -61,7 +66,12 @@
       <label for="exampleInputPassword1">Password</label>
       <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
+    <a href="user_signup.php">Not a user yet? Sign up by clicking here.</a>
   </form>
   
-</div>
+</section>
+
+</main>
+
+<?php include '../view/footer.php'; ?>

@@ -39,9 +39,9 @@
     $count = $statement->rowCount();
     //Conditional statements based on what the query returns. 
     if ($count > 0){
-      $message = '<label>Username Taken!</label>';
+      $message = '<label class="errorMsg">Username Taken!</label>';
     }else if ($password != $password2) {
-      $message = '<label>Passwords Do Not Match!</label>';
+      $message = '<label class="errorMsg">Passwords Do Not Match!</label>';
     }else {
       //These lines will get the latitude and longitude from google maps.
       $address = $street . ' ' . $town . ' ' . $state . ' ' . $zip;
@@ -73,16 +73,24 @@
 
       //Message to alert user that they signed up
       $message = '<label>User Signed Up!</label>';
+      // Need to reroute the person to login at this point, so they don't have to scroll all the way down to get to a login link
+      //header("Location: login.php");
     }
 
   }//End of if main conditional 
 
-?>
-<?php include '../view/header.php'; ?>
 
-<h1>User Sign up</h1>
+//start viewable page
+  require_once('../assets/utility/util.php');
+  include '../view/header.php'; ?>
 
-<div class='container'>
+
+<main class="page" id="signUpPageContainer">
+<h2 class="pageHeading">User Sign up</h2>
+  <img src="<?php echo $fullPath; ?>assets/images/charityWordBox.jpg" alt="Word jumble with charity as the central word" class="heroImg">
+  
+
+<section class='container userForm'>
   
   <!-- Start of error handling -->
   <?php 
@@ -93,7 +101,7 @@
   <!-- End of error handling -->
 
   <!-- Start of bootstrap form -->
-  <form method="post">
+  <form method="post" id="signUpForm">
 
     <div class="form-group">
       <label for="firstname">First Name</label>
@@ -116,7 +124,7 @@
       <input type="text" name='street' class="form-control" id="street" placeholder="Enter Street">
     </div>
     <div class="form-group">
-      <label for="town">Town</label>
+      <label for="town">City</label>
       <input type="text" name='town' class="form-control" id="town" placeholder="Enter Town">
     </div>
     <div class="form-group">
@@ -124,7 +132,7 @@
       <input type="text" name='state' class="form-control" id="state" placeholder="Enter State">
     </div>
     <div class="form-group">
-      <label for="zip">Zip</label>
+      <label for="zip">Zip Code</label>
       <input type="text" name='zip' class="form-control" id="zip" placeholder="Enter Zip">
     </div>
     <div class="form-group">
@@ -132,17 +140,21 @@
       <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword2">Password</label>
+      <label for="exampleInputPassword2">Confirm Password</label>
       <input type="password" name='password2' class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
     </div>
 
-    <button type="submit" name="login" class="btn btn-primary">Submit</button>
+    <button type="submit" name="login" class="btn btn-primary form-submit-btn">Submit</button>
 
   </form>
   <!-- End of Bootstrap form -->
 
-  <div class='login_anchor center'>
-    <a href="index.php">Login Page</a>
+  <div class='login_anchor center' id='loginAnchor'>
+    <a href="login.php">Already a registered user? Login</a>
   </div>
 
-</div>
+</section>
+
+</main>
+
+<?php include '../view/footer.php';?>

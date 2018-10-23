@@ -1,8 +1,8 @@
 <?php
     $dsn = 'mysql:host=localhost;dbname=Capstone';
     $username = 'root';
-    $password = 'root';
-    //$password = 'Taa;2tosbt';
+    //$password = 'root';
+    $password = 'Taa;2tosbt';
     
     try {
         $db = new PDO($dsn, $username, $password);
