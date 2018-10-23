@@ -15,6 +15,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #2E3192;
 }
 
+.errorMsg {
+  color: red;
+  font-weight: 700;
+}
+
 /* Accessibility-related */
 #skip {
   position: absolute;
@@ -31,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Customizations */
+/*Navigation */
 .logoNav {
   max-height: 75px;
   width: 50%;
@@ -80,7 +86,11 @@ h1, h2, h3, h4, h5, h6 {
 .loginBtn:hover {
   background: linear-gradient(#0B0C25, #1D1F5B);
 }
+.loginBtn a:hover {
+  color: #F9ED32;
+}
 
+/* Header */
 .headerImg {
   position: relative;
   width: 100%;

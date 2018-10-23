@@ -36,13 +36,14 @@
       header("location: ../charity/index.php");
       exit();
     }else {
-      $message = '<label>Password is Wrong!</label>';
+      $message = '<label class="errorMsg">Password is Wrong!</label>';
     }
 
   }//Closing main conditional statement
 
-?>
-<?php include '../view/header.php'; ?>
+ //starting the viewable page
+ require_once('../assets/utility/util.php');
+ include '../view/header.php'; ?>
 
 <?php 
   if (isset($message)){
@@ -51,7 +52,7 @@
 ?>
 
 <main class="page" id="loginPageContainer">
-  <img src="http://localhost/capstone/assets/images/charityStones.jpg" alt="charity spelled out in stones on a Zen sand garden" class="heroImg">
+  <img src="<?php echo $fullPath; ?>assets/images/charityStones.jpg" alt="charity spelled out in stones on a Zen sand garden" class="heroImg">
 
 
 <section class='container '>
@@ -66,6 +67,7 @@
       <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
     <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
+    <a href="user_signup.php">Not a user yet? Sign up by clicking here.</a>
   </form>
   
 </section>

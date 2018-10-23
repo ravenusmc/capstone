@@ -5,6 +5,7 @@
   $name = $_SESSION["username"];
   $id = $_SESSION["user_id"];
 
+  require_once('../assets/utility/util.php');
 include '../view/header.php'; 
 ?>
 
@@ -15,7 +16,7 @@ include '../view/header.php';
 <h2 class='aboutHeader'>About Charity Connection</h2>
 <section class='aboutContent'>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, alias itaque omnis voluptatem iste, quos ipsum quas nesciunt cupiditate cum esse excepturi accusamus! Eius blanditiis laborum, dolor voluptate optio quia!</p>
-<img class="aboutImg" src="../assets/images/youCanHelp.jpg" alt="You can help image">
+<img class="aboutImg" src="<?php echo $fullPath; ?>assets/images/youCanHelp.jpg" alt="You can help image">
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, provident harum pariatur deleniti minima quisquam dolorem aut eaque ex dignissimos quod ea et ullam modi unde eveniet odio in esse.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, deserunt suscipit? Exercitationem voluptates animi praesentium, architecto porro reprehenderit ducimus mollitia quisquam hic quidem consequatur, atque dolorem, veritatis laboriosam cumque maiores?</p>
 </section> 

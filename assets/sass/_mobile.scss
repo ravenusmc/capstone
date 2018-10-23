@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, h6 {
      color: $logoBlue;
 }
 
+.errorMsg {
+    color: red;
+    font-weight: 700;
+}
+
 
 // ----------------------------------------//
 /* Accessibility-related */
@@ -49,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 // ----------------------------------------//
 
 // ----------------------------------------//
-//navbar
+/*Navigation */
 // ----------------------------------------//
 
 .logoNav {
@@ -76,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 #mainMenu {
   .nav-link {
     color: $darkBlue;
-}
+  }
 
 }
 
@@ -92,6 +97,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: .5em 0;
 }
 
+
 .loginBtn {
      @include customBtn;
      margin: .5em;
@@ -100,10 +106,14 @@ h1, h2, h3, h4, h5, h6 {
           @include customBtnHover;
      }
 
+     & a:hover {
+        color: $logoYellow;
+     }
+
 } 
 
 // ----------------------------------------//
-//header 
+/* Header */
 // ----------------------------------------//
 
 .headerImg {

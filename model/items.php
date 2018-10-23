@@ -2,7 +2,7 @@
   
   //This file handles all the code dealing with the items tables 
 
-  function get_all_item_categories() {
+  function get_all_item_categories() { //using this in landing page
     global $db;
     $query = "SELECT * FROM itemCategories";
     $statement = $db->prepare($query);

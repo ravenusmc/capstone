@@ -7,7 +7,7 @@
 
   //Pulling in the databases
   require('../model/database.php');
-  //require('../key.php');
+  require('../key.php');
   global $db;
 
   $message = "";
@@ -39,9 +39,9 @@
     $count = $statement->rowCount();
     //Conditional statements based on what the query returns. 
     if ($count > 0){
-      $message = '<label>Username Taken!</label>';
+      $message = '<label class="errorMsg">Username Taken!</label>';
     }else if ($password != $password2) {
-      $message = '<label>Passwords Do Not Match!</label>';
+      $message = '<label class="errorMsg">Passwords Do Not Match!</label>';
     }else {
       //These lines will get the latitude and longitude from google maps.
       $address = $street . ' ' . $town . ' ' . $state . ' ' . $zip;
@@ -73,17 +73,21 @@
 
       //Message to alert user that they signed up
       $message = '<label>User Signed Up!</label>';
+      // Need to reroute the person to login at this point, so they don't have to scroll all the way down to get to a login link
+      //header("Location: login.php");
     }
 
   }//End of if main conditional 
 
-?>
-<?php include '../view/header.php'; ?>
+
+//start viewable page
+  require_once('../assets/utility/util.php');
+  include '../view/header.php'; ?>
 
 
 <main class="page" id="signUpPageContainer">
 <h2 class="pageHeading">User Sign up</h2>
-  <img src="../assets/images/charityWordBox.jpg" alt="Word jumble with charity as the central word" class="heroImg">
+  <img src="<?php echo $fullPath; ?>assets/images/charityWordBox.jpg" alt="Word jumble with charity as the central word" class="heroImg">
   
 
 <section class='container userForm'>

@@ -1,10 +1,20 @@
 <?php 
-include('view/header.php'); ?>
+require('model/database.php');
+require('model/charities.php');
+require('model/items.php');
+require_once('assets/utility/util.php');
+include('view/header.php'); 
 
-<nav class="loginLinks">
-<a href="admin/login.php" class="loginBtn btn ">Login</a>
-<a href="admin/user_signup.php" class="loginBtn btn">Sign Up</a>
-</nav>
+$charityTypes = get_charity_type();
+$itemCategories = get_all_item_categories();
+
+ 
+?>
+
+<!-- <nav class="loginLinks"> -->
+<a href="admin/login.php" class="loginBtn btn" id="loginHeaderBtn">Login</a>
+<a href="admin/user_signup.php" class="loginBtn btn" id="signUpHeaderBtn">Sign Up</a>
+<!-- </nav> -->
 
 
 <header>
@@ -43,42 +53,28 @@ include('view/header.php'); ?>
      <p class="btn" id="advSearchBtn" >Advanced Search</p>
      
      <section class="advSearchHidden" id="advSearchHidden">
-          <form action="" method="post" id="advSearchByType" class="advSearch">
-          <label for="byType">Search by Charity Type</label>
-               <select name="byType">
-                  <option> Choose ... </option>
-                  <option value="education">Education</option>
-                  <option value="animals">Animals</option>
-                  <option value="artsculture">Arts/Culture</option>
-                  <option value="communitydev">Community Development</option>
-                  <option value="environment">Environment</option>
-                  <option value="health">Health</option>
-                  <option value="civilrights">Human and Civil Rights</option>
-                  <option value="humanservices">Human Services</option>
-                  <option value="international">International</option>
-                  <option value="religion">Religious</option>
-                  <option value="research">Research/Public Policy</option>
-              </select>
-              <input type="submit" value="Search" class="ctaBtn btn">
+          <form action="advsearch/index.php" method="post" id="advSearchByType" class="advSearch">
+            <input type="hidden" name="action" value="byType">
+            <label for="byType">Search by Charity Type</label>
+                <select name="byType">
+                    <option> Choose ... </option>
+                    <?php foreach ($charityTypes as $type) : ?>
+                      <option value="<?php echo $type['charityType_ID'];?>"><?php echo $type['type_name']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            <input type="submit" value="Search" class="ctaBtn btn">
           </form>
 
-          <form action="" method="post" id="advSearchByItems" class="advSearch">
-            <label for="byItems">Search by Items Accepted by Charity</label>
+          <form action="advsearch/index.php" method="post" id="advSearchByItems" class="advSearch">
+            <input type="hidden" name="action" value="byItems">
+            <label for="items">Search by Items Accepted by Charity</label>
                <select name="byItems">
                   <option> Choose ... </option>
-                  <option value="household">Household Items</option>
-                  <option value="toys">Kids' Toys</option>
-                  <option value="kidclothes">Kids' Clothing</option>
-                  <option value="books">Books</option>
-                  <option value="appliances">Small Appliances</option>
-                  <option value="womenclothing">Women's Clothing</option>
-                  <option value="menclothing">Men's Clothing</option>
-                  <option value="womenshoes">Women's Shoes</option>
-                  <option value="menshoes">Men's Shoes</option>
-                  <option value="pets">Pet-related Items</option>
-                  <option value="garden">Yard or Garden Items</option>
+                  <?php foreach ($itemCategories as $cat) : ?>
+                      <option value="<?php echo $cat['itemCategory_ID'];?>"><?php echo $cat['category_name']; ?></option>
+                    <?php endforeach; ?>
                </select>
-               <input type="submit" value="Search" class="ctaBtn btn">
+            <input type="submit" value="Search" class="ctaBtn btn">
           </form>
 
      </section>

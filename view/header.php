@@ -1,26 +1,14 @@
 <?php
-  //session_start();
+  session_start();
   
   //This variable will be a flag to verify if the user is currently in a session
   //or just browsing. 
   //$name = $_SESSION["username"];
-  // $name = 'Hello World!';
+  //$name = 'Hello World!';
   //$id = $_SESSION["user_id"];
   // $id = 'MyMyselfandI';
 
- //$doc_root = $_SERVER['DOCUMENT_ROOT'];
- $doc_root = 'localhost/';
- $uri = $_SERVER['REQUEST_URI'];
- $dirs = explode('/', $uri);
- //$app_dirs = $dirs[1] . '/';
- $app_dirs = 'capstone/';
- //$app_path = $doc_root . $app_dirs;
- $app_path = 'localhost/capstone/';
-
- set_include_path($app_path);
  
-//echo $app_path;
-
   
 ?>
 <!DOCTYPE html>
@@ -35,7 +23,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <!-- Missing one from the Bootstrap site - popper.js; is this left out on purpose? -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
    
   
  <!-- This is the Boostrap CSS on the site under Get Started, and is a newer version... -->
@@ -48,7 +36,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/peb4ved.css">
   
   <!-- Custom styles overriding Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="http://localhost/capstone/assets/css/style.css" >
+  <link rel="stylesheet" type="text/css" href="<?php echo $fullPath; ?>assets/css/style.css" >
   
   <!-- Dynamic loading for donations? -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -66,7 +54,7 @@
 <div id="skip"><a href="#pageMain">Skip to Main Content</a></div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-yellow" id="mainNavbar">
-  <a class="navbar-brand" href="http://localhost/capstone/index.php"><img src="http://localhost/capstone/assets/images/logo-blue-text.svg" class="logoNav" alt="Charity Connection Logo"></a>
+  <a class="navbar-brand" href="<?php echo $fullPath; ?>index.php"><img src="<?php echo $fullPath; ?>assets/images/logo-blue-text.svg" class="logoNav" alt="Charity Connection Logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"><br></span>
   </button>
@@ -74,10 +62,10 @@
   <div class="collapse navbar-collapse" id="mainMenu">
   <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link nav_bar_link" href="http://localhost/capstone/">Home</a>
+          <a class="nav-link nav_bar_link" href="<?php echo $fullPath; ?>">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav_bar_link" href="http://localhost/capstone/admin/about.php">About</a>
+          <a class="nav-link nav_bar_link" href="<?php echo $fullPath; ?>admin/about.php">About</a>
         </li>
       <?php if (isset($name)): ?>
         <?php if ($name == 'admin'): ?>
@@ -86,10 +74,10 @@
           </li>
         <?php endif; ?>
         <li class="nav-item">
-          <a class="nav-link nav_bar_link" href="http://localhost/capstone/charity/home.php">Profile</a>
+          <a class="nav-link nav_bar_link" href="<?php echo $fullPath; ?>charity/home.php">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav_bar_link" href="http://localhost/capstone/charity/logout.php">Logout</a>
+          <a class="nav-link nav_bar_link" href="<?php echo $fullPath; ?>charity/logout.php">Logout</a>
         </li>
       </ul>
     <?php endif; ?>
