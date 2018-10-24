@@ -10,7 +10,8 @@
 
   $dsn = 'mysql:host=localhost;dbname=Capstone';
   $username = 'root';
-  $password = 'root';
+  //$password = 'root';
+  $password = 'Taa;2tosbt';
   $db = new PDO($dsn, $username, $password);
 
 

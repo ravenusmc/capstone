@@ -36,7 +36,7 @@ CREATE TABLE charities (
     latitude DECIMAL(7, 5) NOT NULL,
     longitude DECIMAL(7,5) NOT NULL,
     CONSTRAINT charitiesFKcharitytype
-        FOREIGN KEY (charityType_ID) REFERENCES charityType(charityType_ID)
+        FOREIGN KEY (charityType_ID) REFERENCES charityType (charityType_ID)
 );
 
 -- ADDED
@@ -53,9 +53,9 @@ CREATE TABLE items (
     itemCategory_ID INT NOT NULL,
     user_id INT NOT NULL,
     CONSTRAINT itemsFKitemcategories
-        FOREIGN KEY (itemCategory_ID) REFERENCES itemCategories(itemCategory_ID),
+        FOREIGN KEY (itemCategory_ID) REFERENCES itemCategories (itemCategory_ID),
     CONSTRAINT itemsFKuser_ID
-        FOREIGN KEY (user_id) REFERENCES users(user_id)
+        FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
 -- ADDED 
@@ -69,9 +69,9 @@ CREATE TABLE charityAndItemsTable (
     charityType_ID INT NOT NULL,
     itemCategory_ID INT NOT NULL,
     CONSTRAINT crossFKCharityType
-        FOREIGN KEY (charityType_ID) REFERENCES CharityType(charityType_ID),
+        FOREIGN KEY (charityType_ID) REFERENCES CharityType (charityType_ID),
     CONSTRAINT crossFKitemCategories
-        FOREIGN KEY (itemCategory_ID) REFERENCES itemCategories(itemCategory_ID)
+        FOREIGN KEY (itemCategory_ID) REFERENCES itemCategories (itemCategory_ID)
 );
 
 -- Added 
@@ -99,17 +99,17 @@ CREATE TABLE donations (
 );
 
 INSERT INTO itemCategories (itemCategory_ID, category_name) VALUES
-(1, 'Household'),
-(2, 'Kids Toys'),
-(3, 'Kids Clothes'),
-(4, 'Books'),
-(5, 'Small Appliance'),
-(6, 'Womens Clothing'),
-(7, 'Mens Clothing'),
-(8, 'Womens Shoes'),
-(9, 'Mens Shoes'),
-(10, 'Pet Item'),
-(11, 'Yard/Garden Item');
+(1, "Household Items"),
+(2, "Kids' Toys"),
+(3, "Kids' Clothing"),
+(4, "Books"),
+(5, "Small Appliances"),
+(6, "Women's Clothing"),
+(7, "Men's Clothing"),
+(8, "Women's Shoes"),
+(9, "Men's Shoes"),
+(10, "Pet Items"),
+(11, "Yard/Garden Items");
 
 INSERT INTO charities (charity_id, name, street, town, state, zip, password, charityType_ID, latitude, longitude) VALUES
 (1, 'Game Stop', '3385 Woodward Crossing Blvd', 'Buford', 'GA', 30519, '12', 2, '34.06940', '-83.98427'),
