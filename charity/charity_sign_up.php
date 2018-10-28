@@ -54,7 +54,9 @@
     }
 
 ?>
-<?php include '../view/header.php'; ?>
+<?php 
+require('../assets/utility/util.php');
+include '../view/header.php'; ?>
 
 <div class='container'>
 

@@ -1,11 +1,13 @@
 <?php 
 
-  session_start();
+session_start();
 
-  $name = $_SESSION["username"];
-  $id = $_SESSION["user_id"];
+$name = $_SESSION["username"];
+$id = $_SESSION["user_id"];
 
-  require_once('../assets/utility/util.php');
+ ?>
+
+<?php  require_once('../assets/utility/util.php');
 include '../view/header.php'; 
 ?>
 

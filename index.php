@@ -19,7 +19,7 @@ $itemCategories = get_all_item_categories();
 
 <header>
      <div class="headerImg">
-          <img src="http://localhost/capstone/assets/images/heartsWeb.jpg" alt="string of paper hearts" class="heroImg">
+          <img src="<?php echo $fullPath; ?>assets/images/heartsWeb.jpg" alt="string of paper hearts" class="heroImg">
           <p class="heroText">We are here to help</p>
      </div>
      <h1 class="homePageTitle">Welcome to Charity Connection</h1>

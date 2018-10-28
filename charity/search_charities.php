@@ -6,7 +6,9 @@
   $id = $_SESSION["user_id"];
 
 ?>
-<?php include '../view/header.php'; ?>
+<?php 
+require('../assets/utility/util.php');
+include '../view/header.php'; ?>
 <h1>Search Charities</h1>
 
 <!-- form area -->
