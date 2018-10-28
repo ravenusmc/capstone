@@ -2,11 +2,13 @@
 require('model/database.php');
 require('model/charities.php');
 require('model/items.php');
+require('model/advsearch.php');
 require_once('assets/utility/util.php');
 include('view/header.php'); 
 
 $charityTypes = get_charity_type();
-$itemCategories = get_all_item_categories();
+//$itemCategories = get_all_item_categories();
+$charityNames = listAll();
 
  
 ?>
@@ -65,13 +67,13 @@ $itemCategories = get_all_item_categories();
             <input type="submit" value="Search" class="ctaBtn btn">
           </form>
 
-          <form action="advsearch/index.php" method="post" id="advSearchByItems" class="advSearch">
-            <input type="hidden" name="action" value="byItems">
-            <label for="items">Search by Items Accepted by Charity</label>
-               <select name="byItems">
+          <form action="advsearch/index.php" method="post" id="advSearchByName" class="advSearch">
+            <input type="hidden" name="action" value="byName">
+            <label for="byName">Search by Charity Name</label>
+               <select name="byName">
                   <option> Choose ... </option>
-                  <?php foreach ($itemCategories as $cat) : ?>
-                      <option value="<?php echo $cat['itemCategory_ID'];?>"><?php echo $cat['category_name']; ?></option>
+                  <?php foreach ($charityNames as $name) : ?>
+                      <option value="<?php echo $name['charity_id'];?>"><?php echo $name['name']; ?></option>
                     <?php endforeach; ?>
                </select>
             <input type="submit" value="Search" class="ctaBtn btn">
