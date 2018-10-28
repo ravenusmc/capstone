@@ -7,7 +7,9 @@
   $id = $_SESSION["user_id"];
 
 ?>
-<?php include '../view/header.php'; ?>
+<?php 
+require('../assets/utility/util.php');
+include '../view/header.php'; ?>
 
 <h1>Charity By zip</h1>
 

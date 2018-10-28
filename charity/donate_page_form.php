@@ -7,7 +7,9 @@
   $user_id = $_SESSION["user_id"];
 
 ?>
-<?php include '../view/header.php'; ?>
+<?php 
+require('../assets/utility/util.php');
+include '../view/header.php'; ?>
 
 <main class="page">
 <h2 id="donationHeading">Make a Donation!</h2>

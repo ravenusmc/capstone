@@ -9,7 +9,9 @@
   $id = $_SESSION["user_id"];
 
 ?>
-<?php include '../view/header.php'; ?>
+<?php 
+require('../assets/utility/util.php');
+include '../view/header.php'; ?>
 <link rel="stylesheet" type="text/css" href="../assets/css/see_charities.css">
 
 <h1>See Charities</h1>
