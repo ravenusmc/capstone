@@ -6,31 +6,36 @@
   $name = $_SESSION["username"];
   $id = $_SESSION["user_id"];
  
-?>
-<?php 
+
 require('../assets/utility/util.php');
-include '../view/header.php'; ?>
-<link rel="stylesheet" type="text/css" href="../assets/css/home.css">
+include '../view/header.php'; 
+
+?>
+
+<main class="page">
 
 
-<h1>HOME</h1>
+<h2 class="pageHeading">User Profile for <?php echo $name; ?></h2>
 
 <a href="?action=search_charities">Search Charities</a>
 <br>
 <br>
-<a href="?action=select_charity_form">Donations List</a>
+<a href="?action=donate_page_form">Donations List</a>
 <br>
-
 <a href="?action=add_item_form">Add Item to Donate</a>
 <p>The above two links will probably change/go away</p>
+
+
+<section id="nearbyCharities">
 
 <!-- Map Code -->
 <div id="mapid"></div>
 <!-- End of Map Code -->
 
+<div id="nearbyList">
+<h3>Charities Near You:</h3>
 
-<h2>Charities Near You:</h2>
-
+<div id="list">
 <?php foreach ($all_charities as $charity): ?>
   <p>Charity Name: <?php echo $charity['name']; ?></p>
   <p>Address: <?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
@@ -41,10 +46,12 @@ include '../view/header.php'; ?>
     <button type="submit" class="btn btn-primary">Donate</button>
   </form>
 <?php endforeach; ?> 
+</div>
+</div>
+</section>
 
-<hr>
 
-<h2>Your Favorite Charities:</h2>
+<h3>Your Favorite Charities:</h3>
 
 <?php foreach ($charities as $charity): ?>
   <p>Charity Name: <?php echo $charity['name']; ?></p>
@@ -72,6 +79,7 @@ include '../view/header.php'; ?>
   var user_longitude = Number('<?php echo $user['longitude']; ?>')
   var user_latitude = Number('<?php echo $user['latitude']; ?>')
   var mymap = L.map('mapid').setView([user_latitude, user_longitude], 15);
+
 
   var myIcon = L.icon({
     iconUrl: '../assets/images/test.png',
@@ -101,3 +109,5 @@ include '../view/header.php'; ?>
 
 </script>
 <!-- End of code to add map to page -->
+
+<?php include '../view/footer.php'; ?>

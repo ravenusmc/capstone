@@ -65,13 +65,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #FDFACC;
 }
 
-.loginLinks {
-  display: inline;
-  max-width: 50%;
-  float: right;
-  padding: 0.5em 0;
-}
-
 .loginBtn {
   background: linear-gradient(#1D1F5B, #2E3192);
   color: #F9ED32;
@@ -274,6 +267,11 @@ label {
   display: none;
 }
 
+#mapid {
+  height: 600px;
+  width: 600px;
+}
+
 .map {
   border: 2px solid blue;
   height: 500px;
@@ -303,7 +301,7 @@ footer h6 {
 @media screen and (min-width: 49em) {
   #mainNavbar {
     position: relative;
-    width: 100;
+    width: 100%;
   }
 
   #mainMenu {
@@ -415,6 +413,32 @@ footer h6 {
 
   #loginAnchor {
     margin: 0 auto;
+  }
+
+  .nearbyCharities {
+    display: grid;
+    grid-template-areas: "map list" "map list";
+    width: 100%;
+    padding: 1em;
+  }
+
+  #mapid {
+    display: grid;
+    grid-area: map;
+  }
+
+  #nearbyList {
+    display: grid;
+    grid-area: list;
+    grid-template-area: "heading" "charityList";
+  }
+  #nearbyList h3 {
+    display: grid;
+    grid-area: heading;
+  }
+  #nearbyList #list {
+    display: grid;
+    grid-area: charityList;
   }
 }
 

@@ -85,17 +85,22 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-
 .bg-yellow {
      background-color: $paleYellow;
 }
 
-.loginLinks {
-    display: inline;
-    max-width: 50%;
-    float: right;
-    padding: .5em 0;
-}
+//toggle menu
+
+
+
+
+
+// .loginLinks {
+//     display: inline;
+//     max-width: 50%;
+//     float: right;
+//     padding: .5em 0;
+// }
 
 
 .loginBtn {
@@ -331,17 +336,23 @@ label {
 }
 
 
-
-//Mike's CSS
+//Mike's CSS from add_item.css
 #charity_type_selection {
      display: none;
    }
+
+// Mike's CSS from home.css
+#mapid { 
+    height: 600px; 
+    width: 600px;
+  }
 
 
 // ----------------------------------------//
 // Map results page
 // ----------------------------------------//
 
+//Mike's CSS from see_charities.css
 .map {
      border: 2px solid blue;
      height: 500px;
@@ -349,10 +360,11 @@ label {
    }
 
 
-
 // ----------------------------------------//
 // thank you page
 // ----------------------------------------//
+
+
 
 
 // ----------------------------------------//
