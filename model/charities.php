@@ -12,7 +12,7 @@
     return $charity_types;
   }
 
-  function get_all_charities_based_on_type($charity_id) {
+    function get_all_charities_based_on_type($charity_id) {
     global $db;
     $query = "SELECT * FROM charities 
               WHERE charityType_ID = :charity_id";

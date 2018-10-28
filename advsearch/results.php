@@ -10,16 +10,21 @@
           $searchType = "all charities";
      } else if ($search == 'type') {
           $searchType = "charities by type";
-     } else if ($search == 'itemCat')
-          $searchType = "charities by item category"
+     } else if ($search == 'name')
+          $searchType = "charities by name"
 ?>
 
 <main class="resultsBody">
      <h2>Results of search for <?php echo $searchType; ?></h2>
 
-     <?php foreach ($charities as $charity): ?>
-          <p><a href=""><?php echo $charity['name'];?></a></p>
-     <?php endforeach; ?>
+     <?php 
+     if ($search == 'type') :
+          foreach ($charities as $charity): ?>
+               <p><a href="#"><?php echo $charity['name'];?></a></p>
+          <?php endforeach; 
+     elseif ($search == 'name') : ?>
+          <p><a href="#"><?php echo $charity['name']; ?></a></p>
+     <?php endif; ?>
 
 <!-- Put the search results here. -->
 

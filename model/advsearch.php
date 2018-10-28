@@ -27,15 +27,26 @@ function charitiesByType($charityType) {
      return $charities;
 }
 
-function charitiesByItems($itemCategory) {
-     global $db;
-     $query = '';
-     $statement = $db->prepare($query);
-     $statement->bindValue(':item', $itemCategory);
-     $statement->execute();
-     $charities = $statement->fetchAll();
-     $statement->closeCursor();
-     return $charities;
-}
+// function charitiesByItems($itemCategory) {
+//      global $db;
+//      $query = '';
+//      $statement = $db->prepare($query);
+//      $statement->bindValue(':item', $itemCategory);
+//      $statement->execute();
+//      $charities = $statement->fetchAll();
+//      $statement->closeCursor();
+//      return $charities;
+// }
 
+function charityByName($charityID) {
+     global $db;
+     $query = 'SELECT name FROM charities
+               WHERE charity_id = :charityID';
+     $statement = $db->prepare($query);
+     $statement->bindValue(':charityID', $charityID);
+     $statement->execute();
+     $charity = $statement->fetch();
+     $statement->closeCursor();
+     return $charity;
+}
 ?>

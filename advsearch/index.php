@@ -13,10 +13,11 @@ if ($action == NULL) {
      }
 }
 
+
 switch ($action) {
      case 'listAll':
           // get all the charities listed in alphabetical order
-          $charities = allCharities();
+          $charities = listAll();
           $search = "all";
           include('results.php');
           break;
@@ -26,7 +27,7 @@ switch ($action) {
           $typeID = filter_input(INPUT_POST, 'byType', FILTER_VALIDATE_INT);
 
           if ($typeID == NULL) {
-               $errorMsg = "";
+               $error = "";
                include('../errors/error.php');
                break;
           } else {
@@ -36,16 +37,16 @@ switch ($action) {
                break;
           }
 
-     case 'byItems':
-          $itemID = filter_input(INPUT_POST, 'items', FILTER_VALIDATE_INT);
+     case 'byName':
+          $charityID = filter_input(INPUT_POST, 'byName', FILTER_VALIDATE_INT);
 
-          if ($itemID == NULL) {
-               $errorMsg = "";
+          if ($charityID == NULL) {
+               $error = "";
                include('../errors/error.php');
                break;
           } else {
-               $charities = charitiesByItems($itemID);
-               $search = "itemcat";
+               $charity = charityByName($charityID);
+               $search = "name";
                include('results.php');
                break;
           }
