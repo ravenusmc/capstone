@@ -144,13 +144,15 @@
 
 
      // Profile Page
-     .nearbyCharities {
+     #nearbyCharities {
           display: grid;
           grid-template-areas: 
                "map list"
                "map list";
-          width: 100%;
+          width: 80%;
           padding: 1em;
+          margin: 1em auto;
+          border: 1px solid $logoBlue;
      }
 
      #mapid {
@@ -161,19 +163,14 @@
      #nearbyList {
           display: grid;
           grid-area: list;
-          grid-template-area: 
-               "heading"
-               "charityList";
+          
+     }
 
-          h3 {
-               display: grid;
-               grid-area: heading;
-          }
-
-          #list {
-               display: grid;
-               grid-area: charityList;
-          }
+     #favCharities {
+          border: 1px solid $logoBlue;
+          width: 80%;
+          margin: 1em auto;
+          padding: 1em;
      }
 
      

@@ -67,7 +67,7 @@
       <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
     <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
-    <a href="user_signup.php">Not a user yet? Sign up by clicking here.</a>
+    <a href="user_signup.php" id="signupLink">Not a user yet? Sign up by clicking here.</a>
   </form>
   
 </section>
