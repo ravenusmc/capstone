@@ -17,11 +17,7 @@ include '../view/header.php';
 
 <h2 class="pageHeading">User Profile for <?php echo $name; ?></h2>
 
-<a href="?action=search_charities">Search Charities</a>
-<br>
-<br>
-<a href="?action=donate_page_form">Donations List</a>
-<br>
+
 <a href="?action=add_item_form">Add Item to Donate</a>
 <p>The above two links will probably change/go away</p>
 
@@ -55,8 +51,8 @@ include '../view/header.php';
 
 <div id="favList">
 <?php foreach ($charities as $charity): ?>
-  <p>Charity Name: <?php echo $charity['name']; ?></p>
-  <p>Address: <?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
+  <p class="charityName"><?php echo $charity['name']; ?></p>
+  <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
   <br>  
   <form method="post">
     <input type="hidden" name="action" value="donate_page_form">
