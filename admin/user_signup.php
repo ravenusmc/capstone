@@ -74,7 +74,7 @@
       //Message to alert user that they signed up
       $message = '<label>User Signed Up!</label>';
       // Need to reroute the person to login at this point, so they don't have to scroll all the way down to get to a login link
-      //header("Location: login.php");
+      include 'login.php';
     }
 
   }//End of if main conditional 

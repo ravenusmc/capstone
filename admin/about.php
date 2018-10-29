@@ -15,7 +15,7 @@ include '../view/header.php';
 
 
 <main class="page">
-<h2 class='aboutHeader'>About Charity Connection</h2>
+<h2 class='pageHeading'>About Charity Connection</h2>
 <section class='aboutContent'>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, alias itaque omnis voluptatem iste, quos ipsum quas nesciunt cupiditate cum esse excepturi accusamus! Eius blanditiis laborum, dolor voluptate optio quia!</p>
 <img class="aboutImg" src="<?php echo $fullPath; ?>assets/images/youCanHelp.jpg" alt="You can help image">
