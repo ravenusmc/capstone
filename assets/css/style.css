@@ -247,6 +247,10 @@ label {
   margin: 1em;
 }
 
+#signupLink {
+  text-align: center;
+}
+
 #signUpForm {
   max-width: 75%;
   margin: 1em auto;
@@ -415,11 +419,13 @@ footer h6 {
     margin: 0 auto;
   }
 
-  .nearbyCharities {
+  #nearbyCharities {
     display: grid;
     grid-template-areas: "map list" "map list";
-    width: 100%;
+    width: 80%;
     padding: 1em;
+    margin: 1em auto;
+    border: 1px solid #2E3192;
   }
 
   #mapid {
@@ -430,15 +436,13 @@ footer h6 {
   #nearbyList {
     display: grid;
     grid-area: list;
-    grid-template-area: "heading" "charityList";
   }
-  #nearbyList h3 {
-    display: grid;
-    grid-area: heading;
-  }
-  #nearbyList #list {
-    display: grid;
-    grid-area: charityList;
+
+  #favCharities {
+    border: 1px solid #2E3192;
+    width: 80%;
+    margin: 1em auto;
+    padding: 1em;
   }
 }
 

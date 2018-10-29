@@ -122,6 +122,8 @@
       //Getting all charities by zip 
       $charities = get_charity_by_zip($zip);
 
+      //if $charities return no results, then it needs to say that.
+
       include('charity_by_zip.php');
       break; 
     //This action will take the user to the donation page 

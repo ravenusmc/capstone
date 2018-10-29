@@ -11,11 +11,15 @@
 require('../assets/utility/util.php');
 include '../view/header.php'; ?>
 
-<h1>Charity By zip</h1>
+<main class="page">
+<h2 class="pageHeading">Charity By zip</h2>
 
 <?php foreach ($charities as $charity): ?>
 
-  <h2><?php echo $charity['name']; ?></h2>
+  <h3><?php echo $charity['name']; ?></h3>
   <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state'] . ' ' . $charity['zip'] ?></p>
 
 <?php endforeach; ?>
+
+</main>
+<?php include '../view/footer.php'; ?>

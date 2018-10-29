@@ -50,9 +50,10 @@ include '../view/header.php';
 </div>
 </section>
 
-
+<section id="favCharities">
 <h3>Your Favorite Charities:</h3>
 
+<div id="favList">
 <?php foreach ($charities as $charity): ?>
   <p>Charity Name: <?php echo $charity['name']; ?></p>
   <p>Address: <?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
@@ -71,7 +72,8 @@ include '../view/header.php';
     <button type="submit" class="btn btn-danger">unfavorite</button>
   </form>
 <?php endforeach; ?> 
-
+</div>
+<div id="favMaps">
 <script type="text/javascript" src='../assets/js/key.js'></script>
 <!-- Start of code to add map to page -->
 <script type="text/javascript">
@@ -109,5 +111,8 @@ include '../view/header.php';
 
 </script>
 <!-- End of code to add map to page -->
+</div>
+</section>
+
 
 <?php include '../view/footer.php'; ?>
