@@ -149,7 +149,7 @@
           grid-template-areas: 
                "map list"
                "map list";
-          width: 80%;
+          width: 90%;
           padding: 1em;
           margin: 1em auto;
           border: 1px solid $logoBlue;
@@ -158,17 +158,20 @@
      #mapid {
           display: grid;
           grid-area: map;
+          padding: 1em;
+          width: 100%;
      }
 
      #nearbyList {
           display: grid;
           grid-area: list;
+          padding: 1em;
           
      }
 
      #favCharities {
           border: 1px solid $logoBlue;
-          width: 80%;
+          width: 90%;
           margin: 1em auto;
           padding: 1em;
      }

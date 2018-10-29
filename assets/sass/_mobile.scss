@@ -347,8 +347,9 @@ label {
 
 // Mike's CSS from home.css
 #mapid { 
-    height: 600px; 
-    width: 600px;
+    max-height: 90%;
+    min-width: 50%; 
+    max-width: 90%;
   }
 
 
@@ -359,10 +360,18 @@ label {
 //Mike's CSS from see_charities.css
 .map {
      border: 2px solid blue;
-     height: 500px;
-     width: 500px;
+     //height: 500px;
+     //width: 500px;
    }
 
+   #nearbyCharities,
+   #favCharities {
+     display: block;
+   }
+
+   .charityName {
+     font-weight: 700;
+   }
 
 // ----------------------------------------//
 // thank you page

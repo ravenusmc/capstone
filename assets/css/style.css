@@ -272,14 +272,22 @@ label {
 }
 
 #mapid {
-  height: 600px;
-  width: 600px;
+  max-height: 90%;
+  min-width: 50%;
+  max-width: 90%;
 }
 
 .map {
   border: 2px solid blue;
-  height: 500px;
-  width: 500px;
+}
+
+#nearbyCharities,
+#favCharities {
+  display: block;
+}
+
+.charityName {
+  font-weight: 700;
 }
 
 footer {
@@ -422,7 +430,7 @@ footer h6 {
   #nearbyCharities {
     display: grid;
     grid-template-areas: "map list" "map list";
-    width: 80%;
+    width: 90%;
     padding: 1em;
     margin: 1em auto;
     border: 1px solid #2E3192;
@@ -431,16 +439,19 @@ footer h6 {
   #mapid {
     display: grid;
     grid-area: map;
+    padding: 1em;
+    width: 100%;
   }
 
   #nearbyList {
     display: grid;
     grid-area: list;
+    padding: 1em;
   }
 
   #favCharities {
     border: 1px solid #2E3192;
-    width: 80%;
+    width: 90%;
     margin: 1em auto;
     padding: 1em;
   }
