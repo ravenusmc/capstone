@@ -18,7 +18,8 @@ function listAll() {
 function charitiesByType($charityType) {
      global $db;
      $query = 'SELECT name from charities
-               WHERE charityType_ID = :charityType';
+               WHERE charityType_ID = :charityType
+               ORDER BY name ASC';
      $statement = $db->prepare($query);
      $statement->bindValue(':charityType', $charityType);
      $statement->execute();

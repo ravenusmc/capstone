@@ -33,13 +33,13 @@ include '../view/header.php';
 
 <div id="list">
 <?php foreach ($all_charities as $charity): ?>
-  <p>Charity Name: <?php echo $charity['name']; ?></p>
-  <p>Address: <?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
+  <h4><a href="#"><?php echo $charity['name']; ?></a></h4>
+  <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
   <form method="post">
     <input type="hidden" name="action" value="donate_page_form">
     <input type="hidden" name="user_id" value="<?php echo $id; ?>">
     <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
-    <button type="submit" class="btn btn-primary">Donate</button>
+    <button type="submit" class="btn ctaBtn">Donate</button>
   </form>
 <?php endforeach; ?> 
 </div>

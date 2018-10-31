@@ -20,6 +20,16 @@ h1, h2, h3, h4, h5, h6 {
      color: $logoBlue;
 }
 
+a {
+  color: $darkYellow;
+
+  &:hover {
+    color: $darkBlue;
+    text-decoration: none;
+    border-bottom: 1px dotted $darkBlue;
+  }
+}
+
 .errorMsg {
     color: red;
     font-weight: 700;
@@ -89,18 +99,8 @@ h1, h2, h3, h4, h5, h6 {
      background-color: $paleYellow;
 }
 
-//toggle menu
 
 
-
-
-
-// .loginLinks {
-//     display: inline;
-//     max-width: 50%;
-//     float: right;
-//     padding: .5em 0;
-// }
 
 
 .loginBtn {
@@ -155,7 +155,7 @@ label {
 
 .form-submit-btn {
      @include customBtn;
-
+     
      &:hover {
           @include customBtnHover;
      }
@@ -311,7 +311,8 @@ label {
 //Sign up page
 // ----------------------------------------//
 
-#signUpForm {
+#signUpForm,
+.signUpForm {
      max-width: 75%;
      margin: 1em auto;
      padding: .5em;
@@ -321,6 +322,24 @@ label {
 //      position: relative;
 //      right: 1em;
 // }
+
+
+// ----------------------------------------//
+// Logout Page
+// ----------------------------------------//
+
+#logoutMessage {
+  text-align: center;
+  font-family: $sans;
+  font-size: 1.25em;
+  color: $logoBlue;
+  margin: 1em;
+}
+
+#logBackIn {
+  text-align: center;
+}
+
 
 // ----------------------------------------//
 // Add Items page and/or Donations Page
@@ -347,9 +366,7 @@ label {
 
 // Mike's CSS from home.css
 #mapid { 
-    max-height: 90%;
-    min-width: 50%; 
-    max-width: 90%;
+    width: 90%;
   }
 
 
@@ -360,8 +377,7 @@ label {
 //Mike's CSS from see_charities.css
 .map {
      border: 2px solid blue;
-     //height: 500px;
-     //width: 500px;
+     width: 90%;
    }
 
    #nearbyCharities,
@@ -372,6 +388,18 @@ label {
    .charityName {
      font-weight: 700;
    }
+
+
+
+// ----------------------------------------//
+// Advanced Search Results page
+// ----------------------------------------//
+
+.resultsBody {
+    width: 90%;
+    margin: 0 auto;
+}
+
 
 // ----------------------------------------//
 // thank you page
