@@ -15,6 +15,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #2E3192;
 }
 
+a {
+  color: #D67A00;
+}
+a:hover {
+  color: #0B0C25;
+  text-decoration: none;
+  border-bottom: 1px dotted #0B0C25;
+}
+
 .errorMsg {
   color: red;
   font-weight: 700;
@@ -72,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em;
+  margin: 1em 0;
   border: 0;
   margin: 0.5em;
 }
@@ -119,7 +128,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em;
+  margin: 1em 0;
   border: 0;
 }
 .form-submit-btn:hover {
@@ -164,7 +173,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em;
+  margin: 1em 0;
   border: 0;
 }
 .ctaBtn:hover {
@@ -199,7 +208,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em;
+  margin: 1em 0;
   border: 0;
 }
 #advSearchBtn:hover {
@@ -251,10 +260,23 @@ label {
   text-align: center;
 }
 
-#signUpForm {
+#signUpForm,
+.signUpForm {
   max-width: 75%;
   margin: 1em auto;
   padding: 0.5em;
+}
+
+#logoutMessage {
+  text-align: center;
+  font-family: "Ministry";
+  font-size: 1.25em;
+  color: #2E3192;
+  margin: 1em;
+}
+
+#logBackIn {
+  text-align: center;
 }
 
 #donationHeading {
@@ -272,13 +294,12 @@ label {
 }
 
 #mapid {
-  max-height: 90%;
-  min-width: 50%;
-  max-width: 90%;
+  width: 90%;
 }
 
 .map {
   border: 2px solid blue;
+  width: 90%;
 }
 
 #nearbyCharities,
@@ -288,6 +309,11 @@ label {
 
 .charityName {
   font-weight: 700;
+}
+
+.resultsBody {
+  width: 90%;
+  margin: 0 auto;
 }
 
 footer {
@@ -375,7 +401,7 @@ footer h6 {
   #ctaSignUp #signUpBtn {
     height: 2em;
     width: 20%;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .ctaHeading {
@@ -429,9 +455,10 @@ footer h6 {
 
   #nearbyCharities {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "map list" "map list";
-    width: 90%;
     padding: 1em;
+    width: 100%;
     margin: 1em auto;
     border: 1px solid #2E3192;
   }
@@ -451,7 +478,7 @@ footer h6 {
 
   #favCharities {
     border: 1px solid #2E3192;
-    width: 90%;
+    width: 100%;
     margin: 1em auto;
     padding: 1em;
   }

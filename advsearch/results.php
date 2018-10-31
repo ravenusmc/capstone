@@ -15,7 +15,7 @@
 ?>
 
 <main class="resultsBody">
-     <h2>Results of search for <?php echo $searchType; ?></h2>
+     <h2 class="pageHeading">Results of search for <?php echo $searchType; ?></h2>
 
      <?php 
      if ($search == 'type') :

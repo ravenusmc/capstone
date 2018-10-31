@@ -17,7 +17,7 @@ include '../view/header.php'; ?>
 
 <?php if ($charities) {
       foreach ($charities as $charity): ?>
-        <h3><?php echo $charity['name']; ?></h3>
+        <h3><a href="#"><?php echo $charity['name']; ?></a></h3>
         <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state'] . ' ' . $charity['zip'] ?></p>
       <?php endforeach; 
 } else { ?>

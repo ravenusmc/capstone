@@ -80,7 +80,7 @@
           #signUpBtn {
                height: 2em;
                width: 20%;
-               font-size: 2em;
+               font-size: 1.5em;
 
           }
      
@@ -146,11 +146,12 @@
      // Profile Page
      #nearbyCharities {
           display: grid;
+          grid-template-columns: 1fr 1fr;
           grid-template-areas: 
                "map list"
                "map list";
-          width: 90%;
           padding: 1em;
+          width: 100%;
           margin: 1em auto;
           border: 1px solid $logoBlue;
      }
@@ -171,7 +172,7 @@
 
      #favCharities {
           border: 1px solid $logoBlue;
-          width: 90%;
+          width: 100%;
           margin: 1em auto;
           padding: 1em;
      }

@@ -60,7 +60,7 @@ include '../view/header.php'; ?>
 
 <div class='container'>
 
-  <h1>Sign Up Charity</h1>
+  <h2 class="pageHeading">Sign Up Charity</h2>
   
   <!-- Start of error handling -->
   <?php 
@@ -71,7 +71,7 @@ include '../view/header.php'; ?>
   <!-- End of error handling -->
 
   <!-- Start of bootstrap form -->
-  <form method="post">
+  <form method="post" class="signUpForm">
 
     <div class="form-group">
       <label for="charityname">Charity Name</label>
@@ -82,16 +82,16 @@ include '../view/header.php'; ?>
       <input type="text" name='street' class="form-control" id="lastName" placeholder="Enter Street">
     </div>
     <div class="form-group">
-      <label for="town">Town</label>
-      <input type="text" name='town' class="form-control" id="town" placeholder="Enter Town">
+      <label for="town">City</label>
+      <input type="text" name='town' class="form-control" id="town" placeholder="Enter City">
     </div>
     <div class="form-group">
       <label for="state">State</label>
       <input type="text" name='state' class="form-control" id="state" placeholder="Enter State">
     </div>
     <div class="form-group">
-      <label for="street">zip</label>
-      <input type="text" name='zip' class="form-control" id="zip" placeholder="Enter Zip">
+      <label for="street">Zip Code</label>
+      <input type="text" name='zip' class="form-control" id="zip" placeholder="Enter Zip Code">
     </div>
     <div class="form-group">
       <label for="password">Password</label>
@@ -107,7 +107,7 @@ include '../view/header.php'; ?>
     </div>
 
 
-    <button type="submit" name="login" class="btn btn-primary">Submit</button>
+    <button type="submit" name="login" class="btn form-submit-btn">Submit</button>
 
   </form>
   <!-- End of Bootstrap form -->
