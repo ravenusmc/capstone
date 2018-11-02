@@ -75,7 +75,7 @@
           </li>
         <?php endif; ?>
         <li class="nav-item">
-          <a class="nav-link nav_bar_link" href="<?php echo $fullPath; ?>charity/home.php">Profile</a>
+          <a class="nav-link nav_bar_link" href="<?php echo $fullPath; ?>charity/index.php?">Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link nav_bar_link" href="<?php echo $fullPath; ?>charity/logout.php">Logout</a>
