@@ -70,11 +70,17 @@ a {
 .logoNav {
      max-height: 75px;
      width: 50%;
+     
 }
 
 .navbar-brand {
      margin: .5em;
      width: 30%;
+
+     &:hover {
+      text-decoration: none;
+      border: 0;
+    }
 }
 
 .navbar-toggler {
