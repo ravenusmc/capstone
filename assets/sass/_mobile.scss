@@ -115,11 +115,12 @@ a {
 
      &:hover {
           @include customBtnHover;
+          color: $logoYellow;
      }
 
-     & a:hover {
-        color: $logoYellow;
-     }
+    //  & a:hover {
+    //     color: $logoYellow;
+    // }
 
 } 
 

@@ -1,7 +1,9 @@
 <?php
   
   // Start the session
-  session_start();
+  if (!isset($_SESSION)) {
+    session_start();
+  }
 
   //Pulling in the databases
   require('../model/database.php');
