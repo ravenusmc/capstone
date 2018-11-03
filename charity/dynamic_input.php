@@ -42,8 +42,9 @@
 
            }  
       }  
-      echo "Data Inserted";  
+      //echo "Data Inserted";  
       // needs to redirect to '../donations/index.php and change the donate_page_form.php file to remove the alert function.
+      include '../donations/summary.php';
  }  
  else  
  {  

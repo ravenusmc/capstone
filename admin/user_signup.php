@@ -3,7 +3,9 @@
   //All the code in this file will deal with the signup page 
 
   // Start a session
-  session_start();
+  if (!isset($_SESSION)) {
+    session_start();
+  }
 
   //Pulling in the databases
   require('../model/database.php');

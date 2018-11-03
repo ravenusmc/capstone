@@ -1,4 +1,8 @@
 <?php 
+if (!isset($_SESSION)) {
+  session_start();
+}
+
 require('model/database.php');
 require('model/charities.php');
 require('model/items.php');

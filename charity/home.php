@@ -1,5 +1,7 @@
 <?php
-  session_start();
+  if (!isset($_SESSION)) {
+    session_start();
+  }
   
   //This variable will be a flag to verify if the user is currently in a session
   //or just browsing. 
@@ -29,21 +31,22 @@ include '../view/header.php';
 <!-- End of Map Code -->
 
 <div id="nearbyList">
-<h3>Charities Near You:</h3>
+  <h3>Charities Near You:</h3>
 
-<div id="list">
-<?php foreach ($all_charities as $charity): ?>
-  <h4><a href="#"><?php echo $charity['name']; ?></a></h4>
-  <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
-  <form method="post">
-    <input type="hidden" name="action" value="donate_page_form">
-    <input type="hidden" name="user_id" value="<?php echo $id; ?>">
-    <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
-    <button type="submit" class="btn ctaBtn">Donate</button>
-  </form>
-<?php endforeach; ?> 
+  <div id="list">
+    <?php foreach ($all_charities as $charity): ?>
+      <h4><a href="#"><?php echo $charity['name']; ?></a></h4>
+      <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
+      <form method="post">
+        <input type="hidden" name="action" value="donate_page_form">
+        <input type="hidden" name="user_id" value="<?php echo $id; ?>">
+        <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+        <button type="submit" class="btn ctaBtn">Donate</button>
+      </form>
+    <?php endforeach; ?> 
+  </div>
 </div>
-</div>
+
 </section>
 
 <section id="favCharities">
