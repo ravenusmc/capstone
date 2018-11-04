@@ -19,6 +19,11 @@ include '../view/header.php'; ?>
       foreach ($charities as $charity): ?>
         <h3><a href="#"><?php echo $charity['name']; ?></a></h3>
         <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state'] . ' ' . $charity['zip'] ?></p>
+        <form action="index.php" method="post">
+          <input type="hidden" name="action" value="see_single_charity">
+          <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+          <button type="submit" class="btn ctaBtn">More Info</button>
+        </form>
       <?php endforeach; 
 } else { ?>
     <p>We have no charities in your zip code.</p>

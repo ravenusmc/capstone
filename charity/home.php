@@ -19,9 +19,9 @@ include '../view/header.php';
 
 <h2 class="pageHeading">User Profile for <?php echo $name; ?></h2>
 
-
-<a href="?action=add_item_form">Add Item to Donate</a>
-<p>The above two links will probably change/go away</p>
+<!-- This is only here in case something is still needed on those pages -->
+<!-- <a href="?action=add_item_form">Add Item to Donate</a>
+<p>The above two links will probably change/go away</p> -->
 
 
 <section id="nearbyCharities">
@@ -93,8 +93,8 @@ include '../view/header.php';
 
 
   var myIcon = L.icon({
-    iconUrl: '../assets/images/test.png',
-    iconSize: [38, 95],
+    iconUrl: '../assets/images/blueMarker.png',
+    iconSize: [38, 60],
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76],
     shadowSize: [68, 95],

@@ -103,7 +103,7 @@
       //Inserting data in user_tables
       insert_into_favorites($favorite, $charity_id, $user_id);
 
-      include('see_charities.php');
+      include('home.php');
       break;
     //This action will update a favorite charite 
     case 'update_favorite_charity':
