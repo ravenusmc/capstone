@@ -43,6 +43,11 @@ include '../view/header.php';
         <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
         <button type="submit" class="btn ctaBtn">Donate</button>
       </form>
+      <form action="index.php" method="post">
+        <input type="hidden" name="action" value="see_single_charity">
+        <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+        <button type="submit" class="btn ctaBtn">More Info</button>
+      </form>
     <?php endforeach; ?> 
   </div>
 </div>
@@ -64,6 +69,11 @@ include '../view/header.php';
     <button type="submit" class="btn btn-primary">Donate</button>
   </form>
   <br>
+  <form action="index.php" method="post">
+    <input type="hidden" name="action" value="see_single_charity">
+    <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+    <button type="submit" class="btn ctaBtn">More Info</button>
+  </form>
   <form method="post">
     <input type="hidden" name="action" value="update_favorite_charity">
     <input type="hidden" name="user_id" value="<?php echo $id; ?>">

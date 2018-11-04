@@ -4,7 +4,7 @@
   function get_charity_type(){ //using this in landing page
     global $db;
     $query = "SELECT * FROM charitytype
-    ORDER BY type_name ASC";
+    ORDER BY charityType_ID";
     $statement = $db->prepare($query);
     $statement->execute();
     $charity_types = $statement->fetchAll();

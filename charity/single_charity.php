@@ -15,7 +15,7 @@ include '../view/header.php'; ?>
 
 <h2><?php echo $charity['name']; ?></h2>
 <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
-<a href="">URL to Site</a>
+<a href="<?php echo $charity['url']; ?>">Link to Charity Information</a>
 <p>Need table for contact information!</p>
 
 <!-- only using this div because buttons were on edge of screen-this will change! -->
@@ -26,7 +26,6 @@ include '../view/header.php'; ?>
     <input type="hidden" name="user_id" value="<?php echo $id; ?>">
     <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
     <input type='radio' name='favorite' value='y' checked>Yes<br>
-    <input type='radio' name='favorite' value='n'>no<br>
-    <input  type="submit" value="Make Favorite">
+    <button type="submit" class="btn ctaBtn">Make Favorite</button>
   </form>
 </div>
