@@ -35,8 +35,8 @@ include '../view/header.php'; ?>
   <?php endif; ?>
 </div>
 
-  <!-- Start of Google maps code -->
-  <script type="text/javascript">
+<!-- Start of Google maps code -->
+<script type="text/javascript">
 
   $(document).ready(function(){
 
