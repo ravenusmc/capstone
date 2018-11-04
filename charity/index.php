@@ -92,6 +92,9 @@
 
       $charity = get_single_charity($charity_id);
 
+      //Getting information on the user 
+      $user = get_user_info($id);
+
       include('single_charity.php');
       break; 
     //This action will make a charity a favorite 
