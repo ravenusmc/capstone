@@ -8,6 +8,6 @@ $appPath = "capstone/";
 
 $fullPath = $docRoot . $appPath;
 
-set_include_path($fullPath);
+set_include_path($fullPath); 
 
 ?>

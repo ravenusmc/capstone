@@ -103,7 +103,7 @@
   <!-- End of error handling -->
 
   <!-- Instructions -->
-  <p>By registering a <span class="companyName">Charity Connection</span> account, you give permission to <span class="companyName">Charity Connection</span> to use your location to retrieve charities located near you. You can deactivate your account at any time but, we hope you find our site useful for many years to come.</p>
+  <p>By registering for an account, you give permission to <span class="companyName">Charity Connection</span> to use your location to retrieve charities located near you. You can deactivate your account at any time but, we hope you find our site useful for many years to come.</p>
   <p>Please take a quick moment to complete your user registration by clicking the below link. </p>
   <p>Thanks, again!<br>
   <span class="companyName"><em>Charity Connection</em></span></p>

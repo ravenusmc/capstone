@@ -12,7 +12,6 @@
      switch($action) {
           case 'all':
                $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
-               $
 
 
 

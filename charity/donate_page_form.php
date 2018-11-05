@@ -16,6 +16,7 @@ include '../view/header.php'; ?>
 
 <main class="page">
 <h2 id="donationHeading">Make a Donation!</h2>
+<p>Please type the item to be donated. Press the ADD MORE button to add more than one item. Press the REMOVE button to remove an item. Once you’ve entered all of the items to be donated, press SUBMIT.</p>
 
 <div class="container">  
      
