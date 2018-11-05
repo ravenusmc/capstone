@@ -1,5 +1,7 @@
 <?php
-  session_start();
+  if (!isset($_SESSION)) {
+    session_start();
+  }
   
   //This variable will be a flag to verify if the user is currently in a session
   //or just browsing. 
@@ -8,14 +10,13 @@
   
 ?>
 <?php 
+require('../key.php');
 require('../assets/utility/util.php');
 include '../view/header.php'; ?>
 <link rel="stylesheet" type="text/css" href="../assets/css/map.css">
 
 <h1>Information on Charity</h1>
 
-<div id="map_<?php echo $charity['charity_id'] . $charity['item_name']; ?>" class='map'>
-</div>
 
 <h2><?php echo $charity['name']; ?></h2>
 <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>

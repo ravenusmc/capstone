@@ -35,6 +35,10 @@ a {
     font-weight: 700;
 }
 
+.companyName {
+    color: $logoBlue;
+    font-weight: 700;
+}
 
 // ----------------------------------------//
 /* Accessibility-related */
@@ -116,6 +120,7 @@ a {
      &:hover {
           @include customBtnHover;
           color: $logoYellow;
+          border: 0;
      }
 
     //  & a:hover {

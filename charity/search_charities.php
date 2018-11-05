@@ -1,6 +1,7 @@
 <?php
-  
-  session_start();
+  if (!isset($_SESSION)) {
+    session_start();
+  }
 
   $name = $_SESSION["username"];
   $id = $_SESSION["user_id"];

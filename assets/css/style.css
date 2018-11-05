@@ -29,6 +29,11 @@ a:hover {
   font-weight: 700;
 }
 
+.companyName {
+  color: #2E3192;
+  font-weight: 700;
+}
+
 /* Accessibility-related */
 #skip {
   position: absolute;
@@ -92,6 +97,7 @@ a:hover {
 .loginBtn:hover {
   background: linear-gradient(#0B0C25, #1D1F5B);
   color: #F9ED32;
+  border: 0;
 }
 
 /* Header */

@@ -114,7 +114,6 @@ INSERT INTO itemCategories (itemCategory_ID, category_name) VALUES
 
 INSERT INTO charities (name, street, town, state, zip, password, charityType_ID, latitude, longitude, url) VALUES
 ('Cross Pointe Sugarloaf', '1800 Satellite Boulevard', 'Duluth', 'GA', 30097, 'test', 10, '33.99509', '-84.08346', 'http://www.crosspointechurch.com/'),
-('Cross Pointe Sugarloaf', '1800 Satellite Boulevard', 'Duluth', 'GA', 30097, 'test', 10, '33.99509', '-84.08346', 'http://www.crosspointechurch.com/'),
 ('Habitat Restore Lawrenceville', '2100 Riverside Parkway Suite 123-A', 'Lawrenceville', 'GA', 30043, 'test', 4, '40.79128', '-96.63399', 'http://suburbanatlantarestores.org/'),
 ('Animal Welfare and Enforcement', '884 Winder Highway', 'Lawrenceville', 'GA', 30046, 'test', 2, '33.96894', '-83.95598', 'https://www.gwinnettcounty.com/web/gwinnett/departments/communityservices/animalwelfareenforcement'),
 ('Project Safe', 'PO Box 7532', 'Athens', 'GA', 30604, 'test', 8, '33.94611', '-83.40907', 'http://www.project-safe.org/'),

@@ -2,4 +2,5 @@ key.php
 assets/js/key.js
 .vscode/
 assets/css/style.css.map
+assets/utility/util.php
 model/database.php

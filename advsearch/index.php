@@ -32,7 +32,9 @@ switch ($action) {
                break;
           } else {
                $charities = charitiesByType($typeID);
+               $typeName = getCharityType($typeID);
                $search = "type";
+
                include('results.php');
                break;
           }

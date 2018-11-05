@@ -3,14 +3,10 @@
     session_start();
   }
   
-  //This variable will be a flag to verify if the user is currently in a session
-  //or just browsing. 
-  //name = $_SESSION["username"];
-  //$name = 'Hello World!';
-  //$id = $_SESSION["user_id"];
-  // $id = 'MyMyselfandI';
-
- 
+  if (isset($_SESSION['username'])) {
+    $name = $_SESSION['username'];
+  }
+  
   
 ?>
 <!DOCTYPE html>
@@ -18,13 +14,10 @@
 <!-- the head section -->
 <head>
   <title>Charity Connection</title>
-  <!-- Bootstrap CSS -- taken out because of conflicts with the later one-->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-  
-  <!-- Bootstrap JS -->
   
   
- <!-- This is the Boostrap CSS on the site under Get Started, and is a newer version... -->
+  
+ <!-- Boostrap CSS  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
  
  <!-- FontAwesome icon fonts for Bootstrap -->
@@ -41,7 +34,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   
-  <!-- Dynamic loading for donations? -->
+  <!-- Dynamic loading for donations -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   
   <!-- LeafJS links -->
