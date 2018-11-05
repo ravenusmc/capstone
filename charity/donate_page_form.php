@@ -1,5 +1,8 @@
 <?php
-  session_start();
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+ 
   
   //This variable will be a flag to verify if the user is currently in a session
   //or just browsing. 

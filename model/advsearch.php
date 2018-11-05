@@ -28,6 +28,18 @@ function charitiesByType($charityType) {
      return $charities;
 }
 
+function getCharityType($typeID) {
+     global $db;
+     $query = 'SELECT type_name from charitytype
+               WHERE charityType_ID = :typeID';
+     $statement = $db->prepare($query);
+     $statement->bindValue(':typeID', $typeID);
+     $statement->execute();
+     $charityType = $statement->fetch();
+     $statement->closeCursor();
+     return $charityType;
+}
+
 // function charitiesByItems($itemCategory) {
 //      global $db;
 //      $query = '';

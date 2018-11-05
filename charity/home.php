@@ -19,11 +19,6 @@ include '../view/header.php';
 
 <h2 class="pageHeading">User Profile for <?php echo $name; ?></h2>
 
-<!-- This is only here in case something is still needed on those pages -->
-<!-- <a href="?action=add_item_form">Add Item to Donate</a>
-<p>The above two links will probably change/go away</p> -->
-
-
 <section id="nearbyCharities">
 
 <!-- Map Code -->
@@ -35,7 +30,7 @@ include '../view/header.php';
 
   <div id="list">
     <?php foreach ($all_charities as $charity): ?>
-      <h4><a href="#"><?php echo $charity['name']; ?></a></h4>
+      <h4><a href="<?php echo $charity['url'];?>"><?php echo $charity['name']; ?></a></h4>
       <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
       <form method="post">
         <input type="hidden" name="action" value="donate_page_form">
@@ -59,7 +54,7 @@ include '../view/header.php';
 
 <div id="favList">
 <?php foreach ($charities as $charity): ?>
-  <p class="charityName"><?php echo $charity['name']; ?></p>
+  <h4><a href="<?php echo $charity['url'];?>"><?php echo $charity['name']; ?></a></h4>
   <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
   <br>  
   <form method="post">

@@ -35,12 +35,12 @@ $charityNames = listAll();
 
 <section class="homePageSection" id="problem">
      <h2 class="homePageHeading">What's the problem?</h2>
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus ex ac luctus auctor. Ut sed orci pharetra, cursus enim eu, imperdiet tortor. Pellentesque ante turpis, condimentum eget augue nec, viverra suscipit neque. Nam id odio sed risus consectetur tincidunt. Maecenas ligula nulla, iaculis sed tempus eu, congue facilisis nulla. Vestibulum blandit finibus volutpat. In mattis, ipsum quis hendrerit mollis, sapien velit egestas mi, ac tincidunt odio est sed enim. </p>
+     <p>You’ve cleaned out your closets and discovered you have a few or several gently used and loved items you would like to see go to a good home. Looking up charities that accept gently used donations within your area can be time consuming and isn’t as easy as it should be, especially if you’re looking to donate to charities such as Women and Children’s shelters which are often difficult to locate for security reasons.</p>
 </section>
 
 <section class="homePageSection" id="solution">
      <h2 class="homePageHeading">How we solve it</h2>
-     <p>Nullam rhoncus nunc vitae dictum eleifend. Vestibulum faucibus lacus eget malesuada semper. Vivamus lacinia auctor enim vitae vestibulum. Duis cursus leo dictum, consequat nibh rutrum, bibendum sapien. Integer et euismod orci, vel interdum est. Integer in diam felis. Nullam eu scelerisque eros. Cras imperdiet est vel metus maximus, eu accumsan diam efficitur. Integer sed mi facilisis, blandit nulla nec, porttitor mi. Morbi dignissim eleifend quam, at euismod neque tempus ac. Proin cursus rhoncus sem porta congue.</p>
+     <p><span class='companyName'>Charity Connection</span> identifies non-profit charities located within a 10-mile radius of your location. Once the user selects the types of items to be donated, nearby charities that accept those items are displayed to you. It’s that simple! If you need a donation summary for tax purposes we’ve got you covered. Feel free to print your donation summary for your records. Using <span class='companyName'>Charity Connection</span> is easy and free! Start by creating an account today!</p>
 </section>
 
 <section class="ctaSection" id="ctaSignUp">

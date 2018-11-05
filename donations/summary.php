@@ -15,7 +15,10 @@
      * user email
 
 */
-
+if (!isset($_SESSION)) {
+     session_start();
+   }
+   
 require('../assets/utility/util.php');
 include '../view/header.php';
 ?>

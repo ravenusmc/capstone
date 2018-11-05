@@ -1,5 +1,7 @@
 <?php 
-  session_start();
+  if (!isset($_SESSION)) {
+    session_start();
+  }
   
   //This variable will be a flag to verify if the user is currently in a session
   //or just browsing. 
@@ -30,5 +32,8 @@ include '../view/header.php'; ?>
     <p><a href="../index.php">Try another zip code?</a></p>
 <?php }  ?>
 
+<?php if (!isset($_SESSION['username'])): ?>
+  <p>Thanks for searching for nearby charities. Take full advantage of our site by creating a user account and donate your gently used items today!</p>
+<?php endif; ?>
 </main>
 <?php include '../view/footer.php'; ?>
