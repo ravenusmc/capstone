@@ -35,12 +35,12 @@ $charityNames = listAll();
 
 <section class="homePageSection" id="problem">
      <h2 class="homePageHeading">What's the problem?</h2>
-     <p>You’ve cleaned out your closets and discovered you have a few or several gently used and loved items you would like to see go to a good home. Looking up charities that accept gently used donations within your area can be time consuming and isn’t as easy as it should be, especially if you’re looking to donate to charities such as Women and Children’s shelters which are often difficult to locate for security reasons.</p>
+     <p>You’re cleaning out your closets and discover you have gently used and loved items you would like to see go to a good home. Two hours later, you realize you have way too many donations to load in your car. That's where <span class="charityName">Charity Connection</span> can help! <span class="charityName">Charity Connection</span> allows users to locate charities within your zip code that accept your donations. If done on your own, this can be time consuming and isn’t as easy as it should be, especially if you’re looking to donate to charities such as Women and Children’s shelters which are often difficult to locate for security reasons.</p>
 </section>
 
 <section class="homePageSection" id="solution">
      <h2 class="homePageHeading">How we solve it</h2>
-     <p><span class='companyName'>Charity Connection</span> identifies non-profit charities located within a 10-mile radius of your location. Once the user selects the types of items to be donated, nearby charities that accept those items are displayed to you. It’s that simple! If you need a donation summary for tax purposes we’ve got you covered. Feel free to print your donation summary for your records. Using <span class='companyName'>Charity Connection</span> is easy and free! Start by creating an account today!</p>
+     <p><span class='companyName'>Charity Connection</span> identifies non-profit charities located within your zip code. Once the user selects the types of items to be donated, nearby charities that accept those items are displayed to you. It’s that simple! If you need a donation summary for tax purposes we’ve got you covered. Feel free to print your donation summary for your records. Using <span class='companyName'>Charity Connection</span> is easy and free! Start by creating an account today!</p>
 </section>
 
 <section class="ctaSection" id="ctaSignUp">

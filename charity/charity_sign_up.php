@@ -63,7 +63,7 @@ include '../view/header.php'; ?>
 <div class='container'>
 
   <h2 class="pageHeading">Sign Up Charity</h2>
-  
+  <p>Looking to grow donations, increase visibility and better serve your community? Register today to become part of Lawrenceville's very own <span class="charityName">Charity Connection</span> endeavor. We've developed an easier platform for local residents to identify and donate gently used items to nearby reputable charities of their choice. Don't wait and don't miss out on this chance to better serve your community!</p>
   <!-- Start of error handling -->
   <?php 
     if (isset($message)){
