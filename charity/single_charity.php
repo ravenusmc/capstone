@@ -17,6 +17,8 @@ include '../view/header.php'; ?>
 
 <h1>Information on Charity</h1>
 
+<div id="map_<?php echo $charity['charity_id'] . $charity['item_name']; ?>" class='map'>
+</div>
 
 <h2><?php echo $charity['name']; ?></h2>
 <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
