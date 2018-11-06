@@ -13,7 +13,7 @@
 <?php 
 require('../assets/utility/util.php');
 include '../view/header.php'; ?>
-<link rel="stylesheet" type="text/css" href="../assets/css/see_charities.css">
+
 
 <h1>See Charities</h1>
 
@@ -29,6 +29,13 @@ include '../view/header.php'; ?>
     <input type="hidden" name="action" value="see_single_charity">
     <input type="hidden" name="charity_id" value="<?php echo $item['charity_id']; ?>">
     <input class='input_style' type="submit" value="More Info">
+  </form>
+
+  <form method="post">
+    <input type="hidden" name="action" value="donate_page_form">
+    <input type="hidden" name="user_id" value="<?php echo $id; ?>">
+    <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+    <button type="submit" class="btn btn-primary">Donate</button>
   </form>
 
   <div id="map_<?php echo $item['charity_id'] . $item['item_name']; ?>" class='map'>
@@ -87,9 +94,9 @@ include '../view/header.php'; ?>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $api_key ?>"async defer></script>
 
-<!--
-<script src="https://maps.googleapis.com/maps/api/js?key=<?php //echo $api_key ?>&callback=initMap"async defer></script>
--->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $api_key ?>&callback=initMap"async defer></script>
+
 
 
 

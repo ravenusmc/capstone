@@ -297,6 +297,35 @@ label {
   margin: 0 auto;
 }
 
+#donationFollowUp {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+#donationFollowUp .ctaBtn {
+  background: linear-gradient(#1D1F5B, #2E3192);
+  color: #F9ED32;
+  font-family: "Ministry";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1em 0;
+  border: 0;
+  display: inline-block;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 15px;
+}
+#donationFollowUp .ctaBtn a {
+  color: #F9ED32;
+}
+#donationFollowUp .ctaBtn a:hover {
+  border: 0;
+}
+#donationFollowUp .ctaBtn:hover {
+  background: linear-gradient(#0B0C25, #1D1F5B);
+}
+
 #charity_type_selection {
   display: none;
 }

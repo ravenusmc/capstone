@@ -18,6 +18,7 @@ include '../view/header.php'; ?>
 <h1>Information on Charity</h1>
 
 
+
 <h2><?php echo $charity['name']; ?></h2>
 <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
 <a href="<?php echo $charity['url']; ?>">Link to Charity Information</a>
@@ -35,6 +36,7 @@ include '../view/header.php'; ?>
     </form>
   <?php endif; ?>
 </div>
+
 
 <!-- Start of Google maps code -->
 <script type="text/javascript">
