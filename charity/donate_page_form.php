@@ -52,7 +52,10 @@ include '../view/header.php'; ?>
     <input type="submit" class="ctaBtn" value="Donate to another charity">
   </form>
 
-  <button class="ctaBtn"><a href="">Back to your profile</a></button> 
+  <form action="../charity/index.php">
+    <input type="hidden" name="action" value="home">
+    <input type="submit" class="ctaBtn" value="Back to your profile">
+  </form> 
 
 </section>
 </main>

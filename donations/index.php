@@ -1,5 +1,16 @@
 <?php
-     //This is the controller for the donations summary
+     if (!isset($_SESSION)) {
+     session_start();
+     }
+  
+   
+//This variable will be a flag to verify if the user is currently in a session or just browsing. 
+   $name = $_SESSION["username"];
+   $user_id = $_SESSION["user_id"];
+
+     
+   
+//This is the controller for the donations summary
 
      $action = filter_input(INPUT_POST, 'action');
      if ($action == NULL) {
@@ -11,9 +22,9 @@
 
      switch($action) {
           case 'allDonations':
-               //$userID = $name;
+               
 
-               $donations = allDonations($name);
+               $donations = allDonations($user_id);
                include 'summary.php';
                break;
 
