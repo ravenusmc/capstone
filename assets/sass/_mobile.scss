@@ -415,8 +415,9 @@ label {
 
 //Mike's CSS from see_charities.css
 .map {
-     border: 2px solid blue;
+     border: 2px solid black;
      width: 90%;
+     max-width: 500px;
    }
 
    #nearbyCharities,
@@ -438,6 +439,49 @@ label {
     width: 90%;
     margin: 0 auto;
 }
+
+
+
+// ----------------------------------------//
+// Profile page
+// ----------------------------------------//
+.inlineBtns {
+  display: inline;
+  margin: 0 .5em;
+}
+
+.listBlock {
+  margin: 2em 0 0;
+  border: 1px solid $logoBlue;
+  padding: 1em;
+}
+
+.ctaBtnRed {
+  @include customBtn;
+  background: linear-gradient(#8A0000, red);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
+  &:hover {
+    @include customBtnHover;
+    background: linear-gradient(#450000, #8A0000);
+  }
+  
+}
+
+
+
+
+// ----------------------------------------//
+// Single Charity view page
+// ----------------------------------------//
+
+#charityInfo {
+  margin: 1em;
+}
+
+
 
 
 // ----------------------------------------//

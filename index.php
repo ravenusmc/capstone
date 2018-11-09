@@ -35,7 +35,7 @@ $charityNames = listAll();
 
 <section class="homePageSection" id="problem">
      <h2 class="homePageHeading">What's the problem?</h2>
-     <p>You’re cleaning out your closets and discover you have gently used and loved items you would like to see go to a good home. Two hours later, you realize you have way too many donations to load in your car. That's where <span class="charityName">Charity Connection</span> can help! <span class="charityName">Charity Connection</span> allows users to locate charities within your zip code that accept your donations. If done on your own, this can be time consuming and isn’t as easy as it should be, especially if you’re looking to donate to charities such as Women and Children’s shelters which are often difficult to locate for security reasons.</p>
+     <p>You’re cleaning out your closets and discover you have gently used and loved items you would like to see go to a good home. Two hours later, you realize you have way too many donations to load in your car. That's where <span class="companyName">Charity Connection</span> can help! <span class="companyName">Charity Connection</span> allows users to locate charities within your zip code that accept your donations. If done on your own, this can be time consuming and isn’t as easy as it should be, especially if you’re looking to donate to charities such as Women and Children’s shelters which are often difficult to locate for security reasons.</p>
 </section>
 
 <section class="homePageSection" id="solution">

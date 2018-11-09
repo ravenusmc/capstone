@@ -90,7 +90,7 @@ a:hover {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   border: 0;
   margin: 0.5em;
 }
@@ -136,7 +136,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   border: 0;
 }
 .form-submit-btn:hover {
@@ -181,7 +181,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   border: 0;
 }
 .ctaBtn:hover {
@@ -216,7 +216,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   border: 0;
 }
 #advSearchBtn:hover {
@@ -309,7 +309,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   border: 0;
   display: inline-block;
   margin: 0.5em;
@@ -335,8 +335,9 @@ label {
 }
 
 .map {
-  border: 2px solid blue;
+  border: 2px solid black;
   width: 90%;
+  max-width: 500px;
 }
 
 #nearbyCharities,
@@ -351,6 +352,40 @@ label {
 .resultsBody {
   width: 90%;
   margin: 0 auto;
+}
+
+.inlineBtns {
+  display: inline;
+  margin: 0 0.5em;
+}
+
+.listBlock {
+  margin: 2em 0 0;
+  border: 1px solid #2E3192;
+  padding: 1em;
+}
+
+.ctaBtnRed {
+  background: linear-gradient(#1D1F5B, #2E3192);
+  color: #F9ED32;
+  font-family: "Ministry";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0.5em 0;
+  border: 0;
+  background: linear-gradient(#8A0000, red);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.ctaBtnRed:hover {
+  background: linear-gradient(#0B0C25, #1D1F5B);
+  background: linear-gradient(#450000, #8A0000);
+}
+
+#charityInfo {
+  margin: 1em;
 }
 
 footer {
@@ -497,7 +532,7 @@ footer h6 {
     padding: 1em;
     width: 100%;
     margin: 1em auto;
-    border: 1px solid #2E3192;
+    border: 3px solid #2E3192;
     max-height: 600px;
   }
 
@@ -518,7 +553,7 @@ footer h6 {
   }
 
   #favCharities {
-    border: 1px solid #2E3192;
+    border: 3px solid #2E3192;
     width: 100%;
     margin: 1em auto;
     padding: 1em;
