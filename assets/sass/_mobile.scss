@@ -110,12 +110,10 @@ a {
 }
 
 
-
-
-
 .loginBtn {
      @include customBtn;
      margin: .5em;
+     z-index: 1;
 
      &:hover {
           @include customBtnHover;
@@ -123,9 +121,7 @@ a {
           border: 0;
      }
 
-    //  & a:hover {
-    //     color: $logoYellow;
-    // }
+    
 
 } 
 
@@ -155,6 +151,24 @@ a {
      font-size: 1.5em;
      width: 100%;
      margin: 0 auto;
+}
+
+// ----------------------------------------//
+//   Logo animation
+// ----------------------------------------//
+
+#demo {
+	width: 1330px;
+	height: 0px;
+  padding: 8px;
+}
+
+#logo {
+	position: relative;
+	//width: auto;
+  height: 150px;
+  z-index: -1;
+	background: url(../../greensock/assets/images/truck.png) no-repeat;
 }
 
 // ----------------------------------------//
@@ -370,6 +384,33 @@ label {
   }
 }
 
+#donationFollowUp {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  .ctaBtn {
+    @include customBtn;
+    display: inline-block;
+    margin: .5em;
+    padding: 1em;
+    border-radius: 15px;
+
+    a {
+      color: $logoYellow;
+
+      &:hover {
+        border: 0;
+      }
+    }
+
+    &:hover {
+      @include customBtnHover;
+    }
+
+  }
+}
+
 
 //Mike's CSS from add_item.css
 #charity_type_selection {
@@ -388,8 +429,9 @@ label {
 
 //Mike's CSS from see_charities.css
 .map {
-     border: 2px solid blue;
+     border: 2px solid black;
      width: 90%;
+     max-width: 500px;
    }
 
    #nearbyCharities,
@@ -411,6 +453,55 @@ label {
     width: 90%;
     margin: 0 auto;
 }
+
+
+
+// ----------------------------------------//
+// Profile page
+// ----------------------------------------//
+.inlineBtns {
+  display: inline;
+  margin: 0 .5em;
+}
+
+.listBlock {
+  margin: 2em 0 0;
+  border: 1px solid $logoBlue;
+  padding: 1em;
+}
+
+.ctaBtnRed {
+  @include customBtn;
+  background: linear-gradient(#8A0000, red);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
+  &:hover {
+    @include customBtnHover;
+    background: linear-gradient(#450000, #8A0000);
+  }
+  
+}
+
+.profileSection {
+  width: 100%;
+  border: 3px solid $logoBlue;
+  padding: 1em;
+}
+
+
+
+
+// ----------------------------------------//
+// Single Charity view page
+// ----------------------------------------//
+
+#charityInfo {
+  margin: 1em;
+}
+
+
 
 
 // ----------------------------------------//

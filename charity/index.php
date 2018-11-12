@@ -76,15 +76,16 @@
       
       include('home.php');
       break;
+
     //This action will allow the user to see charities based on the items they've donated 
     case 'see_charities':
 
       //Getting the user id 
-      $user_id  = filter_input(INPUT_POST, 'user_id');
+      // $user_id  = filter_input(INPUT_POST, 'user_id');
 
       //Getting all the items based on the user 
-      $items = get_items_charities_each_user($user_id);
-
+      // $items = get_items_charities_each_user($user_id);
+      $charities = getCharities();
       include('see_charities.php');
       break;
     //This action will allow the user to see information on an individual charity 
@@ -100,7 +101,8 @@
       break; 
     //This action will make a charity a favorite 
     case 'add_favorite_charity':
-      $favorite = filter_input(INPUT_POST, 'favorite');
+      
+      $favorite = 'y';
       $charity_id = filter_input(INPUT_POST, 'charity_id');
       $user_id = filter_input(INPUT_POST, 'user_id');
 

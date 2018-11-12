@@ -2,42 +2,51 @@
   if (!isset($_SESSION)) {
     session_start();
   }
-  
+   
   //This variable will be a flag to verify if the user is currently in a session
   //or just browsing. 
   $name = $_SESSION["username"];
   $id = $_SESSION["user_id"];
-  
-?>
-<?php 
-require('../key.php');
-require('../assets/utility/util.php');
-include '../view/header.php'; ?>
-<link rel="stylesheet" type="text/css" href="../assets/css/map.css">
 
-<h1>Information on Charity</h1>
+  require('../assets/utility/tags.php');
+  require('../key.php');
+  require('../assets/utility/util.php');
+  include '../view/header.php'; ?>
+ 
+<main class="page">
+  <h2 class="pageHeading">Information on Charity</h2>
 
-<div id="map_<?php echo $charity['charity_id'] . $charity['item_name']; ?>" class='map'>
-</div>
+  <div id="map_<?php echo $charity['charity_id']; ?>" class='map'>
+  </div>
 
-<h2><?php echo $charity['name']; ?></h2>
-<p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state']; ?></p>
-<a href="<?php echo $charity['url']; ?>">Link to Charity Information</a>
+  <section id="charityInfo">
+    <h3><a href="<?php echo $charity['url']; ?>"><?php echo $charity['name']; ?></a></h3>
+    <p><?php echo $charity['street'] . '<br>' . $charity['town'] . ', ' . $charity['state']; ?></p>
+    <?php $text = addTags($charity['description']);
+    echo $text;?>
+  </section>
+  <!-- only using this div because buttons were on edge of screen-this will change! -->
+  <section>
+    <?php if (isset($name)): ?>
+      
+      <form action="index.php" method="post" class="inlineBtns">
+        <input type="hidden" name="action" value="add_favorite_charity">
+        <input type="hidden" name="user_id" value="<?php echo $id; ?>">
+        <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+        
+        <button type="submit" class="btn ctaBtn">Make Favorite</button>
+      </form>
 
-<!-- only using this div because buttons were on edge of screen-this will change! -->
-<div class='container'>
-  <?php if (isset($name)): ?>
-    <p>Make Favorite Charity?</p>
-    <form action="index.php" method="post">
-      <input type="hidden" name="action" value="add_favorite_charity">
-      <input type="hidden" name="user_id" value="<?php echo $id; ?>">
-      <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
-      <input type='radio' name='favorite' value='y' checked>Yes<br>
-      <button type="submit" class="btn ctaBtn">Make Favorite</button>
-    </form>
-  <?php endif; ?>
-</div>
+      <form method="post" class="inlineBtns">
+          <input type="hidden" name="action" value="donate_page_form">
+          <input type="hidden" name="user_id" value="<?php echo $id; ?>">
+          <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+          <button type="submit" class="btn ctaBtn">Donate</button>
+          </form>
+    <?php endif; ?>
+  </section>
 
+  </main>
 <!-- Start of Google maps code -->
 <script type="text/javascript">
 
@@ -45,7 +54,7 @@ include '../view/header.php'; ?>
 
     function initialize() {
 
-      var map_id = 'map_' + '<?php echo $charity['charity_id']; ?>' + '<?php echo $charity['item_name']; ?>';
+      var map_id = 'map_' + '<?php echo $charity['charity_id']; ?>';
 
       //This is the lat and long of the charity
       var charity_latitude = Number('<?php echo $charity['latitude']; ?>')
@@ -87,3 +96,5 @@ include '../view/header.php'; ?>
   <!-- End of Google maps Code -->
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $api_key ?>"async defer></script>
+
+<?php include '../view/footer.php'; ?>

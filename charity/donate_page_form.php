@@ -33,8 +33,31 @@ include '../view/header.php'; ?>
           <input type="button" name="submit" id="submit" class="btn form-submit-btn" value="Submit" />  
         </div>  
       </form>  
-    </div>  
+    </div> 
 </div>  
+<!-- Buttons to navigate after donation is made  -->
+<section id="donationFollowUp">
+  <form action="../donations/index.php">
+    <input type="hidden" name="action" value="lastDonation">
+    <input type="submit" class="ctaBtn" value="Summary of your donation">
+  </form>
+
+  <form action="../donations/index.php">
+    <input type="hidden" name="action" value="allDonations">
+    <input type="submit" class="ctaBtn" value="See all your donations">
+  </form>
+
+  <form action="../donations/index.php">
+    <input type="hidden" name="action" value="donateAgain">
+    <input type="submit" class="ctaBtn" value="Donate to another charity">
+  </form>
+
+  <form action="../charity/index.php">
+    <input type="hidden" name="action" value="home">
+    <input type="submit" class="ctaBtn" value="Back to your profile">
+  </form> 
+
+</section>
 </main>
 
 <script>  

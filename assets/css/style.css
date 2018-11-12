@@ -90,9 +90,10 @@ a:hover {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   border: 0;
   margin: 0.5em;
+  z-index: 1;
 }
 .loginBtn:hover {
   background: linear-gradient(#0B0C25, #1D1F5B);
@@ -125,6 +126,19 @@ a:hover {
   margin: 0 auto;
 }
 
+#demo {
+  width: 1330px;
+  height: 0px;
+  padding: 8px;
+}
+
+#logo {
+  position: relative;
+  height: 150px;
+  z-index: -1;
+  background: url(../../greensock/assets/images/truck.png) no-repeat;
+}
+
 label {
   color: #2E3192;
 }
@@ -136,7 +150,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   border: 0;
 }
 .form-submit-btn:hover {
@@ -181,7 +195,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   border: 0;
 }
 .ctaBtn:hover {
@@ -216,7 +230,7 @@ label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   border: 0;
 }
 #advSearchBtn:hover {
@@ -297,6 +311,35 @@ label {
   margin: 0 auto;
 }
 
+#donationFollowUp {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+#donationFollowUp .ctaBtn {
+  background: linear-gradient(#1D1F5B, #2E3192);
+  color: #F9ED32;
+  font-family: "Ministry";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0.5em 0;
+  border: 0;
+  display: inline-block;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 15px;
+}
+#donationFollowUp .ctaBtn a {
+  color: #F9ED32;
+}
+#donationFollowUp .ctaBtn a:hover {
+  border: 0;
+}
+#donationFollowUp .ctaBtn:hover {
+  background: linear-gradient(#0B0C25, #1D1F5B);
+}
+
 #charity_type_selection {
   display: none;
 }
@@ -306,8 +349,9 @@ label {
 }
 
 .map {
-  border: 2px solid blue;
+  border: 2px solid black;
   width: 90%;
+  max-width: 500px;
 }
 
 #nearbyCharities,
@@ -322,6 +366,46 @@ label {
 .resultsBody {
   width: 90%;
   margin: 0 auto;
+}
+
+.inlineBtns {
+  display: inline;
+  margin: 0 0.5em;
+}
+
+.listBlock {
+  margin: 2em 0 0;
+  border: 1px solid #2E3192;
+  padding: 1em;
+}
+
+.ctaBtnRed {
+  background: linear-gradient(#1D1F5B, #2E3192);
+  color: #F9ED32;
+  font-family: "Ministry";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0.5em 0;
+  border: 0;
+  background: linear-gradient(#8A0000, red);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.ctaBtnRed:hover {
+  background: linear-gradient(#0B0C25, #1D1F5B);
+  background: linear-gradient(#450000, #8A0000);
+}
+
+.profileSection {
+  width: 100%;
+  border: 3px solid #2E3192;
+  padding: 1em;
+}
+
+#charityInfo {
+  margin: 1em;
 }
 
 footer {
@@ -465,10 +549,8 @@ footer h6 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "map list" "map list";
-    padding: 1em;
     width: 100%;
     margin: 1em auto;
-    border: 1px solid #2E3192;
     max-height: 600px;
   }
 
@@ -489,10 +571,8 @@ footer h6 {
   }
 
   #favCharities {
-    border: 1px solid #2E3192;
     width: 100%;
     margin: 1em auto;
-    padding: 1em;
   }
 }
 

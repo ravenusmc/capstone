@@ -17,7 +17,7 @@ function listAll() {
 
 function charitiesByType($charityType) {
      global $db;
-     $query = 'SELECT name from charities
+     $query = 'SELECT * from charities
                WHERE charityType_ID = :charityType
                ORDER BY name ASC';
      $statement = $db->prepare($query);
@@ -53,7 +53,7 @@ function getCharityType($typeID) {
 
 function charityByName($charityID) {
      global $db;
-     $query = 'SELECT name FROM charities
+     $query = 'SELECT * FROM charities
                WHERE charity_id = :charityID';
      $statement = $db->prepare($query);
      $statement->bindValue(':charityID', $charityID);

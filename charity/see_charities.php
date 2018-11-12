@@ -12,28 +12,36 @@
 ?>
 <?php 
 require('../assets/utility/util.php');
+require('../assets/utility/tags.php');
 include '../view/header.php'; ?>
-<link rel="stylesheet" type="text/css" href="../assets/css/see_charities.css">
 
-<h1>See Charities</h1>
+<main class="page">
+<h2 class="pageHeading">See Charities</h2>
 
 <!-- Displaying all items for the user -->
-<?php foreach ($items as $item): ?>
+<?php foreach ($charities as $charity): ?>
 
-  <h3><?php echo $item['item_name']; ?></h3>
-  <p>Charity Name: '<?php echo $item['name']; ?>'</p>
-  <p>Charity Type: <?php echo $item['type_name']; ?></p>
-  <p><?php echo $item['street'] . ' ' . $item['town'] . ' ' . $item['state'] . ' ' . $item['street']; ?></p>
+  <h3><a href="<?php echo $charity['url']; ?>"><?php echo $charity['name']; ?></a></h3>
+  <h4>Charity Type: <?php echo $charity['type_name']; ?></h4>
+  <p><?php echo $charity['street'] . ' ' . $charity['town'] . ' ' . $charity['state'] . ' ' . $charity['zip']; ?></p>
 
   <form action="index.php" method="post">
     <input type="hidden" name="action" value="see_single_charity">
-    <input type="hidden" name="charity_id" value="<?php echo $item['charity_id']; ?>">
-    <input class='input_style' type="submit" value="More Info">
+    <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+    <input class='input_style btn btn-pimary' type="submit"  value="More Info">
+  </form>
+
+  <form method="post">
+    <input type="hidden" name="action" value="donate_page_form">
+    <input type="hidden" name="user_id" value="<?php echo $id; ?>">
+    <input type="hidden" name="charity_id" value="<?php echo $charity['charity_id']; ?>">
+    <button type="submit" class="btn btn-primary">Donate</button>
   </form>
 
   <div id="map_<?php echo $item['charity_id'] . $item['item_name']; ?>" class='map'>
   </div>
 
+</main>
   <!-- Start of Google maps code -->
   <script type="text/javascript">
 
@@ -87,9 +95,9 @@ include '../view/header.php'; ?>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $api_key ?>"async defer></script>
 
-<!--
-<script src="https://maps.googleapis.com/maps/api/js?key=<?php //echo $api_key ?>&callback=initMap"async defer></script>
--->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $api_key ?>&callback=initMap"async defer></script>
+
 
 
 

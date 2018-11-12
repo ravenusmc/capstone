@@ -31,19 +31,21 @@ CREATE TABLE CharityType (
 
 -- ADDED
 CREATE TABLE charities (
-  charity_id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(255) NOT NULL,
-  street VARCHAR(255) NOT NULL,
-  town VARCHAR(100) NOT NULL,
-  state CHAR(2) NOT NULL,
-  zip INT(11) NOT NULL,
-  password VARCHAR(255) NOT NULL,
-  charityType_ID INT(11) NOT NULL
-                    REFERENCES charityType (charityType_ID),
-  latitude DECIMAL(7,5) NOT NULL,
-  longitude DECIMAL(7,5) NOT NULL,
-  url VARCHAR(255) NOT NULL
+  charity_id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
+  street varchar(255) NOT NULL,
+  town varchar(100) NOT NULL,
+  state char(2) NOT NULL,
+  zip int(11) NOT NULL,
+  password varchar(255) NOT NULL,
+  charityType_ID int(11) NOT NULL
+					REFERENCES charitytype(charityType_ID),
+  latitude decimal(7,5) NOT NULL,
+  longitude decimal(7,5) NOT NULL,
+  url varchar(255) NOT NULL,
+  description varchar(1000) NOT NULL
 ); 
+
 
 -- ADDED 
 CREATE TABLE itemCategories (
@@ -112,18 +114,19 @@ INSERT INTO itemCategories (itemCategory_ID, category_name) VALUES
 (10, "Pet Items"),
 (11, "Yard/Garden Items");
 
-INSERT INTO charities (name, street, town, state, zip, password, charityType_ID, latitude, longitude, url) VALUES
-('Cross Pointe Sugarloaf', '1800 Satellite Boulevard', 'Duluth', 'GA', 30097, 'test', 10, '33.99509', '-84.08346', 'http://www.crosspointechurch.com/'),
-('Habitat Restore Lawrenceville', '2100 Riverside Parkway Suite 123-A', 'Lawrenceville', 'GA', 30043, 'test', 4, '40.79128', '-96.63399', 'http://suburbanatlantarestores.org/'),
-('Animal Welfare and Enforcement', '884 Winder Highway', 'Lawrenceville', 'GA', 30046, 'test', 2, '33.96894', '-83.95598', 'https://www.gwinnettcounty.com/web/gwinnett/departments/communityservices/animalwelfareenforcement'),
-('Project Safe', 'PO Box 7532', 'Athens', 'GA', 30604, 'test', 8, '33.94611', '-83.40907', 'http://www.project-safe.org/'),
-('StreetWise', '1770 Cedars Road', 'Lawrenceville', 'GA', 30045, 'test', 8, '33.98082', '-83.94922', 'https://www.streetwisegeorgia.org/'),
-('Athens Area Homeless Shelter', '620 Barber Street', 'Athens', 'GA', 30601, 'test', 8, '33.96858', '-83.38631', 'https://www.helpathenshomeless.org/'),
-('The Quinn House', '120 South Perry Street', 'Lawrenceville', 'GA', 30046, 'test', 8, '33.95571', '-83.98985', 'http://www.thequinnhouse.com/'),
-('Lawrenceville Co-Op Ministries', '52 Gwinnett Drive, Suite C', 'Lawrenceville', 'GA', 30046, 'test', 8, '33.94942', '-83.97373', 'http://www.lawrencevilleco-op.org/'),
-('Family Promise Gwinnett', '3495-B Sugarloaf Parkway', 'Lawrenceville', 'GA', 30044, 'test', 8, '33.92653', '-84.01779', 'http://familypromisegwinnett.org/'),
-('Goodwill of Lawrenceville', '251 Scenic Hwy N', 'Lawrenceville', 'GA', 30046, 'test', 8, '33.95668', '-83.97955', 'https://goodwillng.org/locations/lawrenceville-store-donation-center-30045/'),
-('Gwinnett Childrens Shelter', '3850 Tuggle Rd NE', 'Buford', 'GA', 30519, 'test', 8, '34.10059', '-83.91588', 'https://homeofhopegcs.org/');
+INSERT INTO charities (name, street, town, state, zip, password, charityType_ID, latitude, longitude, url, description) VALUES
+('Cross Pointe Sugarloaf', '1800 Satellite Boulevard', 'Duluth', 'GA', 30097, 'test', 10, '33.99509', '-84.08346', 'http://www.crosspointechurch.com/', 'Welcome to CarePointe, a Ministry of Cross Pointe Church in Duluth, GA. We serve our community by providing food and clothing, helping residents learn the English language, and connecting them to Christ and His Church. Our clients are treated with discretion, dignity and respect as we help to meet their most vital needs.'),
+('Habitat Restore Lawrenceville', '2100 Riverside Parkway Suite 123-A', 'Lawrenceville', 'GA', 30043, 'test', 4, '40.79128', '-96.63399', 'http://suburbanatlantarestores.org/', 'Habitat for Humanity ReStores are home improvement stores and donation centers that sell new and gently used furniture, appliances, home accessories, building materials and more to the public at a fraction of the retail price.'),
+('Animal Welfare and Enforcement', '884 Winder Highway', 'Lawrenceville', 'GA', 30046, 'test', 2, '33.96894', '-83.95598', 'https://www.gwinnettcounty.com/web/gwinnett/departments/communityservices/animalwelfareenforcement', 'Gwinnett County Animal Welfare and Enforcement operates the animal shelter and encourages the adoption and rescue of shelter animals.'),
+('Project Safe', 'PO Box 7532', 'Athens', 'GA', 30604, 'test', 8, '33.94611', '-83.40907', 'http://www.project-safe.org/', 'Project Save Inc. offers comprehensive services in order to reduce incidents of domestic violence and increase victims\\’ access to safety and justice. These services can be grouped into four main areas: Prevention & Education, Crisis Intervention, Ongoing Support and Systems Change.'),
+('StreetWise', '1770 Cedars Road', 'Lawrenceville', 'GA', 30045, 'test', 8, '33.98082', '-83.94922', 'https://www.streetwisegeorgia.org/', 'StreetWise Georgia is designed to help get struggling families back on their feet and functioning independently. StreetWise offers a place where people can count on getting the help and support they need, whenever they need it.'),
+('Athens Area Homeless Shelter', '620 Barber Street', 'Athens', 'GA', 30601, 'test', 8, '33.96858', '-83.38631', 'https://www.helpathenshomeless.org/', 'Athens Area Homeless Shelter provides collaborative, comprehensive services to homeless individuals and families working toward sustainable independence.'),
+('The Quinn House', '120 South Perry Street', 'Lawrenceville', 'GA', 30046, 'test', 8, '33.95571', '-83.98985', 'http://www.thequinnhouse.com/', 'The Quinn House, Inc. is a Christian ministry for food distribution, clothing, home goods assistance and men\\’s addiction recovery. Our key principles are to provide direct assistance for basic human needs; create a nonjudgmental environment where people have a positive experience and feel comfortable asking for and receiving help; and to help people change their inward focus to an outward focus through helping others. Our vision statement is that the Gwinnett County community recognizes and values the contribution of the Quinn House and other non-profits in improving people’s lives. The Quinn House ministry has a fully developed organization system and consistent resources allowing us to help more people as long as the need persists.'),
+('Lawrenceville Co-Op Ministries', '52 Gwinnett Drive, Suite C', 'Lawrenceville', 'GA', 30046, 'test', 8, '33.94942', '-83.97373', 'http://www.lawrencevilleco-op.org/', 'The Lawrenceville Cooperative Ministry has been serving the citizens of Gwinnett County, Georgia since 1995. We are Christian organization that seeks to care for those in need in the Lawrenceville and Dacula communities. We assist by providing food, limited emergency financial assistance, and connections to other helping resource.  One of our primary goals is to help clients become fully responsible for themselves.'),
+('Family Promise Gwinnett', '3495-B Sugarloaf Parkway', 'Lawrenceville', 'GA', 30044, 'test', 8, '33.92653', '-84.01779', 'http://familypromisegwinnett.org/', 'Family Promise of Gwinnett County, Inc. brings existing local resources together to help homeless children and their families regain their housing and their independence, while maintaining their dignity. We mobilize congregations of faith, community volunteers, and social service agencies. Together we are ending homelessness – one family at a time.\r\nWhen fully operational, we provide: *Triage services at SaltLight Center emergency shelter. *Family stabilization through Homeless Recovery. *Self-sufficiency in Aftercare'),
+('Goodwill of Lawrenceville', '251 Scenic Hwy N', 'Lawrenceville', 'GA', 30046, 'test', 8, '33.95668', '-83.97955', 'https://goodwillng.org/locations/lawrenceville-store-donation-center-30045/', 'Your donations support our career centers throughout Georgia, helping provide training and job placement assistance to hundreds and thousands of people throughout the years.'),
+('Gwinnett Childrens Shelter', '3850 Tuggle Rd NE', 'Buford', 'GA', 30519, 'test', 8, '34.10059', '-83.91588', 'https://homeofhopegcs.org/', 'The Home of Hope at Gwinnett Children\\’s Shelter, tucked away on a 45-acre Buford campus, provides education, life skills and job training to young mothers of homeless children as well as young women aging out of foster care. \\\\\r\nGuests at the Home of Hope are provided with customized \\“Life Plans\\” that are designed around the physical, emotional and educational needs of the kids, while helping their moms create a plan of action to get back on her feet.');
+
 
 INSERT INTO charityAndItemsTable (charityType_ID, itemCategory_ID) VALUES
 (1, 2),
