@@ -93,6 +93,7 @@ a:hover {
   margin: 0.5em 0;
   border: 0;
   margin: 0.5em;
+  z-index: 1;
 }
 .loginBtn:hover {
   background: linear-gradient(#0B0C25, #1D1F5B);
@@ -123,6 +124,19 @@ a:hover {
   font-size: 1.5em;
   width: 100%;
   margin: 0 auto;
+}
+
+#demo {
+  width: 1330px;
+  height: 0px;
+  padding: 8px;
+}
+
+#logo {
+  position: relative;
+  height: 150px;
+  z-index: -1;
+  background: url(../../greensock/assets/images/truck.png) no-repeat;
 }
 
 label {

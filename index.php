@@ -14,14 +14,18 @@ $charityTypes = get_charity_type();
 //$itemCategories = get_all_item_categories();
 $charityNames = listAll();
 
- 
 ?>
 
-<!-- <nav class="loginLinks"> -->
-<a href="admin/login.php" class="loginBtn btn" id="loginHeaderBtn">Login</a>
-<a href="admin/user_signup.php" class="loginBtn btn" id="signUpHeaderBtn">Sign Up</a>
-<!-- </nav> -->
+<section>
 
+  <div id="demo">
+    <div id="logo"></div>
+  </div>
+    
+    <a href="admin/login.php" class="loginBtn btn" id="loginHeaderBtn">Login</a>
+    <a href="admin/user_signup.php" class="loginBtn btn" id="signUpHeaderBtn">Sign Up</a>
+  
+</section>
 
 <header>
      <div class="headerImg">

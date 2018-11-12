@@ -101,7 +101,8 @@
       break; 
     //This action will make a charity a favorite 
     case 'add_favorite_charity':
-      $favorite = filter_input(INPUT_POST, 'favorite');
+      
+      $favorite = 'y';
       $charity_id = filter_input(INPUT_POST, 'charity_id');
       $user_id = filter_input(INPUT_POST, 'user_id');
 

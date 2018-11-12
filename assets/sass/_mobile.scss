@@ -110,12 +110,10 @@ a {
 }
 
 
-
-
-
 .loginBtn {
      @include customBtn;
      margin: .5em;
+     z-index: 1;
 
      &:hover {
           @include customBtnHover;
@@ -123,9 +121,7 @@ a {
           border: 0;
      }
 
-    //  & a:hover {
-    //     color: $logoYellow;
-    // }
+    
 
 } 
 
@@ -155,6 +151,24 @@ a {
      font-size: 1.5em;
      width: 100%;
      margin: 0 auto;
+}
+
+// ----------------------------------------//
+//   Logo animation
+// ----------------------------------------//
+
+#demo {
+	width: 1330px;
+	height: 0px;
+  padding: 8px;
+}
+
+#logo {
+	position: relative;
+	//width: auto;
+  height: 150px;
+  z-index: -1;
+	background: url(../../greensock/assets/images/truck.png) no-repeat;
 }
 
 // ----------------------------------------//
