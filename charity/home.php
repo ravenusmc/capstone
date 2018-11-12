@@ -19,7 +19,7 @@ include '../view/header.php';
 
 <h2 class="pageHeading">User Profile for <?php echo $name; ?></h2>
 
-<section id="nearbyCharities">
+<section id="nearbyCharities" class="profileSection">
 
 <!-- Map Code -->
 <div id="mapid"></div>
@@ -50,7 +50,7 @@ include '../view/header.php';
 
 </section>
 
-<section id="favCharities">
+<section id="favCharities" class="profileSection">
   <h3>Your Favorite Charities:</h3>
 
   <div id="favList">
@@ -121,7 +121,7 @@ include '../view/header.php';
   </div>
 </section>
 
-<section id="donationsList">
+<section id="donationsList" class="profileSection">
   <h3>Your Donations</h3>
    
 

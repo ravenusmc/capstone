@@ -384,6 +384,12 @@ label {
   background: linear-gradient(#450000, #8A0000);
 }
 
+.profileSection {
+  width: 100%;
+  border: 3px solid #2E3192;
+  padding: 1em;
+}
+
 #charityInfo {
   margin: 1em;
 }
@@ -529,10 +535,8 @@ footer h6 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "map list" "map list";
-    padding: 1em;
     width: 100%;
     margin: 1em auto;
-    border: 3px solid #2E3192;
     max-height: 600px;
   }
 
@@ -553,10 +557,8 @@ footer h6 {
   }
 
   #favCharities {
-    border: 3px solid #2E3192;
     width: 100%;
     margin: 1em auto;
-    padding: 1em;
   }
 }
 

@@ -26,10 +26,10 @@ if (!isset($_SESSION)) {
           <h3><?php echo $typeName['type_name']; ?></h3>
 
           <?php foreach ($charities as $charity): ?>
-               <p><a href="#"><?php echo $charity['name'];?></a></p>
+               <p><a href="<?php echo $charity['url']; ?>"><?php echo $charity['name'];?></a></p>
           <?php endforeach; 
      elseif ($search == 'name') : ?>
-          <p><a href="#"><?php echo $charity['name']; ?></a></p>
+          <p><a href="<?php echo $charity['url']; ?>"><?php echo $charity['name']; ?></a></p>
      <?php endif; ?>
 
 <!-- Encourage them to sign up. -->
