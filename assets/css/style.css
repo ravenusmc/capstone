@@ -348,10 +348,11 @@ label {
   width: 90%;
 }
 
-.map {
+#map {
   border: 2px solid black;
   width: 90%;
   max-width: 500px;
+  height: 500px;
 }
 
 #nearbyCharities,

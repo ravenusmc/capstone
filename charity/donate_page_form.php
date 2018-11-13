@@ -47,7 +47,7 @@ include '../view/header.php'; ?>
     <input type="submit" class="ctaBtn" value="See all your donations">
   </form>
 
-  <form action="../donations/index.php">
+  <form action="../charity/index.php">
     <input type="hidden" name="action" value="donateAgain">
     <input type="submit" class="ctaBtn" value="Donate to another charity">
   </form>
