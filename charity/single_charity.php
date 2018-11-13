@@ -11,13 +11,14 @@
   require('../assets/utility/tags.php');
   require('../key.php');
   require('../assets/utility/util.php');
-  include '../view/header.php'; ?>
+  include '../view/header.php'; 
+?>
+<link rel="stylesheet" type="text/css" href="../assets/css/test.css">
  
 <main class="page">
   <h2 class="pageHeading">Information on Charity</h2>
 
-  <div id="map_<?php echo $charity['charity_id']; ?>" class='map'>
-  </div>
+   <div id="map"></div>
 
   <section id="charityInfo">
     <h3><a href="<?php echo $charity['url']; ?>"><?php echo $charity['name']; ?></a></h3>
@@ -47,14 +48,14 @@
   </section>
 
   </main>
+
+
 <!-- Start of Google maps code -->
 <script type="text/javascript">
 
   $(document).ready(function(){
 
     function initialize() {
-
-      var map_id = 'map_' + '<?php echo $charity['charity_id']; ?>';
 
       //This is the lat and long of the charity
       var charity_latitude = Number('<?php echo $charity['latitude']; ?>')
@@ -71,7 +72,7 @@
 
       var chairtyLatLng = {lat: Number('<?php echo $charity['latitude']; ?>'), lng: Number('<?php echo $charity['longitude']; ?>') };
 
-      var map = new google.maps.Map(document.getElementById(map_id), {
+      var map = new google.maps.Map(document.getElementById('map'), {
             center: chairtyLatLng,
             zoom: 12
       });
