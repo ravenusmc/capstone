@@ -11,12 +11,14 @@
   require('../assets/utility/tags.php');
   require('../key.php');
   require('../assets/utility/util.php');
-  include '../view/header.php'; ?>
+  include '../view/header.php'; 
+?>
+<link rel="stylesheet" type="text/css" href="../assets/css/test.css">
  
 <main class="page">
   <h2 class="pageHeading">Information on Charity</h2>
 
-  <div id="map">   </div>
+   <div id="map"></div>
 
   <section id="charityInfo">
     <h3><a href="<?php echo $charity['url']; ?>"><?php echo $charity['name']; ?></a></h3>
@@ -46,8 +48,16 @@
   </section>
 
   </main>
+<<<<<<< HEAD
+=======
 
 
+<!-- Start of Google maps code -->
+<script type="text/javascript">
+>>>>>>> upstream/fix
+
+
+<<<<<<< HEAD
 </div>
    <!-- Start of Google maps code -->
   <script type="text/javascript">
@@ -55,6 +65,11 @@
      function initialize() {
        var map_id = 'map_' + '<?php echo $charity['charity_id']; ?>' + '<?php echo $charity['item_name']; ?>';
        //This is the lat and long of the charity
+=======
+    function initialize() {
+
+      //This is the lat and long of the charity
+>>>>>>> upstream/fix
       var charity_latitude = Number('<?php echo $charity['latitude']; ?>')
       var charity_longitude = Number('<?php echo $charity['longitude']; ?>')
        //This is the lat and long of the user. 
@@ -64,8 +79,15 @@
           ['User', user_latitude, user_longitude, ('http://maps.google.com/mapfiles/ms/icons/green-dot.png')],
           ['<?php echo $charity['name']; ?>', charity_latitude, charity_longitude, ('http://maps.google.com/mapfiles/ms/icons/red-dot.png') ]
       ]
+<<<<<<< HEAD
        var chairtyLatLng = {lat: Number('<?php echo $charity['latitude']; ?>'), lng: Number('<?php echo $charity['longitude']; ?>') };
        var map = new google.maps.Map(document.getElementById(map_id), {
+=======
+
+      var chairtyLatLng = {lat: Number('<?php echo $charity['latitude']; ?>'), lng: Number('<?php echo $charity['longitude']; ?>') };
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+>>>>>>> upstream/fix
             center: chairtyLatLng,
             zoom: 12
       });
