@@ -53,19 +53,16 @@
 <!-- Start of Google maps code -->
 <script type="text/javascript">
 
-  $(document).ready(function(){
 
     function initialize() {
 
       //This is the lat and long of the charity
       var charity_latitude = Number('<?php echo $charity['latitude']; ?>')
       var charity_longitude = Number('<?php echo $charity['longitude']; ?>')
-
-      //This is the lat and long of the user. 
+       //This is the lat and long of the user. 
       var user_latitude = Number('<?php echo $user['latitude']; ?>')
       var user_longitude = Number('<?php echo $user['longitude']; ?>')
-
-      var markers = [
+       var markers = [
           ['User', user_latitude, user_longitude, ('http://maps.google.com/mapfiles/ms/icons/green-dot.png')],
           ['<?php echo $charity['name']; ?>', charity_latitude, charity_longitude, ('http://maps.google.com/mapfiles/ms/icons/red-dot.png') ]
       ]
@@ -76,8 +73,7 @@
             center: chairtyLatLng,
             zoom: 12
       });
-
-      for (var i = 0; i < markers.length; i++){
+       for (var i = 0; i < markers.length; i++){
           var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
           var marker = new google.maps.Marker({
             position: position,
@@ -85,17 +81,13 @@
             map: map
           })
       }
-
-    }
+     }
     
     google.maps.event.addDomListener(window, 'load', initialize); 
-
-  });
+   });
   
-
-  </script>
+   </script>
   <!-- End of Google maps Code -->
-
-<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $api_key ?>"async defer></script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $api_key ?>"async defer></script>
 
 <?php include '../view/footer.php'; ?>
