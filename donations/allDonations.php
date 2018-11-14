@@ -1,6 +1,14 @@
 <?php 
 require('../assets/utility/util.php');
 include '../view/header.php';
+
+$donationsArray = array();
+foreach ($donations as $donation) :
+     $donationDate = $donation['created'];
+     $charityName = $donation['name'];
+     
+
+
 ?>
 
 <main class="page">
