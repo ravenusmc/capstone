@@ -35,6 +35,7 @@ include '../view/header.php'; ?>
       </form>  
     </div> 
 </div>  
+
 <!-- Buttons to navigate after donation is made  -->
 <section id="donationFollowUp">
   <form action="../donations/index.php">
