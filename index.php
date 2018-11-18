@@ -16,7 +16,7 @@ $charityNames = listAll();
 
 ?>
 
-<section>
+<section id="loginSection">
 
   <div id="demo">
     <div id="logo"></div>

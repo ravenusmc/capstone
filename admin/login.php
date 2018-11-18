@@ -58,7 +58,7 @@
 
 
 <section class='container '>
-<p>Hi there! Please enter your user name and password to sign-in and access your account.</p>
+<p class="instructions">Hi there! Please enter your user name and password to sign-in and access your account.</p>
   <form method="post" id="loginForm">
     <div class="form-group">
       <label for="exampleInputEmail1">Username</label>
