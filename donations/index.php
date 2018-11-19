@@ -25,8 +25,16 @@ require('../model/charities.php');
                $donations = allDonations($user_id);
                include 'allDonations.php';
                break;
+               
           case 'lastDonation':
-               $donation = latestDonation($userID);
+               // get userID     
+               $userID = $user_id;
+               
+               //get last entry information
+               $lastEntry = getLatestEntry($userID);
+               $lastDate = $lastEntry['created'];
+
+               $donation = latestDonation($userID, $lastDate);
                include 'summary.php';
                break;
      
