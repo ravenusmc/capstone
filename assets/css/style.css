@@ -426,7 +426,7 @@ label {
   margin: 1em;
 }
 
-.allDonationList .donationH3 .donationH4 .donationH5 .donationList #summary .donationP #donationDate #donationItems footer {
+footer {
   clear: both;
   display: block;
   text-align: center;
@@ -434,7 +434,7 @@ label {
   padding: 1em;
   margin: 2em auto;
 }
-.allDonationList .donationH3 .donationH4 .donationH5 .donationList #summary .donationP #donationDate #donationItems footer p {
+footer p {
   font-size: 0.75em;
 }
 
