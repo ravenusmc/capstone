@@ -35,9 +35,9 @@ $date = $date->format('F j, Y');
 
     <h3>Donated to: <a href="<?php echo $donation[0]['url'];?>"><?php echo $donation[0]['name']; ?></a></h3>
     <p class="donationP" id="donationDate"><?php echo $date; ?></p>
-      <?php foreach ($donation as $d) : ?>
-        <p id="donationItems" class="donationP"><?php echo $d['items_list']; ?></p>
-      <?php endforeach; ?>
+      <ul><?php foreach ($donation as $d) : ?>
+        <li id="donationItems" class="donationP"><?php echo $d['items_list']; ?></li>
+      <?php endforeach; ?></ul>
 
     <p class="instructions"><?php echo $donation[0]['name']; ?> will contact you at <?php echo $donation[0]['email']; ?> with a date and time for pickup. Please go to the <a href="<?php echo $donation[0]['url']; ?>"><?php echo $donation[0]['name']; ?></a>  website if you have any questions.</p>
 

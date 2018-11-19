@@ -426,6 +426,29 @@ label {
   margin: 1em;
 }
 
+.allDonationList {
+  width: 60%;
+  margin: 0 auto;
+  border: 2px solid #2E3192;
+  padding: 1em;
+}
+
+#summary {
+  width: 75%;
+  margin: 0 auto;
+  border: 2px solid #2E3192;
+  padding: 1em;
+}
+
+#donationDate {
+  color: #D67A00;
+  font-weight: 700;
+}
+
+#donationItems {
+  color: #0B0C25;
+}
+
 footer {
   clear: both;
   display: block;

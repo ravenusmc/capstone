@@ -1,33 +1,23 @@
 <?php 
 require('../assets/utility/util.php');
 include '../view/header.php';
-
-$donationsArray = array();
-foreach ($donations as $donation) :
-     $donationDate = $donation['created'];
-     $charityName = $donation['name'];
-     
-
-
 ?>
 
 <main class="page">
-<h2 class="pageHeading">Your Donations</h2>
-    <?php $previous_date = $donations['created']; ?>
+<h2 class="pageHeading">All Donations</h2>
+    <?php $previous_date = $donation['created']; ?>
     <?php foreach ($donations as $donation) : ?>
       <?php if ($previous_date != $donation['created']): ?>
-        <section class="allDonationList">
-          <h3 class="donationH3"><?php 
-              $donationDate = new DateTime($donation['created']);
-              $donationDate = $donationDate->format('F j, Y');
-              echo $donationDate;
-              ?></h3>
-              <h4 class="goldHeading donationh4"><a href="<?php  echo $donation['url'];?>"><?php echo $donation['name']; ?></a></h4>
-          <h5 class="donationH5">Donated Items:</h5>
-        <?php endif; ?>
-            <?php $previous_date = $donation['created'] ?>
-            <p class="donationList"><?php echo $donation['items_list']; ?></p>
-          </section>
+        <h3><?php 
+          $donationDate = new DateTime($donation['created']);
+          $donationDate = $donationDate->format('F j, Y');
+          echo $donationDate; ?></h3>
+        <h4 class="donationHeading">Donated Items:</h4>
+      <?php endif; ?>
+          <?php $previous_date = $donation['created'] ?>
+          <ul>
+            <li class="donationList"><?php echo $donation['items_list']; ?></li>
+          </ul>
      <?php endforeach; ?>
 
 

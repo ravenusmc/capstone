@@ -521,7 +521,10 @@ label {
 // all donations page
 // ----------------------------------------//
 .allDonationList {
-
+     width: 60%;
+     margin: 0 auto;
+     border: 2px solid $logoBlue;
+     padding: 1em;
 }
 .donationH3 {
 
@@ -541,16 +544,18 @@ label {
 // thank you page
 // ----------------------------------------//
 #summary {
-
+     width: 75%;
+     margin: 0 auto;
+     border: 2px solid $logoBlue;
+     padding: 1em;
 }
-.donationP {
 
-}
 #donationDate {
-
+     color: $darkYellow;
+     font-weight: 700;
 }
 #donationItems {
-     
+     color: $darkBlue;
 }
 
 
