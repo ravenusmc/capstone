@@ -40,6 +40,10 @@ a {
     font-weight: 700;
 }
 
+.goldHeading {
+  color: $darkYellow;
+}
+
 // ----------------------------------------//
 /* Accessibility-related */
 // ----------------------------------------//
@@ -120,10 +124,12 @@ a {
           color: $logoYellow;
           border: 0;
      }
-
-    
-
 } 
+
+#loginSection {
+  width: 100%;
+  overflow: hidden;
+}
 
 // ----------------------------------------//
 /* Header */
@@ -158,7 +164,7 @@ a {
 // ----------------------------------------//
 
 #demo {
-	width: 1330px;
+	width: 100%;
 	height: 0px;
   padding: 8px;
 }
@@ -329,6 +335,14 @@ label {
 }
 
 #signupLink {
+  text-align: center;
+}
+
+.instructions {
+  padding: 1em;
+  font-family: $sans;
+  color: $logoBlue;
+  font-weight: normal;
   text-align: center;
 }
 
@@ -503,12 +517,46 @@ label {
 }
 
 
+// ----------------------------------------//
+// all donations page
+// ----------------------------------------//
+.allDonationList {
+     width: 60%;
+     margin: 0 auto;
+     border: 2px solid $logoBlue;
+     padding: 1em;
+}
+.donationH3 {
+
+}
+.donationH4 {
+
+}
+.donationH5 {
+
+}
+.donationList {
+
+}
 
 
 // ----------------------------------------//
 // thank you page
 // ----------------------------------------//
+#summary {
+     width: 75%;
+     margin: 0 auto;
+     border: 2px solid $logoBlue;
+     padding: 1em;
+}
 
+#donationDate {
+     color: $darkYellow;
+     font-weight: 700;
+}
+#donationItems {
+     color: $darkBlue;
+}
 
 
 

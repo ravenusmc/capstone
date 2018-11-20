@@ -21,6 +21,10 @@ if (!isset($_SESSION)) {
    
 require('../assets/utility/util.php');
 include '../view/header.php';
+
+$date = new DateTime($donation[0]['created']);
+$date = $date->format('F j, Y');
+
 ?>
 
 <main class="page">
@@ -29,13 +33,13 @@ include '../view/header.php';
 
 <section id="summary">
 
-<!-- * donations list
-     * charity chosen to donate to
-     * date of donation scheduling submission
-     * username
--->
+    <h3>Donated to: <a href="<?php echo $donation[0]['url'];?>"><?php echo $donation[0]['name']; ?></a></h3>
+    <p class="donationP" id="donationDate"><?php echo $date; ?></p>
+      <ul><?php foreach ($donation as $d) : ?>
+        <li id="donationItems" class="donationP"><?php echo $d['items_list']; ?></li>
+      <?php endforeach; ?></ul>
 
-<p><!--charity name--> will contact you at <!-- user email --> with a date and time for pickup. Please go to the <!-- charity name with url --> website if you have any questions.</p>
+    <p class="instructions"><?php echo $donation[0]['name']; ?> will contact you at <?php echo $donation[0]['email']; ?> with a date and time for pickup. Please go to the <a href="<?php echo $donation[0]['url']; ?>"><?php echo $donation[0]['name']; ?></a>  website if you have any questions.</p>
 
 </section>
 

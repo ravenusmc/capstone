@@ -34,6 +34,10 @@ a:hover {
   font-weight: 700;
 }
 
+.goldHeading {
+  color: #D67A00;
+}
+
 /* Accessibility-related */
 #skip {
   position: absolute;
@@ -101,6 +105,11 @@ a:hover {
   border: 0;
 }
 
+#loginSection {
+  width: 100%;
+  overflow: hidden;
+}
+
 /* Header */
 .headerImg {
   position: relative;
@@ -127,7 +136,7 @@ a:hover {
 }
 
 #demo {
-  width: 1330px;
+  width: 100%;
   height: 0px;
   padding: 8px;
 }
@@ -282,6 +291,14 @@ label {
   text-align: center;
 }
 
+.instructions {
+  padding: 1em;
+  font-family: "Ministry";
+  color: #2E3192;
+  font-weight: normal;
+  text-align: center;
+}
+
 #signUpForm,
 .signUpForm {
   max-width: 75%;
@@ -349,10 +366,11 @@ label {
 }
 
 #map {
-  height: 400px;  /* The height is 400 pixels */
-  width: 100%;  /* The width is the width of the web page */
-  border: 2px solid red;
- }
+  border: 2px solid black;
+  width: 90%;
+  max-width: 500px;
+  height: 500px;
+}
 
 #nearbyCharities,
 #favCharities {
@@ -406,6 +424,29 @@ label {
 
 #charityInfo {
   margin: 1em;
+}
+
+.allDonationList {
+  width: 60%;
+  margin: 0 auto;
+  border: 2px solid #2E3192;
+  padding: 1em;
+}
+
+#summary {
+  width: 75%;
+  margin: 0 auto;
+  border: 2px solid #2E3192;
+  padding: 1em;
+}
+
+#donationDate {
+  color: #D67A00;
+  font-weight: 700;
+}
+
+#donationItems {
+  color: #0B0C25;
 }
 
 footer {
