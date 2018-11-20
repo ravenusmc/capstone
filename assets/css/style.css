@@ -426,6 +426,13 @@ label {
   margin: 1em;
 }
 
+.charitiesList {
+  width: 75%;
+  margin: 1em auto;
+  border: 2px solid #2E3192;
+  padding: 1em;
+}
+
 .allDonationList {
   width: 60%;
   margin: 0 auto;
