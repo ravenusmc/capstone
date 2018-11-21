@@ -108,8 +108,8 @@
 
       //Inserting data in user_tables
       insert_into_favorites($favorite, $charity_id, $user_id);
-
-      include('home.php');
+      header("Location: .");
+      //include('home.php');
       break;
     //This action will update a favorite charite 
     case 'update_favorite_charity':
@@ -118,8 +118,8 @@
 
       //Calling the function to change status of favorites 
       change_favorite_table($user_id, $charity_id);
-      
-      include('home.php');
+      header("Location: . ");
+      //include('home.php');
       break;
     //This action will take the user to the page to see the charities by zip
     case 'see_charity_by_zip':

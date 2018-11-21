@@ -177,6 +177,40 @@
           margin: 1em auto;
      }
 
+
+     // Single Charity page
+
+     #singleCharity {
+          display: grid;
+          grid-template-columns: 50%;
+          grid-template-areas: 
+               "heading heading"
+               "map info";
+
+          .pageHeading {
+               display: grid;
+               grid-area: heading;
+          }
+
+          #map {
+               display: grid;
+               grid-area: map;
+               padding: 1em;
+               width: 100%;
+               max-height: 500px;
+          }
+
+          #charityInfo {
+               display: grid;
+               grid-area: info;
+               padding: 1em;
+               width: 100%;
+               max-height: 500px;
+               overflow-y: scroll;
+          }
+
+     }
+
      
 
 }
