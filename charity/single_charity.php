@@ -15,7 +15,7 @@
 ?>
 <link rel="stylesheet" type="text/css" href="../assets/css/test.css">
  
-<main class="page">
+<main class="page" id="singleCharity">
   <h2 class="pageHeading">Information on Charity</h2>
 
    <div id="map"></div>
@@ -25,9 +25,9 @@
     <p><?php echo $charity['street'] . '<br>' . $charity['town'] . ', ' . $charity['state']; ?></p>
     <?php $text = addTags($charity['description']);
     echo $text;?>
-  </section>
+  
   <!-- only using this div because buttons were on edge of screen-this will change! -->
-  <section>
+  <section id="formBtns">
     <?php if (isset($name)): ?>
       
       <form action="index.php" method="post" class="inlineBtns">
@@ -45,8 +45,8 @@
           <button type="submit" class="btn ctaBtn">Donate</button>
           </form>
     <?php endif; ?>
-  </section>
-
+  </section><!-- end the form buttons -->
+  </section><!-- end the information section -->
   </main>
 
 

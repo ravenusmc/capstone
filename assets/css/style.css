@@ -622,6 +622,31 @@ footer h6 {
     width: 100%;
     margin: 1em auto;
   }
+
+  #singleCharity {
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-areas: "heading heading" "map info";
+  }
+  #singleCharity .pageHeading {
+    display: grid;
+    grid-area: heading;
+  }
+  #singleCharity #map {
+    display: grid;
+    grid-area: map;
+    padding: 1em;
+    width: 100%;
+    max-height: 500px;
+  }
+  #singleCharity #charityInfo {
+    display: grid;
+    grid-area: info;
+    padding: 1em;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
