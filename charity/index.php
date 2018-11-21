@@ -187,7 +187,7 @@
       $user_id = filter_input(INPUT_POST, 'user_id');
       $charities = getCharities();
       include 'see_charities.php';
-      break;
+      break; 
   } 
 
 ?>

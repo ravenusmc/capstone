@@ -126,7 +126,7 @@
       global $db;
       $query = 'SELECT charity_id, name, url, street, town, state, zip, description, type_name FROM charities c
       JOIN charitytype t ON t.charitytype_ID = c.charitytype_ID
-      SORT BY name ASC';
+      ORDER BY name ASC';
       $statement = $db->prepare($query);
       $statement->execute();
       $charities = $statement->fetchAll();
